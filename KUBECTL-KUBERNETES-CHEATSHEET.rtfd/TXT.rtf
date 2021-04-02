@@ -1,0 +1,1821 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red218\green218\blue218;
+\red184\green14\blue61;\red247\green238\blue241;\red110\green74\blue73;\red66\green66\blue66;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c88235\c88235\c88235;
+\cssrgb\c78039\c14510\c30588;\cssrgb\c97647\c94902\c95686;\cssrgb\c50980\c36471\c35686;\cssrgb\c32941\c32941\c32941;}
+\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\deftab720
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\f0\fs36 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 1.1\'a0COMMON COMMANDS\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Run curl test temporarily\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl run --generator=run-pod/v1 --rm mytest --image=yauritux/busybox-curl -it
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Run wget test temporarily\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl run --generator=run-pod/v1 --rm mytest --image=busybox -it wget
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Run nginx deployment with 2 replicas\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl run my-nginx --image=nginx --replicas=2 --port=80
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Run nginx pod and expose it\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl run my-nginx --restart=Never --image=nginx --port=80 --expose
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Run nginx deployment and expose it\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl run my-nginx --image=nginx --port=80 --expose
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List authenticated contexts\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl config get-contexts
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 ~/.kube/config
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Set namespace preference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl config set-context <context_name> --namespace=<ns_name>
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List pods with nodes info\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pod -o wide
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List everything\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get all --all-namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get all services\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get service --all-namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get all deployments\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get deployments --all-namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Show nodes with labels\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get nodes --show-labels
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get resources with json output\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods --all-namespaces -o json
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Validate yaml file with dry run\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl create --dry-run --validate -f pod-dummy.yaml
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Start a temporary pod for testing\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl run --rm -i -t --image=alpine test-$RANDOM -- sh
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl run shell command\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl exec -it mytest -- ls -l /etc/hosts
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get system conf via configmap\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl -n kube-system get cm kubeadm-config -o yaml
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get deployment yaml\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl -n denny-websites get deployment mysql -o yaml
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Explain resource\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl explain pods
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl explain svc
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Watch pods\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods -n wordpress --watch
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Query healthcheck endpoint\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 curl -L http://127.0.0.1:10250/healthz
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Open a bash terminal in a pod\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl exec -it storage sh
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Check pod environment variables\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl exec redis-master-ft9ex env
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Enable kubectl shell autocompletion\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 echo "source <(kubectl completion bash)" >>~/.bashrc
+\f0\fs28 \cf2 \cb3 \strokec2 , and reload\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Use minikube dockerd in your laptop\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 eval $(minikube docker-env)
+\f0\fs28 \cf2 \cb3 \strokec2 , No need to push docker hub any more\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Kubectl apply a folder of yaml files\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl apply -R -f .
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get services sorted by name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get services \'96sort-by=.metadata.name\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get pods sorted by restart count\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get pods \'96sort-by=\'92.status.containerStatuses[0].restartCount\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List pods and images\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get pods -o=\'92custom-columns=PODS:.metadata.name,Images:.spec.containers[*].image\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List all container images\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/list-all-images.sh#L14-L17"}}{\fldrslt \cf7 \cb3 \strokec7 list-all-images.sh}}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubeconfig skip tls verification\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/skip-tls-verify.md"}}{\fldrslt \cf7 \cb3 \strokec7 skip-tls-verify.md}}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/tasks/tools/install-kubectl/"}}{\fldrslt \cf7 \cb3 \strokec7 Ubuntu install kubectl}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 "deb https://apt.kubernetes.io/ kubernetes-xenial main"
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tags"}}{\fldrslt \cf7 \cb3 \strokec7 GitHub: kubernetes releases}}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/cheatsheet-minikube-A4"}}{\fldrslt \cf7 \cb3 \strokec7 minikube cheatsheet}}\cb3 ,\'a0{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/cheatsheet-docker-A4"}}{\fldrslt \cf7 \strokec7 docker cheatsheet}},\'a0{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/cheatsheet-openshift-A4"}}{\fldrslt \cf7 \strokec7 OpenShift CheatSheet}}\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.2\'a0CHECK PERFORMANCE\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8910\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13870\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8910\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13870\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Get node resource usage\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl top node
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8910\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13870\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get pod resource usage\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl top pod
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8910\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13870\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get resource usage for a given pod\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl top <podname> --containers
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8910\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth13870\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List resource utilization for all containers\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl top pod --all-namespaces --containers=true
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.3\'a0RESOURCES DELETION\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Delete pod\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete pod/<pod-name> -n <my-namespace>
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete pod by force\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete pod/<pod-name> --grace-period=0 --force
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete pods by labels\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete pod -l env=test
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete deployments by labels\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete deployment -l app=wordpress
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete all resources filtered by labels\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete pods,services -l name=myLabel
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete resources under a namespace\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl -n my-ns delete po,svc --all
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete persist volumes by labels\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete pvc -l app=wordpress
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8209\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14570\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete state fulset only (not pods)\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete sts/<stateful_set_name> --cascade=false
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/"}}{\fldrslt 
+\fs26 \cf7 \strokec7 \
+}}\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.4\'a0LOG & CONF FILES\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Comment\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Config folder\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /etc/kubernetes/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Certificate files\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /etc/kubernetes/pki/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Credentials to API server\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /etc/kubernetes/kubelet.conf
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Superuser credentials\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /etc/kubernetes/admin.conf
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl config file\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 ~/.kube/config
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Kubernets working dir\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/lib/kubelet/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Docker working dir\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/lib/docker/
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/log/containers/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Etcd working dir\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/lib/etcd/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Network cni\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /etc/cni/net.d/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Log files\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/log/pods/
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 log in worker node\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/log/kubelet.log
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /var/log/kube-proxy.log
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 log in master node\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kube-apiserver.log
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kube-scheduler.log
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kube-controller-manager.log
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Env\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5509\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17270\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Env\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 export KUBECONFIG=/etc/kubernetes/admin.conf\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.5\'a0POD\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List all pods\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List pods for all namespace\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods -all-namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List all critical pods\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get -n kube-system pods -a
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List pods with more info\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pod -o wide
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pod/<pod-name> -o yaml
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get pod info\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl describe pod/srv-mysql-server
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List all pods with labels\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods --show-labels
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/issues/49387"}}{\fldrslt \cf7 \cb3 \strokec7 List all unhealthy pods}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get pods \'96field-selector=status.phase!=Running \'96all-namespaces\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List running pods\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get pods \'96field-selector=status.phase=Running\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get Pod initContainer status\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pod --template '\{\{.status.initContainerStatuses\}\}' <pod-name>
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl run command\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl exec -it -n \'93$ns\'94 \'93$podname\'94 \'96 sh -c \'93echo $msg >>/dev/err.log\'94\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Watch pods\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods -n wordpress --watch
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get pod by selector\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get pods \'96selector=\'94app=syslog\'94 -o jsonpath='\{.items[*].metadata.name\}\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List pods and images\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get pods -o=\'92custom-columns=PODS:.metadata.name,Images:.spec.containers[*].image\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List pods and containers\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 -o=\'92custom-columns=PODS:.metadata.name,CONTAINERS:.spec.containers[*].name\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5478\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17302\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.6\'a0LABEL & ANNONTATION\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7007\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15772\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7007\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15772\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Filter pods by label\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get pods -l owner=denny
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7007\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15772\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Manually add label to a pod\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl label pods dummy-input owner=denny
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7007\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15772\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Remove label\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl label pods dummy-input owner-
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7007\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15772\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Manually add annonation to a pod\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl annotate pods dummy-input my-url=https://dennyzhang.com
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.7\'a0DEPLOYMENT & SCALE\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Scale out\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl scale --replicas=3 deployment/nginx-app
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 online rolling upgrade\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl rollout app-v1 app-v2 --image=img:v2
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Roll backup\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl rollout app-v1 app-v2 --rollback
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List rollout\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get rs
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Check update status\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl rollout status deployment/nginx-app
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Check update history\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl rollout history deployment/nginx-app
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Pause/Resume\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl rollout pause deployment/nginx-deployment
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 resume
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Rollback to previous version\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl rollout undo deployment/nginx-deployment
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6435\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16344\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cb3 ,\'a0{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#pausing-and-resuming-a-deployment"}}{\fldrslt \cf7 \strokec7 Link: Pausing and Resuming a Deployment}}\cb1 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/"}}{\fldrslt 
+\fs26 \cf7 \strokec7 \pard\pardeftab720\partightenfactor0
+\cf7 \
+}}\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.8\'a0QUOTA & LIMITS & RESOURCE\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6042\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16737\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6042\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16737\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List Resource Quota\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get resourcequota
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6042\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16737\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List Limit Range\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get limitrange
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6042\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16737\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Customize resource definition\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl set resources deployment nginx -c=nginx --limits=cpu=200m
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6042\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16737\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Customize resource definition\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl set resources deployment nginx -c=nginx --limits=memory=512Mi
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6042\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16737\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.9\'a0SERVICE\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List all services\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get services
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List service endpoints\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get endpoints
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get service detail\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get service nginx-service -o yaml
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get service cluster ip\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get service nginx-service -o go-template='\{\{.spec.clusterIP\}\}\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get service cluster port\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get service nginx-service -o go-template='\{\{(index .spec.ports 0).port\}\}\'92\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Expose deployment as lb service\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl expose deployment/my-app --type=LoadBalancer --name=my-service
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Expose service as lb service\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl expose service/wordpress-1-svc --type=LoadBalancer --name=ns1
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6405\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16374\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.10\'a0SECRETS\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List secrets\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get secrets --all-namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Generate secret\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 echo -n 'mypasswd'
+\f0\fs28 \cf2 \cb3 \strokec2 , then redirect to\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 base64 --decode
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get secret\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get secret denny-cluster-kubeconfig
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get a specific field of a secret\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get secret denny-cluster-kubeconfig -o jsonpath=\'94\{.data.value\}\'94\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Create secret from cfg file\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl create secret generic db-user-pass \'96from-file=./username.txt\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15761\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cb3 ,\'a0{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/concepts/configuration/secret/"}}{\fldrslt \cf7 \strokec7 Link: Secrets}}\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.11\'a0STATEFULSET\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7590\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15190\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7590\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15190\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List statefulset\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get sts
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7590\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15190\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete statefulset only (not pods)\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl delete sts/<stateful_set_name> --cascade=false
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7590\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15190\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Scale statefulset\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl scale sts/<stateful_set_name> --replicas=5
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7590\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15190\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.12\'a0VOLUMES & VOLUME CLAIMS\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List storage class\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get storageclass
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Check the mounted volumes\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl exec storage ls /data
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Check persist volume\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl describe pv/pv0001
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Copy local file to pod\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl cp /tmp/my <some-namespace>/<some-pod>:/tmp/server
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Copy pod file to local\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl cp <some-namespace>/<some-pod>:/tmp/server /tmp/my
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6634\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16145\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.13\'a0EVENTS & METRICS\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8322\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14457\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8322\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14457\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 View all events\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get events --all-namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth8322\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth14457\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List Events sorted by timestamp\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl get events \'96sort-by=.metadata.creationTimestamp\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.14\'a0NODE MAINTENANCE\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12324\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10455\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12324\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10455\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Mark node as unschedulable\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl cordon $NDOE_NAME
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12324\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10455\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Mark node as schedulable\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl uncordon $NDOE_NAME
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12324\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10455\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Drain node in preparation for maintenance\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl drain $NODE_NAME
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.15\'a0NAMESPACE & SECURITY\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 List authenticated contexts\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl config get-contexts
+\f0\fs28 \cf2 \cb3 \strokec2 ,\'a0
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 ~/.kube/config
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Set namespace preference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl config set-context <context_name> --namespace=<ns_name>
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Switch context\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl config use-context <cluster-name>
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Load context from config file\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get cs --kubeconfig kube_config.yml
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Delete the specified context\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl config delete-context <cluster-name>
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List all namespaces defined\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get namespaces
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List certificates\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get csr
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/concepts/policy/pod-security-policy/"}}{\fldrslt \cf7 \cb3 \strokec7 Check user privilege}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 kubectl \'96as=system:serviceaccount:ns-denny:test-privileged-sa -n ns-denny auth can-i use pods/list\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/concepts/policy/pod-security-policy/"}}{\fldrslt \cf7 \cb3 \strokec7 Check user privilege}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl auth can-i use pods/list
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth5352\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17427\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Reference\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/kubernetes-yaml-templates"}}{\fldrslt \cf7 \cb3 \strokec7 Link: kubernetes yaml templates}}\cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.16\'a0NETWORK\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7745\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15034\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Command\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7745\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15034\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Temporarily add a port-forwarding\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl port-forward redis-134 6379:6379
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7745\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15034\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Add port-forwaring for deployment\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl port-forward deployment/redis-master 6379:6379
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7745\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15034\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Add port-forwaring for replicaset\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl port-forward rs/redis-master 6379:6379
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7745\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15034\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Add port-forwaring for service\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl port-forward svc/redis-master 6379:6379
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7745\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15034\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Get network policy\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get NetworkPolicy
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.17\'a0PATCH\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6150\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16629\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Summary\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6150\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth16629\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Patch service to loadbalancer\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl patch svc $svc_name -p '\{"spec": \{"type": "LoadBalancer"\}\}'
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.18\'a0EXTENSTIONS\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12730\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10049\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Summary\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12730\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10049\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 Enumerates the resource types available\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl api-resources
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12730\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10049\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List api group\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl api-versions
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12730\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10049\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List all CRD\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get crd
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth12730\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth10049\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 List storageclass\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\fs25\fsmilli12600 \cf5 \cb6 \strokec5 kubectl get storageclass
+\f0\fs28 \cf2 \cb1 \strokec2 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://cheatsheet.dennyzhang.com/"}}{\fldrslt 
+\fs26 \cf7 \strokec7 \pard\pardeftab720\partightenfactor0
+\cf7 \
+}}\pard\pardeftab720\sl380\sa180\partightenfactor0
+
+\fs36 \cf2 \cb3 1.19\'a0COMPONENTS & SERVICES\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf8 \strokec8 \
+\pard\pardeftab720\sl340\sa160\partightenfactor0
+
+\fs32 \cf2 \cb3 \strokec2 1.19.1\'a0SERVICES ON MASTER NODES\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4941\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17839\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Summary\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4941\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17839\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kube-apiserver"}}{\fldrslt 
+\f0\b0\fs28 \cf7 \cb3 \strokec7 kube-apiserver}}
+\f0\b0\fs28 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 exposes the Kubernetes API from master nodes\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4941\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17839\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://coreos.com/etcd/"}}{\fldrslt \cf7 \cb3 \strokec7 etcd}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 reliable data store for all k8s cluster data\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4941\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17839\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kube-scheduler"}}{\fldrslt \cf7 \cb3 \strokec7 kube-scheduler}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 schedule pods to run on selected nodes\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4941\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth17839\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kube-controller-manager"}}{\fldrslt \cf7 \cb3 \strokec7 kube-controller-manager}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 node controller, replication controller, endpoints controller, and service account & token controllers\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa160\partightenfactor0
+
+\fs32 \cf2 \cb3 1.19.2\'a0SERVICES ON WORKER NODES\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4275\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth18504\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Summary\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4275\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth18504\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kubelet"}}{\fldrslt 
+\f0\b0\fs28 \cf7 \cb3 \strokec7 kubelet}}
+\f0\b0\fs28 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 makes sure that containers are running in a pod\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4275\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth18504\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kube-proxy"}}{\fldrslt \cf7 \cb3 \strokec7 kube-proxy}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 perform connection forwarding\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth4275\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth18504\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/docker/engine"}}{\fldrslt \cf7 \cb3 \strokec7 Container Runtime}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Kubernetes supported runtimes: Docker, rkt, runc and any\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/opencontainers/runtime-spec"}}{\fldrslt \cf7 \strokec7 OCI runtime-spec}}\'a0implementation.\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa160\partightenfactor0
+
+\fs32 \cf2 \cb3 1.19.3\'a0ADDONS: PODS AND SERVICES THAT IMPLEMENT CLUSTER FEATURES\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7201\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15578\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Summary\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7201\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15578\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0\fs28 \cf2 \cb3 DNS\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 serves DNS records for Kubernetes services\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7201\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15578\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Web UI\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 a general purpose, web-based UI for Kubernetes clusters\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7201\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15578\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Container Resource Monitoring\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 collect, store and serve container metrics\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth7201\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15578\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Cluster-level Logging\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 save container logs to a central log store with search/browsing interface\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl340\sa160\partightenfactor0
+
+\fs32 \cf2 \cb3 1.19.4\'a0TOOLS\cb1 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf4 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6966\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15813\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b\fs24 \cf2 \cb3 Name\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Summary\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6966\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15813\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kubectl"}}{\fldrslt 
+\f0\b0\fs28 \cf7 \cb3 \strokec7 kubectl}}
+\f0\b0\fs28 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 the command line util to talk to k8s cluster\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6966\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15813\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/kubernetes/kubernetes/tree/master/cmd/kubeadm"}}{\fldrslt \cf7 \cb3 \strokec7 kubeadm}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 the command to bootstrap the cluster\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6966\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15813\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/reference/setup-tools/kubefed/kubefed/"}}{\fldrslt \cf7 \cb3 \strokec7 kubefed}}\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 the command line to control a Kubernetes Cluster Federation\cb1 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf4 \trbrdrb\brdrs\brdrw20\brdrcf4 \trbrdrr\brdrs\brdrw20\brdrcf4 
+\clvertalc \clshdrawnil \clwWidth6966\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth15813\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadt200 \clpadl200 \clpadb200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Kubernetes Components\cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://kubernetes.io/docs/concepts/overview/components/"}}{\fldrslt \cf7 \cb3 \strokec7 Link: Kubernetes Components}}\cell \lastrow\row
+}
