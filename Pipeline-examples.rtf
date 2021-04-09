@@ -1,0 +1,338 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Menlo-Bold;\f5\fmodern\fcharset0 CourierNewPSMT;
+\f6\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red31\green32\blue33;\red255\green255\blue255;\red173\green45\blue55;
+\red245\green245\blue247;\red249\green249\blue249;\red98\green9\blue1;\red251\green0\blue7;\red210\green9\blue5;
+\red83\green83\blue83;\red0\green0\blue0;\red0\green0\blue0;\red82\green0\blue83;\red25\green28\blue31;
+\red0\green0\blue100;\red38\green38\blue38;\red234\green234\blue234;}
+{\*\expandedcolortbl;;\cssrgb\c16078\c16863\c17255;\cssrgb\c100000\c100000\c100000;\cssrgb\c74118\c25490\c27843;
+\cssrgb\c96863\c96863\c97647;\cssrgb\c98039\c98039\c98039;\cssrgb\c46667\c6667\c0;\cssrgb\c100000\c0\c0\c4706;\cssrgb\c86667\c13333\c0;
+\cssrgb\c40000\c40000\c40000;\cssrgb\c0\c0\c0\c6667;\cssrgb\c0\c0\c0;\cssrgb\c40000\c0\c40000;\cssrgb\c12941\c14510\c16078;
+\cssrgb\c0\c0\c46667;\cssrgb\c19608\c19608\c19608;\cssrgb\c93333\c93333\c93333;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww25740\viewh13760\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs58 \cf0 Pipeline :- \
+\
+pipeline is a workflow with group of events or jobs that are chained and integrated with each other in sequence.\
+\
+or\
+\
+series of steps which orchestrates work required to build , test, deploy application\
+\
+\
+\
+They are defined in a file called jenkinsfile which is stored in the root of project repository\
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl520\sa120\partightenfactor0
+\cf2 Pipeline Terms\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\b\fs54 \cf2 Step\cb1 \
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\f0\b0 \cf2 \cb3 A single task; fundamentally steps tell Jenkins\'a0
+\f2\i what
+\f0\i0 \'a0to do. For example, to execute the shell command\'a0
+\f3 \cf4 \cb5 make
+\f0 \cf2 \cb3 \'a0use the\'a0
+\f3 \cf4 \cb5 sh
+\f0 \cf2 \cb3 \'a0step:\'a0
+\f3 \cf4 \cb5 sh 'make'
+\f0 \cf2 \cb3 . When a plugin extends the Pipeline DSL, that typically means the plugin has implemented a new\'a0
+\f2\i step
+\f0\i0 .\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\b \cf2 \cb3 Node\cb1 \
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\f0\b0 \cf2 \cb3 Most\'a0
+\f2\i work
+\f0\i0 \'a0a Pipeline performs is done in the context of one or more declared\'a0
+\f3 \cf4 \cb5 node
+\f0 \cf2 \cb3 \'a0steps. Confining the work inside of a node step does two things:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Schedules the steps contained within the block to run by adding an item to the Jenkins queue. As soon as an executor is free on a node, the steps will run.\cb1 \uc0\u8232 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Creates a workspace (a directory specific to that particular Pipeline) where work can be done on files checked out from source control.\cb1 \uc0\u8232 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\b \cf2 \cb3 Stage\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f3\b0 \cf4 \cb5 stage
+\f0 \cf2 \cb3 \'a0is a step for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to visualize or present Jenkins Pipeline status/progress
+\fs48 \cb1 \
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+=================================================================\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs47\fsmilli23600 \cf2 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Build\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 '\cf9 Building..\cf7 '\
+					 \cf2 \cb6 \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 '\cf9 Testing..\cf7 '\cf2 \cb6 \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Deploy\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 '\cf9 Deploying....\cf7 '\cf2 \cb6 \
+            \}\
+        \}\
+    \}\
+\}\
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\f0\fs30 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs65\fsmilli32600 \cf2 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Example\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 "\cf9 Running 
+\f4\b \cf10 \cb11 $\{
+\f3\b0 \cf12 env.BUILD_ID
+\f4\b \cf10 \}
+\f3\b0 \cf9 \cb8  on 
+\f4\b \cf10 \cb11 $\{
+\f3\b0 \cf12 env.JENKINS_URL
+\f4\b \cf10 \}
+\f3\b0 \cf7 \cb8 "\cf2 \cb6 \
+            \}\
+        \}\
+    \}\
+\}
+\fs57\fsmilli28600 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs57\fsmilli28600 \cf2 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+    parameters \{\
+        string(\cf13 name\cf2 : \cf7 \cb8 '\cf9 Greeting\cf7 '\cf2 \cb6 , \cf13 defaultValue\cf2 : \cf7 \cb8 '\cf9 Hello\cf7 '\cf2 \cb6 , \cf13 description\cf2 : \cf7 \cb8 '\cf9 How should I greet the world?\cf7 '\cf2 \cb6 )\
+    \}\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Example\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 "
+\f4\b \cf10 \cb11 $\{
+\f3\b0 \cf12 params.Greeting
+\f4\b \cf10 \}
+\f3\b0 \cf9 \cb8   Welcome to Jenkins World!\cf7 "\cf2 \cb6 \
+            \}\
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs56 \cf0 pipeline \{\
+    agent any\
+    stages \{\
+        /* "Build" and "Test" stages omitted */\
+        stage('Deploy - Dev\'92) \{\
+            steps \{\
+                echo 'hello' \
+            \}\
+        \}\
+        stage('Deploy - QA') \{\
+            steps \{\
+               echo \'91QA\'92\
+                input "Does the staging environment look ok?"\
+            \}\
+        \}\
+        stage('Deploy - Production') \{\
+            steps \{\
+                echo ' production'\
+            \}\
+        \}\
+    \}\
+\}\
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs48\fsmilli24250 \cf14 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent \{\
+        docker \{\
+            image \cf7 \cb8 '\cf9 maven:3-alpine\cf7 '\cf14 \cb6 \
+            args \cf7 \cb8 '\cf9 -v /root/.m2:/root/.m2\cf7 '\cf14 \cb6 \
+        \}\
+    \}\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Build\cf7 '\cf14 \cb6 ) \{\
+            steps \{\
+                sh \cf7 \cb8 '\cf9 mvn -B -DskipTests clean package\cf7 '\cf14 \cb6 \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test\cf7 '\cf14 \cb6 ) \{ \
+            steps \{\
+                sh \cf7 \cb8 '\cf9 mvn test\cf7 '\cf14 \cb6  \
+            \}\
+            post \{\
+                always \{\
+                    junit \cf7 \cb8 '\cf9 target/surefire-reports/*.xml\cf7 '\cf14 \cb6  \
+                \}\
+            \}\
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs52\fsmilli26250 \cf14 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Test\cf7 '\cf14 \cb1 ) \{\
+            steps \{\
+                sh \cf7 \cb8 '\cf9 make check\cf7 '\cf14 \cb1 \
+            \}\
+        \}\
+    \}\
+    post \{\
+        always \{\
+            junit \cf7 \cb8 '\cf9 **/target/*.xml\cf7 '\cf14 \cb1 \
+        \}\
+        failure \{\
+            mail \cf13 to\cf14 : team\cf15 @example\cf14 .com, \cf13 subject\cf14 : \cf7 \cb8 '\cf9 The Pipeline failed :(\cf7 '\cf14 \cb1 \
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs42\fsmilli21250 \cf14 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent none\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Build\cf7 '\cf14 \cb6 ) \{\
+            agent any\
+            steps \{\
+                checkout scm\
+                sh \cf7 \cb8 '\cf9 make\cf7 '\cf14 \cb6 \
+                stash \cf13 includes\cf14 : \cf7 \cb8 '\cf9 **/target/*.jar\cf7 '\cf14 \cb6 , \cf13 name\cf14 : \cf7 \cb8 '\cf9 app\cf7 '\cf14 \cb6  \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test on Linux\cf7 '\cf14 \cb6 ) \{\
+            agent \{ \
+                label \cf7 \cb8 '\cf9 linux\cf7 '\cf14 \cb6 \
+            \}\
+            steps \{\
+                unstash \cf7 \cb8 '\cf9 app\cf7 '\cf14 \cb6  \
+                sh \cf7 \cb8 '\cf9 make check\cf7 '\cf14 \cb6 \
+            \}\
+            post \{\
+                always \{\
+                    junit \cf7 \cb8 '\cf9 **/target/*.xml\cf7 '\cf14 \cb6 \
+                \}\
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test on Windows\cf7 '\cf14 \cb6 ) \{\
+            agent \{\
+                label \cf7 \cb8 '\cf9 windows\cf7 '\cf14 \cb6 \
+            \}\
+            steps \{\
+                unstash \cf7 \cb8 '\cf9 app\cf7 '\cf14 \cb6 \
+                bat \cf7 \cb8 '\cf9 make check\cf7 '\cf14 \cb6  \
+            \}\
+            post \{\
+                always \{\
+                    junit \cf7 \cb8 '\cf9 **/target/*.xml\cf7 '\cf14 \cb6 \
+                \}\
+            \}\
+        \}\
+    \}\
+\}
+\fs24\fsmilli12250 \
+\
+\
+\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f5\fs30 \cf16 \cb17 echo "BUILD_NUMBER" :: $BUILD_NUMBER
+\f6 \cb1 \
+
+\f5 \cb17 echo "BUILD_ID" :: $BUILD_ID
+\f6 \cb1 \
+
+\f5 \cb17 echo "BUILD_DISPLAY_NAME" :: $BUILD_DISPLAY_NAME
+\f6 \cb1 \
+
+\f5 \cb17 echo "JOB_NAME" :: $JOB_NAME
+\f6 \cb1 \
+
+\f5 \cb17 echo "JOB_BASE_NAME" :: $JOB_BASE_NAME
+\f6 \cb1 \
+
+\f5 \cb17 echo "BUILD_TAG" :: $BUILD_TAG
+\f6 \cb1 \
+
+\f5 \cb17 echo "EXECUTOR_NUMBER" :: $EXECUTOR_NUMBER
+\f6 \cb1 \
+
+\f5 \cb17 echo "NODE_NAME" :: $NODE_NAME
+\f6 \cb1 \
+
+\f5 \cb17 echo "NODE_LABELS" :: $NODE_LABELS
+\f6 \cb1 \
+
+\f5 \cb17 echo "WORKSPACE" :: $WORKSPACE
+\f6 \cb1 \
+
+\f5 \cb17 echo "JENKINS_HOME" :: $JENKINS_HOME
+\f6 \cb1 \
+
+\f5 \cb17 echo "JENKINS_URL" :: $JENKINS_URL
+\f6 \cb1 \
+
+\f5 \cb17 echo "BUILD_URL" ::$BUILD_URL
+\f6 \cb1 \
+
+\f5 \cb17 echo "JOB_URL" :: $JOB_URL}
