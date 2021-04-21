@@ -1,0 +1,2 @@
+myservers]
+54.191.47.173 ansible_user=ubuntu ansible_ssh_private_key_file=/Users/rayalajagadeesh/Downloads/demo_us_west.pem

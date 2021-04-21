@@ -1,0 +1,30 @@
+---
+- name: Create a new Demo EC2 instance
+  hosts: localhost
+  gather_facts: False
+
+  vars:
+      region: us-west-2
+      instance_type: t2.nano
+      ami: ami-0ca5c3bd5a268e7db  # Ubuntu 20.04 LTS, Give you AMI ID 
+      keypair: demo_us_west # pem file name, I am giveing mine
+      subnetid: subnet-e4de7e83 #give you subent in VPC
+  
+  tasks:
+
+    - name: Create an ec2 instance
+      ec2:
+         key_name: "{{ keypair }}"
+         group: launch-wizard-63  # security group name
+         instance_type: "{{ instance_type }}"
+         image: "{{ ami }}"
+         wait: true
+         region: "{{ region }}"
+         count: 1  # default
+         count_tag:
+            Name: Demo
+         instance_tags:
+            Name: Demo
+         vpc_subnet_id: "{{ subnetid }}"
+         assign_public_ip: yes
+      register: ec2
