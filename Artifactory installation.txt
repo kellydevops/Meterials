@@ -1,0 +1,6 @@
+1  cd /opt
+    2  wget https://releases.jfrog.io/artifactory/artifactory-rpms/artifactory-rpms.repo -O jfrog-artifactory-rpms.repo;
+    3  sudo mv jfrog-artifactory-rpms.repo /etc/yum.repos.d/;
+    4  sudo yum update && sudo yum install jfrog-artifactory-oss
+    5  systemctl start artifactory.service
+    6  systemctl status artifactory.service
