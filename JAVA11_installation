@@ -1,0 +1,27 @@
+      tar xzf jdk-11.0.16.1_linux-x64_bin.tar.gz
+      cd /opt/jdk-11.0.16.1/
+      alternatives --install /usr/bin/java java /opt/jdk-11.0.16.1/bin/java 2
+     
+     alternatives --config java
+     alternatives --install /usr/bin/jar jar /opt/jdk-11.0.16.1/bin/jar 2
+     alternatives --install /usr/bin/javac javac /opt/jdk-11.0.16.1/bin/javac 2
+     alternatives --set jar /opt/jdk-11.0.16.1/bin/jar
+     alternatives --set javac /opt/jdk-11.0.16.1/bin/javac
+     java -version
+     export JAVA_HOME=/opt/jdk-11.0.16.1
+     export JRE_HOME=/opt/jdk-11.0.16.1/jre
+     export PATH=$PATH:/opt/jdk-11.0.16.1/bin:/opt/jdk-11.0.16.1/jre/bin
+     
+     =====================
+     MAven Installation
+     to dowload
+ #wget https://downloads.apache.org/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip
+unzip maven
+ #unzip apache-maven-3.8.1-bin.zip 
+link to maven to easy access folder
+ #ln -s apache-maven-3.8.1 maven
+configure maven home dir & path
+ #vi /etc/profile.d/maven.sh
+  export M2_HOME=/opt/maven
+  export PATH=${M2_HOME}/bin:${PATH}
+:wq! (save & quit)
