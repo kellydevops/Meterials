@@ -1,0 +1,374 @@
+ CI/CD using Jenkins,github,docker ,ECS and ECR on AWS platform
+
+once Developer commit the code on Github Jenkins will start the build and create Docker image and push it AWS ECR and deployed to ECS.
+
+GitHub  
+Jenkins,Docker —EC2 Jenkins &Docker —CloudFormation — AWS CLI
+ECS —  CloudFormation — AWS CLI
+ECR —  AWS CLI
+
+AWS 
+
+IAM: to manage AWS users
+EC2: it’s VM 
+Clodfromation: json/yml script to provision AWS resource. 
+AWS CLI: to operate AWS services through command line
+ECS: it a service to run container on high available env on aws
+ECR: to store Docker image on AWS
+VPC: virtual Private cloud to manage private network on AWS to get more control on AWS resource.
+
+ec2 install docker run container
+multple
+
+ecs — instance which is having docker 2 — run 
+
+cluster  2 or 
+===================
+AWS account
+
+AWS CLI
+
+1.console
+username
+password
+
+2.Programatic 
+CLI, API, SDKs
+
+1. get access and secret key
+  in we can create 2 AK SK
+
+go to console  on top right side corner click on  account name in that scurity credentials  
+or 
+goto service called IAM  click on user name and click on tab security credentials
+
+2. install AWS CLI on your laptop
+
+Go to browser : search for AWS CLI install on Windows
+download file using below link
+
+https://awscli.amazonaws.com/AWSCLIV2.msi
+
+once you download double click on msi file it install automatically
+
+open power shell/cmd 
+type aws
+
+3.Configure credentials
+ run command 
+#aws configure 
+AWS Access Key ID [****************JCOW]: 
+AWS Secret Access Key [****************TZGp]: 
+Default region name [us-west-2]: 
+Default output format [json]: 
+
+cat ~/.aws/credentials 
+
+
+
+
+
+IAM(Identity Access Management): to give minimal permission to user on AWS services
+
+Users: 
+Group:
+Policy:
+Roles: 
+
+
+policy — set of rules to allow/deny to access AWS resources.It’s in Json
+
+users
+group
+Roles
+
+
+to write policy
+1.AWS policy generator
+2.from template(from another policy edit)
+3.visual editor
+
+{
+  "Statement":[{
+    "Effect":"effect",
+    "Action":"action",
+    "Resource":"arn",
+    "Condition":{
+      "condition":{
+        "key":"value"
+        }
+      }
+    }
+  ]
+}
+	•	Version – Specify the version of the policy language that you want to use. As a best practice, use the latest 2012-10-17 version.
+	•	Statement – Use this main policy element as a container for the following elements. You can include more than one statement in a policy.
+	•	Sid (Optional) – Include an optional statement ID to differentiate between your statements.
+	•	Effect – Use Allow or Deny to indicate whether the policy allows or denies access.
+	•	Principal (Required in only some circumstances) – If you create a resource-based policy, you must indicate the account, user, role, or federated user to which you would like to allow or deny access. If you are creating an IAM permissions policy to attach to a user or role, you cannot include this element. The principal is implied as that user or role.
+	•	Action – Include a list of actions that the policy allows or denies.
+	•	Resource (Required in only some circumstances) – If you create an IAM permissions policy, you must specify a list of resources to which the actions apply. If you create a resource-based policy, this element is optional. If you do not include this element, then the resource to which the action applies is the resource to which the policy is attached.
+	•	Condition (Optional) – Specify the circumstances under which the policy grants permission
+
+arn:partition:service:region:account:resource
+arn:aws:[service]:[region]:[account-id]:resourceType/resourcePath
+
+
+
+
+One AWS service to another service
+one AWS account to other AWS account
+Web Identity
+SSO
+
+Roles
+AWS Git,jnkins hr — SSO
+
+arn:aws:s3:::demo7am
+
+CloudFromation/ ARM — — terraform
+
+stack 
+template
+
+BCP
+Desater Recovry
+
+
+{
+  "AWSTemplateFormatVersion" : "version date",
+
+  "Description" : "JSON string",
+
+  "Metadata" : {
+    template metadata
+  },
+
+  "Parameters" : {
+    set of parameters
+  },
+  
+  "Rules" : {
+    set of rules
+  },
+
+  "Mappings" : {
+    set of mappings
+  },
+
+  "Conditions" : {
+    set of conditions
+  },
+
+  "Transform" : {
+    set of transforms
+  },
+
+  "Resources" : {
+    set of resources
+  },
+  
+  "Outputs" : {
+    set of outputs
+  }
+}
+
+Format Version (optional)
+The AWS CloudFormation template version that the template conforms to. The template format version isn't the same as the API or WSDL version. The template format version can change independently of the API and WSDL versions.
+Description (optional)
+A text string that describes the template. This section must always follow the template format version section.
+Metadata (optional)
+Objects that provide additional information about the template.
+Parameters (optional)
+Values to pass to your template at runtime (when you create or update a stack). You can refer to parameters from the Resources and Outputs sections of the template.
+Rules (optional)
+Validates a parameter or a combination of parameters passed to a template during a stack creation or stack update.
+Mappings (optional)
+A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table. You can match a key to a corresponding value by using the Fn::FindInMap intrinsic function in the Resources and Outputs sections.
+Conditions (optional)
+Conditions that control whether certain resources are created or whether certain resource properties are assigned a value during stack creation or update. For example, you could conditionally create a resource that depends on whether the stack is for a production or test environment.
+Transform (optional)
+For serverless applications (also referred to as Lambda-based applications), specifies the version of the AWS Serverless Application Model (AWS SAM) to use. When you specify a transform, you can use AWS SAM syntax to declare resources in your template. The model defines the syntax that you can use and how it's processed.
+You can also use AWS::Include transforms to work with template snippets that are stored separately from the main AWS CloudFormation template. You can store your snippet files in an Amazon S3 bucket and then reuse the functions across multiple templates.
+Resources (required)
+Specifies the stack resources and their properties, such as an Amazon Elastic Compute Cloud instance or an Amazon Simple Storage Service bucket. You can refer to resources in the Resources and Outputs sections of the template.
+Outputs (optional)
+Describes the values that are returned whenever you view your stack's properties. For example, you can declare an output for an S3 bucket name and then call the aws cloudformation describe-stacks AWS CLI command to view the name.
+
+
+steps by step guide
+https://github.com/aws-samples/aws-cicd-docker-containers
+
+clone this repo
+https://github.com/jicowan/hello-world
+
+cd hello-world
+aws cloudformation create-stack --template-body file://ecs-cluster.template --stack-name EcsClusterStack --capabilities CAPABILITY_IAM --tags Key=Name,Value=ECS --region us-west-2 --parameters ParameterKey=KeyName,ParameterValue=demo_key ParameterKey=EcsCluster,ParameterValue=getting-started ParameterKey=AsgMaxSize,ParameterValue=2
+
+ECS:
+ec2 with high availability docker env
+
+		Task Definition — This a blueprint that describes how a docker container should launch. If you are already familiar with AWS, it is like a LaunchConfig except instead it is for a docker container instead of a instance. It contains settings like exposed port, docker image, cpu shares, memory requirement, command to run and environmental variables.
+		
+		Task — This is a running container with the settings defined in the Task Definition. It can be thought of as an “instance” of a Task Definition.
+		
+		Service — Defines long running tasks of the same Task Definition. This can be 1 running container or multiple running containers all using the same Task Definition.
+		
+		Cluster — A logic group of EC2 instances. When an instance launches the ecs-agent software on the server registers the instance to an ECS Cluster. This is easily configurable by setting the ECS_CLUSTER variable in /etc/ecs/ecs.config described 
+		Container Instance — This is just an EC2 instance that is part of an ECS Cluster and has docker and the ecs-agent running on it.
+
+		Task Definition — This a blueprint that describes how a docker container should launch. If you are already familiar with AWS, it is like a LaunchConfig except instead it is for a docker container instead of a instance. It contains settings like exposed port, docker image, cpu shares, memory requirement, command to run and environmental variables.
+		
+		Task — This is a running container with the settings defined in the Task Definition. It can be thought of as an “instance” of a Task Definition.
+		
+		Service — Defines long running tasks of the same Task Definition. This can be 1 running container or multiple running containers all using the same Task Definition.
+		
+		Cluster — A logic group of EC2 instances. When an instance launches the ecs-agent software on the server registers the instance to an ECS Cluster. This is easily configurable by setting the ECS_CLUSTER variable in /etc/ecs/ecs.config described 
+		
+		Container Instance — This is just an EC2 instance that is part of an ECS Cluster and has docker and the ecs-agent running on it.
+
+2 ec2  
+Jenkins:
+
+Getting started 
+2 ec2
+instance type
+AMI 
+policy
+
+ change instance type and AMI ID
+
+AmazonEC2ContainerServiceFullAccess
+
+line no 105 replace policy name 
+
+ AmazonEC2ContainerServiceFullAccess = AmazonEC2ContainerRegistryPowerUser
+
+AmazonEC2ContainerRegistryFullAccess
+
+line no 450 -453
+
+
+Jenkins installation steps
+4# Install Jenkins\n",
+
+"wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo\n",
+
+"rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key\n",
+
+"yum install -y jenkins\n",
+
+replace with
+
+
+"wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+",
+
+"rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key",
+
+"yum install -y jenkins\n",
+
+
+ 2plugins
+ 
+Amazon ECR
+Cloubees docker build and publish
+
+create job with below step
+step 1: check cli for ECR from Jenkis server
+step 2: ECR information, image tag and push
+step 3: to deploy ECS
+
+create freestyle job
+in configuration
+  — github url https://github.com/jicowan/hello-world.git
+build: 
+   excute-shell : 
+#!/bin/bash
+DOCKER_LOGIN=“copy that and paste”
+${DOCKER_LOGIN}
+
+manually execute this cmd on Jenkins servers
+#aws ecr get-login --region us-west-2
+ remove -e none from output
+ copy that and paste in “<>”
+
+step2: Docker build and publish:
+   ecr repo name: hello-world
+   tag:v_$BUILD_NUMBER
+   ecr url:https://416227743233.dkr.ecr.us-west-2.amazonaws.com
+
+step3:
+
+  excute shell
+
+#!/bin/bash
+#Constants
+REGION=us-west-2
+REPOSITORY_NAME=<ECR_repo>
+CLUSTER=<cluster_name>
+FAMILY=`sed -n 's/.*"family": "\(.*\)",/\1/p' taskdef.json`
+NAME=`sed -n 's/.*"name": "\(.*\)",/\1/p' taskdef.json`
+SERVICE_NAME=${NAME}-service
+#Store the repositoryUri as a variable
+REPOSITORY_URI=`aws ecr describe-repositories --repository-names ${REPOSITORY_NAME} --region ${REGION} | jq .repositories[].repositoryUri | tr -d '"'`
+#Replace the build number and respository URI placeholders with the constants above
+sed -e "s;%BUILD_NUMBER%;${BUILD_NUMBER};g" -e "s;%REPOSITORY_URI%;${REPOSITORY_URI};g" taskdef.json > ${NAME}-v_${BUILD_NUMBER}.json
+#Register the task definition in the repository
+aws ecs register-task-definition --family ${FAMILY} --cli-input-json file://${WORKSPACE}/${NAME}-v_${BUILD_NUMBER}.json --region ${REGION}
+SERVICES=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION} | jq .failures[]`
+#Get latest revision
+REVISION=`aws ecs describe-task-definition --task-definition ${NAME} --region ${REGION} | jq .taskDefinition.revision`
+
+#Create or update service
+if [ "$SERVICES" == "" ]; then
+  echo "entered existing service"
+  DESIRED_COUNT=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION} | jq .services[].desiredCount`
+  if [ ${DESIRED_COUNT} = "0" ]; then
+    DESIRED_COUNT="1"
+  fi
+  aws ecs update-service --cluster ${CLUSTER} --region ${REGION} --service ${SERVICE_NAME} --task-definition ${FAMILY}:${REVISION} --desired-count ${DESIRED_COUNT}
+else
+  echo "entered new service"
+  aws ecs create-service --service-name ${SERVICE_NAME} --desired-count 1 --task-definition ${FAMILY} --cluster ${CLUSTER} --region ${REGION}
+fi
+
+ you will see error
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/auth": dial unix /var/run/docker.sock: connect: permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
+
+go to jenkins server run below cmd
+chmod 777 /var/run/docker.sock
+
+re-run the job
+
+
+unknown shorthand flag: 'e' in -e
+See 'docker login --help'.
+[root@ip-10-0-1-170 ~]# 
+
+#!/bin/bash
+DOCKER_LOGIN=`aws ecr get-login --region us-west-2`
+DOCKER_LOGIN=“VAlue”
+${DOCKER_LOGIN}
+stateless
+stateful
+		
+		==========================
+		Code checkout
+		Run tests
+		Compile the code
+		Run Sonarqube analysis on the code
+		Push the image to Docker Hub
+		Pull and run the image on local system
+
+
+  Docker and Docker compose
+  Jenkins and Jenkins pipeline
+  SonarQube
+ DockerHub
+
+Ec2(2VCPUs, 4GB) — Docker and Docker-compose
+  2 container one Jenkins and another one is SonarQube
+DockerHub account
