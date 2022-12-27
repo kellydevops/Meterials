@@ -1,0 +1,68 @@
+Horizental Pod Autoscaling(HPA)
+
+prerequisites:
+
+1. existing Amazon EKS cluster.
+2. Kubernetes Metrics Server installed.
+3. kubectl installed on Workstaion.
+
+in AWS EKS cluster HPA below is doc
+https://docs.aws.amazon.com/eks/latest/userguide/horizontal-pod-autoscaler.html
+
+or 
+kubernets docs
+https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+
+
+Installing the Kubernetes Metrics Server
+
+1.Deploy the Metrics Server with the following command:
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+2.Verify that the metrics-server deployment is running the desired number of pods with the following command.
+kubectl get deployment metrics-server -n kube-system
+
+
+The example output is as follows.
+
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+metrics-server   1/1     1            1           6m
+
+
+To test your Horizontal Pod Autoscaler installation
+
+Deploy a simple Apache web server application with the following command.
+kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+
+Create a Horizontal Pod Autoscaler resource for the php-apache deployment.
+kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+
+Describe the autoscaler with the following command to view its details.
+kubectl get hpa
+
+Create a load for the web server by running a container.
+kubectl run -i \
+    --tty load-generator \
+    --rm --image=busybox \
+    --restart=Never \
+    -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+
+To watch the deployment scale out, periodically run the following command in a separate terminal from 
+the terminal that you ran the previous step in.
+
+kubectl get hpa php-apache
+
+
+Stop generating load
+To finish the example, stop sending the load.
+
+In the terminal where you created the Pod that runs a busybox image, terminate the load generation by typing <Ctrl> + C.
+
+Then verify the result state (after a minute or so):
+
+# type Ctrl+C to end the watch when you're ready
+kubectl get hpa php-apache --watch
+
+
+When you are done experimenting with your sample application, delete the php-apache resources.
+kubectl delete deployment.apps/php-apache service/php-apache horizontalpodautoscaler.autoscaling/php-apache
