@@ -1,0 +1,11 @@
+---
+ - name: copy index.html file
+   copy:
+     src: index.html
+     dest: /var/www/html/index.html
+ - name: copy apache2.conf file
+   copy:
+     src: apache2.conf
+     dest: /etc/apache2
+   notify: 
+     restart apache2 service
