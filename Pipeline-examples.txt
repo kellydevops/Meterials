@@ -1,0 +1,272 @@
+Pipeline :- 
+
+DS Grovy Script
+
+
+pipeline is a workflow with group of events or jobs that are chained and integrated with each other in sequence.
+or
+series of steps which orchestrates work required to build , test, deploy application
+
+They are defined in a file called jenkinsfile which is stored in the root of project repository
+Pipeline Terms
+Step
+A single task; fundamentally steps tell Jenkins what to do. For example, to execute the shell command make use the sh step: sh 'make'. When a plugin extends the Pipeline DSL, that typically means the plugin has implemented a new step.
+Node
+Most work a Pipeline performs is done in the context of one or more declared node steps. Confining the work inside of a node step does two things:
+	1.	Schedules the steps contained within the block to run by adding an item to the Jenkins queue. As soon as an executor is free on a node, the steps will run. 
+	2.	Creates a workspace (a directory specific to that particular Pipeline) where work can be done on files checked out from source control.
+Stage
+stage is a step for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to visualize or present Jenkins Pipeline status/progress
+=================================================================
+Jekinsfile — 
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+					 
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
+
+
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+            echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
+}
+
+scripted pipeline
+
+pipeline {
+    agent any
+    parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo "${params.Greeting}  Welcome to Jenkins World!"
+            }
+        }
+    }
+}
+
+
+
+Declarative pipeline
+
+There are two types of pipeline in jenkins
+	1	Declarative
+	2	Scripted
+Let’s look what is the difference between declarative vs scripted pipeline in Jenkins
+	•	The key difference between Declarative pipeline and Scripted pipeline would be with respect to their syntaxes and their flexibility. 
+	•	Declarative pipeline is a relatively new feature that supports the pipeline as code concept. It makes the pipeline code easier to read and write. This code is written in a Jenkinsfile which can be checked into a source control management system such as Git.
+	•	Whereas, the scripted pipeline is a traditional way of writing the code. In this pipeline, the Jenkinsfile is written on the Jenkins UI instance. 
+	•	Though both these pipelines are based on the groovy DSL, the scripted pipeline uses stricter groovy based syntaxes because it was the first pipeline to be built on the groovy foundation. Since this Groovy script was not typically desirable to all the users, the declarative pipeline was introduced to offer a simpler and more optioned Groovy syntax.
+	•	The declarative pipeline is defined within a block labelled ‘pipeline’ whereas the scripted pipeline is defined within a ‘node’. 
+Structure and syntax of the Declarative pipeline:
+The Agent is where the whole pipeline runs. Example, Docker. The Agent has following parameters:
+	•	any – Which mean the whole pipeline will run on any available agent.
+	•	none – Which mean all the stages under the block will have to declared with agent separately.
+	•	label –  this is just a label for the Jenkins environment
+	•	docker –  this is to run the pipeline in Docker environment.
+
+
+￼
+
+ multi branch
+
+sequence of steps
+
+Jenkinsfile
+
+
+pipeline {
+    agent any
+    stages {
+      
+        stage('Deploy - Dev’) {
+            steps {
+                echo 'hello' 
+            }
+        }
+        stage('Deploy - QA') {
+            steps {
+               echo ‘QA’
+                input "Does the staging environment look ok?"
+            }
+        }
+        stage('Deploy - Production') {
+            steps {
+                echo ' production'
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// in this array we'll place the jobs that we wish to run
+
+def branches = [:]
+
+
+
+
+//running the job 4 times concurrently
+
+//the dummy parameter is for preventing mutation of the parameter before the execution of the closure.
+
+//we have to assign it outside the closure or it will run the job multiple times with the same parameter "4"
+
+//and jenkins will unite them into a single run of the job
+
+
+
+
+for (int i = 0; i < 4; i++) {
+
+  def index = i //if we tried to use i below, it would equal 4 in each job execution.
+
+  branches["branch${i}"] = {
+
+//Parameters:
+
+//param1 : an example string parameter for the triggered job.
+
+//dummy: a parameter used to prevent triggering the job with the same parameters value.
+
+//       this parameter has to accept a different value each time the job is triggered.
+
+    build job: 'freestyle', parameters: [
+
+      string(name: 'param1', value:'test_param'),
+
+      string(name:'dummy', value: "${index}")]
+
+  }
+
+}
+
+parallel branches
+
+
+
+pipeline {
+    agent {
+        docker {
+            image 'maven:3-alpine'
+            args '-v /root/.m2:/root/.m2'
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn -B -DskipTests clean package'
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'mvn test' 
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml' 
+                }
+            }
+        }
+    }
+}
+
+
+
+
+pipeline {
+    agent any
+    stages {
+        stage('Test') {
+            steps {
+                sh 'make check'
+            }
+        }
+    }
+    post {
+        always {
+            junit '**/target/*.xml'
+        }
+        failure {
+            mail to: team@example.com, subject: 'The Pipeline failed :('
+        }
+    }
+}
+
+
+
+
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+            agent any
+            steps {
+                checkout scm
+                sh 'make'
+                stash includes: '**/target/*.jar', name: 'app' 
+            }
+        }
+        stage('Test on Linux') {
+            agent { 
+                label 'linux'
+            }
+            steps {
+                unstash 'app' 
+                sh 'make check'
+            }
+            post {
+                always {
+                    junit '**/target/*.xml'
+                }
+            }
+        }
+        stage('Test on Windows') {
+            agent {
+                label 'windows'
+            }
+            steps {
+                unstash 'app'
+                bat 'make check' 
+            }
+            post {
+                always {
+                    junit '**/target/*.xml'
+                }
+            }
+        }
+    }
+}
