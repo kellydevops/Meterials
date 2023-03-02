@@ -1,0 +1,649 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2708
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Menlo-Bold;\f5\fmodern\fcharset0 CourierNewPSMT;
+\f6\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red31\green32\blue33;\red255\green255\blue255;\red173\green45\blue55;
+\red245\green245\blue247;\red249\green249\blue249;\red98\green9\blue1;\red251\green0\blue7;\red210\green9\blue5;
+\red83\green83\blue83;\red0\green0\blue0;\red0\green0\blue0;\red82\green0\blue83;\red26\green26\blue26;
+\red38\green38\blue38;\red234\green234\blue234;\red21\green23\blue26;\red87\green96\blue106;\red27\green31\blue34;
+\red203\green35\blue57;\red7\green68\blue184;\red6\green33\blue79;\red25\green28\blue31;\red0\green0\blue100;
+}
+{\*\expandedcolortbl;;\cssrgb\c16078\c16863\c17255;\cssrgb\c100000\c100000\c100000;\cssrgb\c74118\c25490\c27843;
+\cssrgb\c96863\c96863\c97647;\cssrgb\c98039\c98039\c98039;\cssrgb\c46667\c6667\c0;\cssrgb\c100000\c0\c0\c4706;\cssrgb\c86667\c13333\c0;
+\cssrgb\c40000\c40000\c40000;\cssrgb\c0\c0\c0\c6667;\cssrgb\c0\c0\c0;\cssrgb\c40000\c0\c40000;\cssrgb\c13333\c13333\c13333;
+\cssrgb\c19608\c19608\c19608;\cssrgb\c93333\c93333\c93333;\cssrgb\c10588\c12157\c13725\c29804;\cssrgb\c41569\c45098\c49020;\cssrgb\c14118\c16078\c18039;
+\cssrgb\c84314\c22745\c28627;\cssrgb\c0\c36078\c77255;\cssrgb\c1176\c18431\c38431;\cssrgb\c12941\c14510\c16078;\cssrgb\c0\c0\c46667;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww28600\viewh17440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 hpe$qXcaJZJ$rcR4fR!Y\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs58 \cf0 Pipeline :- \
+\
+DS Grovy Script\
+\
+\
+pipeline is a workflow with group of events or jobs that are chained and integrated with each other in sequence.\
+or\
+series of steps which orchestrates work required to build , test, deploy application\
+\
+They are defined in a file called jenkinsfile which is stored in the root of project repository\cf2 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl520\sa120\partightenfactor0
+\cf2 Pipeline Terms
+\f1\b\fs54 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 Step\cb1 \
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\f0\b0 \cf2 \cb3 A single task; fundamentally steps tell Jenkins\'a0
+\f2\i what
+\f0\i0 \'a0to do. For example, to execute the shell command\'a0
+\f3 \cf4 \cb5 make
+\f0 \cf2 \cb3 \'a0use the\'a0
+\f3 \cf4 \cb5 sh
+\f0 \cf2 \cb3 \'a0step:\'a0
+\f3 \cf4 \cb5 sh 'make'
+\f0 \cf2 \cb3 . When a plugin extends the Pipeline DSL, that typically means the plugin has implemented a new\'a0
+\f2\i step
+\f0\i0 .\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\b \cf2 \cb3 Node\cb1 \
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\f0\b0 \cf2 \cb3 Most\'a0
+\f2\i work
+\f0\i0 \'a0a Pipeline performs is done in the context of one or more declared\'a0
+\f3 \cf4 \cb5 node
+\f0 \cf2 \cb3 \'a0steps. Confining the work inside of a node step does two things:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Schedules the steps contained within the block to run by adding an item to the Jenkins queue. As soon as an executor is free on a node, the steps will run.\cb1 \uc0\u8232 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Creates a workspace (a directory specific to that particular Pipeline) where work can be done on files checked out from source control.\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\b \cf2 \cb3 Stage\
+\pard\pardeftab720\sl300\sa240\partightenfactor0
+
+\f3\b0 \cf4 \cb5 stage
+\f0 \cf2 \cb3 \'a0is a step for defining a conceptually distinct subset of the entire Pipeline, for example: "Build", "Test", and "Deploy", which is used by many plugins to visualize or present Jenkins Pipeline status/progress
+\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+\cf0 =================================================================\
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\fs134 \cf0 Jekinsfile \'97 
+\fs24 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs47\fsmilli23600 \cf2 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Build\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 '\cf9 Building..\cf7 '\
+					 \cf2 \cb6 \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 '\cf9 Testing..\cf7 '\cf2 \cb6 \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Deploy\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 '\cf9 Deploying....\cf7 '\cf2 \cb6 \
+            \}\
+        \}\
+    \}\
+\}\
+\pard\pardeftab720\sl320\sa240\partightenfactor0
+
+\f0\fs30 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs65\fsmilli32600 \cf2 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Example\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+            echo \cf7 \cb8 "\cf9 Running 
+\f4\b \cf10 \cb11 $\{
+\f3\b0 \cf12 env.BUILD_ID
+\f4\b \cf10 \}
+\f3\b0 \cf9 \cb8  on 
+\f4\b \cf10 \cb11 $\{
+\f3\b0 \cf12 env.JENKINS_URL
+\f4\b \cf10 \}
+\f3\b0 \cf7 \cb8 "\cf2 \cb6 \
+            \}\
+        \}\
+    \}\
+\}
+\fs57\fsmilli28600 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs150 \cf0 scripted pipeline
+\fs24 \
+\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs57\fsmilli28600 \cf2 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+    parameters \{\
+        string(\cf13 name\cf2 : \cf7 \cb8 '\cf9 Greeting\cf7 '\cf2 \cb6 , \cf13 defaultValue\cf2 : \cf7 \cb8 '\cf9 Hello\cf7 '\cf2 \cb6 , \cf13 description\cf2 : \cf7 \cb8 '\cf9 How should I greet the world?\cf7 '\cf2 \cb6 )\
+    \}\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Example\cf7 '\cf2 \cb6 ) \{\
+            steps \{\
+                echo \cf7 \cb8 "
+\f4\b \cf10 \cb11 $\{
+\f3\b0 \cf12 params.Greeting
+\f4\b \cf10 \}
+\f3\b0 \cf9 \cb8   Welcome to Jenkins World!\cf7 "\cf2 \cb6 \
+            \}\
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs114 \cf0 \
+Declarative pipeline\
+\
+\pard\pardeftab720\sa400\partightenfactor0
+
+\fs32 \cf14 \cb3 \expnd0\expndtw0\kerning0
+There are two types of pipeline in jenkins\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf14 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Declarative\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Scripted\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+\cf14 \cb3 Let\'92s look what is the difference between declarative vs scripted pipeline in Jenkins\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The\'a0
+\f1\b key difference
+\f0\b0 \'a0between Declarative pipeline and Scripted pipeline would be with respect to their\'a0
+\f1\b syntaxes
+\f0\b0 \'a0and their\'a0
+\f1\b flexibility
+\f0\b0 .\'a0\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Declarative pipeline is a relatively new feature that supports the pipeline as code concept. It makes the pipeline code easier to read and write. This code is written in a Jenkinsfile which can be checked into a source control management system such as Git.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Whereas, the scripted pipeline is a traditional way of writing the code. In this pipeline, the Jenkinsfile is written on the Jenkins UI instance.\'a0\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Though both these pipelines are based on the groovy DSL, the scripted pipeline uses stricter groovy based syntaxes because it was the first pipeline to be built on the groovy foundation. Since this Groovy script was not typically desirable to all the users, the declarative pipeline was introduced to offer a simpler and more optioned Groovy syntax.\cb1 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The declarative pipeline is defined within a block labelled \'91pipeline\'92 whereas the scripted pipeline is defined within a \'91node\'92.\'a0\cb1 \
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f1\b \cf14 \cb3 Structure and syntax of the Declarative pipeline:
+\f0\b0 \
+The Agent is where the whole pipeline runs. Example, Docker. The Agent has following parameters:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0
+\f1\b \cf14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+any\'a0
+\f0\b0 \'96 Which mean the whole pipeline will run on any available agent.\cb1 \
+\ls4\ilvl0
+\f1\b \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+none\'a0
+\f0\b0 \'96 Which mean all the stages under the block will have to declared with agent separately.\cb1 \
+\ls4\ilvl0
+\f1\b \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+label\'a0
+\f0\b0 \'96\'a0 this is just a label for the Jenkins environment\cb1 \
+\ls4\ilvl0
+\f1\b \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+docker\'a0
+\f0\b0 \'96\'a0 this is to run the pipeline in Docker environment.\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf14 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Pasted Graphic.png \width10300 \height11160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs114 \cf0 \
+\
+ multi branch\
+\
+sequence of steps\
+\
+Jenkinsfile
+\fs24 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs56 \cf0 pipeline \{\
+    agent any\
+    stages \{\
+      \
+        stage('Deploy - Dev\'92) \{\
+            steps \{\
+                echo 'hello' \
+            \}\
+        \}\
+        stage('Deploy - QA') \{\
+            steps \{\
+               echo \'91QA\'92\
+                input "Does the staging environment look ok?"\
+            \}\
+        \}\
+        stage('Deploy - Production') \{\
+            steps \{\
+                echo ' production'\
+            \}\
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f5\fs30 \cf15 \cb16 \expnd0\expndtw0\kerning0
+echo "BUILD_NUMBER" :: $BUILD_NUMBER
+\f6 \cb1 \
+
+\f5 \cb16 echo "BUILD_ID" :: $BUILD_ID
+\f6 \cb1 \
+
+\f5 \cb16 echo "BUILD_DISPLAY_NAME" :: $BUILD_DISPLAY_NAME
+\f6 \cb1 \
+
+\f5 \cb16 echo "JOB_NAME" :: $JOB_NAME
+\f6 \cb1 \
+
+\f5 \cb16 echo "JOB_BASE_NAME" :: $JOB_BASE_NAME
+\f6 \cb1 \
+
+\f5 \cb16 echo "BUILD_TAG" :: $BUILD_TAG
+\f6 \cb1 \
+
+\f5 \cb16 echo "EXECUTOR_NUMBER" :: $EXECUTOR_NUMBER
+\f6 \cb1 \
+
+\f5 \cb16 echo "NODE_NAME" :: $NODE_NAME
+\f6 \cb1 \
+
+\f5 \cb16 echo "NODE_LABELS" :: $NODE_LABELS
+\f6 \cb1 \
+
+\f5 \cb16 echo "WORKSPACE" :: $WORKSPACE
+\f6 \cb1 \
+
+\f5 \cb16 echo "JENKINS_HOME" :: $JENKINS_HOME
+\f6 \cb1 \
+
+\f5 \cb16 echo "JENKINS_URL" :: $JENKINS_URL
+\f6 \cb1 \
+
+\f5 \cb16 echo "BUILD_URL" ::$BUILD_URL
+\f6 \cb1 \
+
+\f5 \cb16 echo "JOB_URL" :: $JOB_URL
+\f6 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+
+\f3 \cf17 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 // in this array we'll place the jobs that we wish to run\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf20 def\cf19  branches \cf20 =\cf19  [:]\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\partightenfactor0
+\cf19 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //running the job 4 times concurrently\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //the dummy parameter is for preventing mutation of the parameter before the execution of the closure.\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //we have to assign it outside the closure or it will run the job multiple times with the same parameter "4"\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //and jenkins will unite them into a single run of the job\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\partightenfactor0
+\cf19 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19 \
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf20 for\cf19  (\cf20 int\cf19  i \cf20 =\cf19  \cf21 0\cf19 ; i \cf20 <\cf19  \cf21 4\cf19 ; i\cf20 ++\cf19 ) \{\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19   \cf20 def\cf19  index \cf20 =\cf19  i \cf18 //if we tried to use i below, it would equal 4 in each job execution.\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19   branches[\cf22 "branch\cf19 $\{i\}\cf22 "\cf19 ] \cf20 =\cf19  \{\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //Parameters:\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //param1 : an example string parameter for the triggered job.\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //dummy: a parameter used to prevent triggering the job with the same parameters value.\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf18 //       this parameter has to accept a different value each time the job is triggered.\cf19 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19     build \cf21 job\cf19 : \cf22 'freestyle'\cf19 , \cf21 parameters\cf19 : [\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19       string(\cf21 name\cf19 : \cf22 'param1'\cf19 , \cf21 value\cf19 :\cf22 'test_param'\cf19 ),\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19       string(\cf21 name\cf19 :\cf22 'dummy'\cf19 , \cf21 value\cf19 : \cf22 "\cf19 $\{index\}\cf22 "\cf19 )]\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19   \}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19 \}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1000\clftsWidth3 \clminw1000 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth16005\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf17 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf19 parallel branches\cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs48\fsmilli24250 \cf23 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent \{\
+        docker \{\
+            image \cf7 \cb8 '\cf9 maven:3-alpine\cf7 '\cf23 \cb6 \
+            args \cf7 \cb8 '\cf9 -v /root/.m2:/root/.m2\cf7 '\cf23 \cb6 \
+        \}\
+    \}\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Build\cf7 '\cf23 \cb6 ) \{\
+            steps \{\
+                sh \cf7 \cb8 '\cf9 mvn -B -DskipTests clean package\cf7 '\cf23 \cb6 \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test\cf7 '\cf23 \cb6 ) \{ \
+            steps \{\
+                sh \cf7 \cb8 '\cf9 mvn test\cf7 '\cf23 \cb6  \
+            \}\
+            post \{\
+                always \{\
+                    junit \cf7 \cb8 '\cf9 target/surefire-reports/*.xml\cf7 '\cf23 \cb6  \
+                \}\
+            \}\
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs52\fsmilli26250 \cf23 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent any\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Test\cf7 '\cf23 \cb1 ) \{\
+            steps \{\
+                sh \cf7 \cb8 '\cf9 make check\cf7 '\cf23 \cb1 \
+            \}\
+        \}\
+    \}\
+    post \{\
+        always \{\
+            junit \cf7 \cb8 '\cf9 **/target/*.xml\cf7 '\cf23 \cb1 \
+        \}\
+        failure \{\
+            mail \cf13 to\cf23 : team\cf24 @example\cf23 .com, \cf13 subject\cf23 : \cf7 \cb8 '\cf9 The Pipeline failed :(\cf7 '\cf23 \cb1 \
+        \}\
+    \}\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f3\fs42\fsmilli21250 \cf23 \cb6 \expnd0\expndtw0\kerning0
+pipeline \{\
+    agent none\
+    stages \{\
+        stage(\cf7 \cb8 '\cf9 Build\cf7 '\cf23 \cb6 ) \{\
+            agent any\
+            steps \{\
+                checkout scm\
+                sh \cf7 \cb8 '\cf9 make\cf7 '\cf23 \cb6 \
+                stash \cf13 includes\cf23 : \cf7 \cb8 '\cf9 **/target/*.jar\cf7 '\cf23 \cb6 , \cf13 name\cf23 : \cf7 \cb8 '\cf9 app\cf7 '\cf23 \cb6  \
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test on Linux\cf7 '\cf23 \cb6 ) \{\
+            agent \{ \
+                label \cf7 \cb8 '\cf9 linux\cf7 '\cf23 \cb6 \
+            \}\
+            steps \{\
+                unstash \cf7 \cb8 '\cf9 app\cf7 '\cf23 \cb6  \
+                sh \cf7 \cb8 '\cf9 make check\cf7 '\cf23 \cb6 \
+            \}\
+            post \{\
+                always \{\
+                    junit \cf7 \cb8 '\cf9 **/target/*.xml\cf7 '\cf23 \cb6 \
+                \}\
+            \}\
+        \}\
+        stage(\cf7 \cb8 '\cf9 Test on Windows\cf7 '\cf23 \cb6 ) \{\
+            agent \{\
+                label \cf7 \cb8 '\cf9 windows\cf7 '\cf23 \cb6 \
+            \}\
+            steps \{\
+                unstash \cf7 \cb8 '\cf9 app\cf7 '\cf23 \cb6 \
+                bat \cf7 \cb8 '\cf9 make check\cf7 '\cf23 \cb6  \
+            \}\
+            post \{\
+                always \{\
+                    junit \cf7 \cb8 '\cf9 **/target/*.xml\cf7 '\cf23 \cb6 \
+                \}\
+            \}\
+        \}\
+    \}\
+\}
+\fs24\fsmilli12250 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\
+\
+\
+node \{\
+	stage  \'91Dev\'92\
+	echo \'91Hello World1\'92\
+stage  \'91QA\'92\
+	echo \'91Hello World2\'92\
+stage \'91PROD\'92\
+	echo \'91Hello World3\'92\
+\}\
+\
+\
+nagiosadmin\
+363Rdv!8qocg!XHCaIRb\
+\
+sas001123@@\
+\
+\
+jenkinsurl/api/json?pretty=true\
+\
+\
+>curl   jenkinsurl/api/json?pretty=true\
+\
+\
+jury/me/configure\
+\
+\
+-g =true&tree=jobs[name,color]\'94\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs48 \cf0 curl -u admin:token \'93jurl/job/failingjob.01/config.xml  -o config.xml}
