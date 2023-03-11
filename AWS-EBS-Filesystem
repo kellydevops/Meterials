@@ -1,0 +1,128 @@
+1. Attach volume from AWS console
+ in  ec2 —> volumes —> select volume —-> actions —>attach volume —> select instace(only same AZ instance can attach)
+ ssh to instance and check
+to list disks in linux system
+#fdisk -l 
+to format the disk (primary or extend)
+#fdisk /dev/xvdf
+options:
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): e
+Partition number (1-4, default 1): 
+First sector (2048-16777215, default 2048): 
+Last sector, +sectors or +size{K,M,G,T,P} (2048-16777215, default 16777215): +7G
+
+Created a new partition 1 of type 'Extended' and of size 7 GiB.
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 1 extended, 3 free)
+   l   logical (numbered from 5)
+Select (default p): l
+
+Adding logical partition 5
+First sector (4096-14682111, default 4096): 
+Last sector, +sectors or +size{K,M,G,T,P} (4096-14682111, default 14682111): +5G
+
+Created a new partition 5 of type 'Linux' and of size 5 GiB.
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+
+
+[root@ip-172-31-17-27 ~]# fdisk -l
+Disk /dev/xvda: 8 GiB, 8589934592 bytes, 16777216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: B23630C7-DB75-4FDA-9D00-2BD0B403F7AC
+
+Device       Start      End  Sectors Size Type
+/dev/xvda1    4096 16777182 16773087   8G Linux filesystem
+/dev/xvda128  2048     4095     2048   1M BIOS boot
+
+Partition table entries are not in disk order.
+
+
+Disk /dev/xvdf: 8 GiB, 8589934592 bytes, 16777216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xaf8dbb95
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/xvdf1       2048 14682111 14680064   7G  5 Extended
+/dev/xvdf5       4096 10489855 10485760   5G 83 Linux
+
+to update disk changes to kernel without reboot instance
+[root@ip-172-31-17-27 ~]# partprobe /dev/xvdf
+
+crate file system 
+[root@ip-172-31-17-27 ~]# mkfs -t ext4 /dev/xvdf5
+
+create a dir
+[root@ip-172-31-17-27 ~]# mkdir /test
+check the content before you mout
+[root@ip-172-31-17-27 ~]# ls /test
+check mounted parturitions on linux system
+[root@ip-172-31-17-27 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        474M     0  474M   0% /dev
+tmpfs           483M     0  483M   0% /dev/shm
+tmpfs           483M  424K  482M   1% /run
+tmpfs           483M     0  483M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  3.1G  4.9G  39% /
+tmpfs            97M     0   97M   0% /run/user/1000
+
+mount logical partion to /test dir 
+[root@ip-172-31-17-27 ~]# mount /dev/xvdf5 /test
+
+check  mounted parturitions
+[root@ip-172-31-17-27 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        474M     0  474M   0% /dev
+tmpfs           483M     0  483M   0% /dev/shm
+tmpfs           483M  424K  482M   1% /run
+tmpfs           483M     0  483M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  3.1G  4.9G  39% /
+tmpfs            97M     0   97M   0% /run/user/1000
+/dev/xvdf5      4.8G   24K  4.6G   1% /test
+[root@ip-172-31-17-27 ~]# ls /test
+lost+found
+move to the /test folder
+[root@ip-172-31-17-27 ~]# cd /test
+create file
+[root@ip-172-31-17-27 test]# touch sample{1..10}
+[root@ip-172-31-17-27 test]# ls
+lost+found  sample10  sample3  sample5  sample7  sample9
+sample1     sample2   sample4  sample6  sample8
+
+come out from /test folder
+[root@ip-172-31-17-27 test]# cd
+unmount 
+[root@ip-172-31-17-27 ~]# umount /test
+
+
+[root@ip-172-31-17-27 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        474M     0  474M   0% /dev
+tmpfs           483M     0  483M   0% /dev/shm
+tmpfs           483M  424K  482M   1% /run
+tmpfs           483M     0  483M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  3.1G  4.9G  39% /
+tmpfs            97M     0   97M   0% /run/user/1000
+
+now check the content in /test folder
+[root@ip-172-31-17-27 ~]# ls /test
+
+to dettach volume first unmount all file system on this disk 
+check df -h command 
+
+go to aws console —> ec2 service volume —> actions —> dettach volume.
