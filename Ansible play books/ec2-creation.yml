@@ -1,0 +1,18 @@
+---
+ - name: create ec2
+   hosts: localhost
+   tasks:
+    - name: start specific number of multiple instances
+      ec2_instance:
+        instance_type: t2.micro
+        image_id: ami-0735c191cf914754d
+        count: 1
+        region: us-west-2
+        network:
+         assign_public_ip: true
+         security_group: default
+         vpc_subnet_id: default
+        state: present
+        tags:
+         foo: bar
+         name: ansibleec2
