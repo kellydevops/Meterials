@@ -25,3 +25,4 @@ configure maven home dir & path
   export M2_HOME=/opt/maven
   export PATH=${M2_HOME}/bin:${PATH}
 :wq! (save & quit)
+#source /etc/profile.d/maven.sh
