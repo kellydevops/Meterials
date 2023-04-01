@@ -1,4 +1,5 @@
-➜   kubectl get secret                     
+➜   kubectl get secret  
+-   kubectl create -f secrets.yml
 ➜   kubectl create -f mongo-deployment.yml 
 ➜   kubectl get deployment                 
 ➜   kubectl create -f mongodb-configmap.yml
