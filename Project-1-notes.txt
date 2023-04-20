@@ -372,3 +372,35 @@ stateful
 Ec2(2VCPUs, 4GB) — Docker and Docker-compose
   2 container one Jenkins and another one is SonarQube
 DockerHub account
+
+
+for more details follow below link:
+https://hakdogan.medium.com/an-end-to-end-tutorial-to-continuous-integration-and-continuous-delivery-by-dockerize-jenkins-f5b9b45b610d
+
+1.Launch t2.medium ubuntu instance
+2. connect and install Docker & Docker-compose
+apt install docker.io
+apt install docker-compose
+
+3. clone https://github.com/hakdogan/jenkins-pipeline.git
+    git clone https://github.com/hakdogan/jenkins-pipeline.git
+
+4. need to launch Jenkins & SonarQube containers
+
+  if we go to folder called jenkins-pipeline we can see 
+   docker-compose.ym file in that file we will nuild Jenkins & SonarQube images and run as containers
+    
+  for Sonarqube there is folder called sonarqube
+  for Jenkins there is folder called jenkins
+
+  in jenkins folder update latest image(get it from hub.docker.com search jenkins) in Dockerfile
+    cd jenkins-pipeline
+    vi jenkins/Dockerfile
+      FROM jenkins/jenkins:lts-jdk11 
+ 
+   : wq! (save & quit)
+   
+    
+    vi sonarqube/Dockerfile
+    FROM sonarqube:6.7-alpine
+    : wq! (save & quit)
