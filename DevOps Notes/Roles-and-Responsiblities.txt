@@ -1,0 +1,21 @@
+ I’m so & So working as DevOps engineer with xyz org, having 5 yr IT exp. I’m working for client called xyz, it is  healthcare domain. For this we are using DevOps Practices like CI/CD CD, configuration management for infra automation we use CHEF/Ansible and Terraform and cloud platform AWS/Azure.
+   
+   Comming to our projects env one of our Project 
+   
+CI/CD using Jenkins,github,docker ,ECS and ECR on AWS platform
+
+once Developer commit the code on Github, Jenkins will startd build and create Docker image and push it AWS ECR and deployed to ECS.
+
+ we use jenkins pipelines for CI/CD, to deploy microservice, code fetch form github and jenins pipeline
+checkout the code, build , run code quality, build docker image, upload to Docker Hub and Deploy to remote
+server.
+   docker,dockerhub,conayinerised jenkins and SonarQube. docker compose to manage conatiners(jenkins and SonarQube)
+  we have jenkins pipeline in that pipeline various steps we hav
+
+   And also we use Configuration Management tool Ansible to automate infra and regular tasks like install       
+   s/w, deployments and patching etc..
+   and also we use Infra provisong tool Terraform to mainatain Hybrid cloud and infra.
+
+   And  We containerised our applications and micro services for that we are using docker and Kubernetes.
+   We have Kubernetes cluster setup AWS platform using Kubeadm and also we are having Kubernetes managed servive EKS onn AWS.
+   We are working on Agile model, we have 2 weeks sprint. For tickets and Boards we are using JIRA tool.

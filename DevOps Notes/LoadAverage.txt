@@ -1,0 +1,16 @@
+In Linux, load average is a measure of the system's CPU utilization over a period of time. It represents the average number of processes that are running or waiting to run in the system's CPU queue. Load average is typically represented as three values, which indicate the system's load over the last 5, 10, and 15 minutes, respectively.
+
+The load average values are displayed using the "uptime" or "top" commands, among others, and are typically shown in the format like this: "0.50 0.75 0.80". Each load average value represents the average number of processes in the CPU queue during the specified time period.
+
+Here's how to interpret load average values in Linux:
+
+Load average below 1.0: If the load average is consistently below 1.0, it indicates that the system's CPU has enough capacity to handle the processes without any significant waiting time. This means the system is not heavily loaded and has ample CPU resources available.
+
+Load average around 1.0: If the load average is consistently around 1.0, it indicates that the system's CPU is fully utilized and there may be some processes waiting in the CPU queue during peak usage. This suggests the system is moderately loaded, but not overloaded.
+
+Load average above 1.0: If the load average is consistently above 1.0, it indicates that the system's CPU is overloaded and there are more processes waiting in the CPU queue than the CPU can handle immediately. This suggests the system is heavily loaded and may experience performance degradation or slowdowns.
+
+It's important to note that load average values are relative and should be interpreted in the context of the system's hardware capabilities, workload, and performance requirements. Additionally, load average values should be considered along with other system performance metrics to get a comprehensive understanding of the system's overall performance and resource utilization.
+
+
+

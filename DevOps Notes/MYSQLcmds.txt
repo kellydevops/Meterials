@@ -1,0 +1,79 @@
+commands for PostgreSQL and MySQL database administration, troubleshooting, and performance tuning:
+
+PostgreSQL:
+
+Installation and Setup:
+
+Install PostgreSQL:
+Ubuntu: sudo apt-get install postgresql
+CentOS: sudo yum install postgresql-server
+Configure PostgreSQL:
+Ubuntu: sudo nano /etc/postgresql/{version}/main/postgresql.conf
+CentOS: sudo nano /var/lib/pgsql/{version}/data/postgresql.conf
+
+Create a new database:
+createdb mydatabase
+Create a new user:
+createuser myuser
+Grant permissions to a user:
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
+Monitoring and Logging:
+Check PostgreSQL server status:
+sudo systemctl status postgresql
+Access PostgreSQL logs:
+Ubuntu: tail -f /var/log/postgresql/postgresql-{version}-main.log
+CentOS: tail -f /var/lib/pgsql/{version}/data/pg_log/postgresql.log
+Backup and Recovery:
+Perform a full backup:
+pg_dump -U myuser -W -F t mydatabase > mydatabase.tar
+Restore from a backup:
+pg_restore -U myuser -Ft -C -d mydatabase < mydatabase.tar
+Troubleshooting:
+Check slow queries:
+pg_stat_activity (to view current queries and their statuses)
+pg_stat_statements extension (to analyze query performance)
+Analyze query execution plan:
+EXPLAIN <query>
+Performance Tuning:
+Optimize queries with indexing:
+CREATE INDEX myindex ON mytable (mycolumn);
+Adjust PostgreSQL configuration:
+Ubuntu: sudo nano /etc/postgresql/{version}/main/postgresql.conf
+CentOS: sudo nano /var/lib/pgsql/{version}/data/postgresql.conf
+MySQL:
+
+Installation and Setup:
+Install MySQL:
+Ubuntu: sudo apt-get install mysql-server
+CentOS: sudo yum install mysql-server
+Configure MySQL:
+Ubuntu: sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+CentOS: sudo nano /etc/my.cnf
+Create a new database:
+CREATE DATABASE mydatabase;
+Create a new user:
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
+Grant permissions to a user:
+GRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';
+Monitoring and Logging:
+Check MySQL server status:
+sudo systemctl status mysql
+Access MySQL logs:
+Ubuntu: tail -f /var/log/mysql/error.log
+CentOS: tail -f /var/log/mysqld.log
+Backup and Recovery:
+Perform a full backup:
+mysqldump -u myuser -p mydatabase > mydatabase.sql
+Restore from a backup:
+mysql -u myuser -p mydatabase < mydatabase.sql
+Troubleshooting:
+Check slow queries:
+SHOW FULL PROCESSLIST;
+Analyze query execution plan:
+EXPLAIN <query>
+Performance Tuning:
+Optimize queries with indexing:
+CREATE INDEX myindex ON mytable (mycolumn);
+Adjust MySQL configuration:
+Ubuntu: sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+CentOS: `sudo nano

@@ -1,0 +1,88 @@
+top command is used to show the Linux processes. It provides a dynamic real-time view of the running system. Usually, this command shows the summary information of the system and the list of processes or threads which are currently managed by the Linux Kernel. As soon as you will run this command it will open an interactive command mode where the top half portion will contain the statistics of processes and resource usage. And Lower half contains a list of the currently running processes. Pressing q will simply exit the command
+
+PID: Shows task’s unique process id.
+PR: The process’s priority. The lower the number, the higher the priority.
+VIRT: Total virtual memory used by the task.
+USER: User name of owner of task.
+%CPU: Represents the CPU usage.
+TIME+: CPU Time, the same as ‘TIME’, but reflecting more granularity through hundredths of a second.
+SHR: Represents the Shared Memory size (kb) used by a task.
+NI: Represents a Nice Value of task. A Negative nice value implies higher priority, and positive Nice value means lower priority.
+%MEM: Shows the Memory usage of task.
+RES: How much physical RAM the process is using, measured in kilobytes.
+COMMAND: The name of the command that started the process.
+
+
+Display Specific User Process:
+
+top -u username
+
+
+
+top displays uptime information
+Tasks displays process status information
+%Cpu(s) displays various processor values
+MiB Mem displays physical memory utilization
+MiB Swap displays virtual memory utilization
+
+
+Tasks
+The second line is the Tasks output, and it's broken down into five states. These five states display the status of processes on the system:
+
+total shows the sum of the processes from any state.
+running shows how many processes are handling requests, executing normally, and have CPU access.
+sleeping indicates processes awaiting resources, which is a normal state.
+stopped reports processes exiting and releasing resources; these send a termination message to the parent process.
+zombie refers to a process waiting for its parent process to release it; it may become orphaned if the parent exits first.
+Zombie processes usually mean an application or service didn't exit gracefully. A few zombie processes on a long-running system are not usually a problem.
+
+Tasks: 220 total, 3 running, 217 sleeping, 0 stopped, 0 zombie
+%Cpu(s)
+Career advice
+Take a sysadmin skills assessment
+Explore training and certification options
+Red Hat Certification remote exams FAQ
+10 resources to make you a better communicator
+How to explain modern software development in plain English
+Learning path: Getting started with Red Hat OpenShift Service on AWS (ROSA)
+Values related to processor utilization are displayed on the third line. They provide insight into exactly what the CPUs are doing.
+
+us is the percent of time spent running user processes.
+sy is the percent of time spent running the kernel.
+ni is the percent of time spent running processes with manually configured nice values.
+id is the percent of time idle (if high, CPU may be overworked).
+wa is the percent of wait time (if high, CPU is waiting for I/O access).
+hi is the percent of time managing hardware interrupts.
+si is the percent of time managing software interrupts.
+st is the percent of virtual CPU time waiting for access to physical CPU.
+Values such as id, wa, and st help identify whether the system is overworked.
+
+%Cpu(s): 19.3 us, 4.0 sy, 0.0 ni, 74.7 id, 0.0 wa, 0.3 hi, 1.7 si, 0.0 st
+
+MiB Memory
+The final two lines of top's output provide information on memory utilization. The first line—MiB Mem—displays physical memory utilization. This value is based on the total amount of physical RAM installed on the system.
+
+MiB Mem: 3898.5 total, 385.2 free, 1167.0 used, 2346.2 buff/cache
+Note: The term mebibyte (and similar units, such as kibibytes and gibibytes) differs slightly from measurements such as megabytes. Mebibytes are based on 1024 units, and megabytes are based on 1000 units (decimal). Most users are familiar with the decimal measurement, but it is not as accurate as the binary form. The top utility reports memory consumption in decimal.
+
+total shows total installed memory.
+free shows available memory.
+used shows consumed memory.
+buff/cache shows the amount of information buffered to be written.
+MiB Swap
+Linux can take advantage of virtual memory when physical memory space is consumed by borrowing storage space from storage disks. The process of swapping data back and forth between physical RAM and storage drives is time-consuming and uses system resources, so it's best to minimize the use of virtual memory.
+
+MiB Swap: 3898.0 total, 3898.0 free, 0.0 used, 2433.1 avail Mem
+
+
+total shows total swap space.
+free shows available swap space.
+used shows consumed swap space.
+buff/cache shows the amount of information cached for future reads.
+In general, a high amount of swap utilization indicates the system does not have enough memory installed for its tasks. The solution is to either increase RAM or decrease the workload.
+
+
+============
+
+
+echo ~/Folder_1/ ~/Folder_2/ ~/Folder_3/ | xargs -n 1 cp -v ~/Folder_4/File_Name.txt
