@@ -7,3 +7,8 @@
 ➜   kubectl create -f mongo-express.yml
 ➜   kubectl get svc       
 ➜   kubectl get deployment
+
+if you use minikube cluster forward port using below command:
+
+kubectl port-forward service/mongo-express-service 8081:8081
+
