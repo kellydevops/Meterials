@@ -288,10 +288,11 @@ build:
 DOCKER_LOGIN=“copy that and paste”
 ${DOCKER_LOGIN}
 
+remove ${DOCKER_LOGIN}
+goto ecr repository select push commands copy the command from console
+example: aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin <id>.dkr.ecr.us-west-2.amazonaws.com
+
 manually execute this cmd on Jenkins servers
-#aws ecr get-login --region us-west-2
- remove -e none from output
- copy that and paste in “<>”
 
 step2: Docker build and publish:
    ecr repo name: hello-world
