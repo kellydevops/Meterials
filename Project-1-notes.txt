@@ -405,3 +405,20 @@ apt install docker-compose
     vi sonarqube/Dockerfile
     FROM sonarqube:6.7-alpine
     : wq! (save & quit)
+
+
+now you can check to conatainer 
+#docker ps
+
+goto browser and access Jenkins and sonarqube using docker host ip
+http://<docker host ip>:8080
+http://<docker host ip>:9000
+
+login to jenkins 
+install docker plugin
+add credentials for DockerHub account
+go to manage jenkins --> manage tools --> add maven and Docker --> save
+create job with type pipeline  -- use the github url https://github.com/hakdogan/jenkins-pipeline.git
+and save 
+
+then run the job
