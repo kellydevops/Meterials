@@ -4,3 +4,51 @@
    sudo yum update && sudo yum install jfrog-artifactory-oss
    systemctl start artifactory.service
    systemctl status artifactory.service
+
+====================================================
+Jenkins --->Jfrog Artifactory
+
+Universal Binary repository:
+to mainatain binaries centrally
+ex: Jfrog Artifactory, Nexus, Archiva
+
+1.VCS suitable for Files not for binaries
+sometimes binaries size will be larger.
+
+2.  to mainatin version of binaries
+
+3. proxy for external downloads
+
+=========
+
+
+Installed Jfrog server
+GUI logged in
+created Local Repo
+integrate Jenkins w/t Artifactory  -- install plugin Artifactory
+once build is done upload war file into Artifactory repo
+
+on browser copy below link
+https://jfrog.com/community/download-artifactory-oss/
+
+wget https://releases.jfrog.io/artifactory/artifactory-rpms/artifactory-rpms.repo -O jfrog-artifactory-rpms.repo;
+sudo mv jfrog-artifactory-rpms.repo /etc/yum.repos.d/;
+sudo yum update && sudo yum install jfrog-artifactory-oss
+
+ systemctl start artifactory.service
+
+1. Local Repo: on Jforg created a folder to upload Artifacts
+  2.Remote Repo: on Remote site 
+  3. virtual Repo: combination of local and remote
+
+install artifactory plugin
+manage jenkins --> manage plugins -- available -- search for Artifactory -- install 
+
+goto manage jenkins ---> configuration system -- > JFrog --> give ID(any name like jforg)
+   ---> JFrog Platform URL (artifactory url publicip:8082)
+   ---> Default Deployer Credentials - give username and credential of artifacroy server
+
+
+go to jenkins job -- configuration --> post build action select "deploy artfacts to artifactory"
+
+
