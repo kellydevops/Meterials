@@ -1,0 +1,74 @@
+main.tf
+
+provider "aws" {
+    region = var.region
+}
+resource "aws_instance" "web" {
+  ami           = var.ami
+  instance_type = var.instancetype[0]
+
+  tags = {
+    Name = var.name[0]
+  }
+}
+resource "aws_s3_bucket" "testbkt" {
+  bucket = "mytftestbkt-kelly"
+  tags = {
+    Name        = var.name[1]
+  }
+}
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+  owners = ["099720109477"] # Canonical
+}
+
+resource "aws_instance" "web1" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instancetype[1]
+
+  tags = {
+    Name = var.name[2]
+  }
+}
+
+=============
+variables.tf
+
+variable "region" {
+  type = string
+  #default = "us-west-2"
+}
+variable "ami" {
+  type = string
+  #default = "ami-0571c1aedb4b8c5fc"
+}
+variable "name" {
+  type = list
+  #default = ["HelloWorld","My bucket","HelloWorld-1"]
+}
+variable "instancetype" {
+  type = list
+  #default = ["t2.micro","t3.micro"]
+}
+
+======================
+
+values.tfvars
+
+  region = "us-west-2"
+  name = ["HelloWorld","My bucket","HelloWorld-1"]
+  ami = "ami-0571c1aedb4b8c5fc"
+  instancetype = ["t2.micro","t3.micro"]
+
+
+
+=========================
