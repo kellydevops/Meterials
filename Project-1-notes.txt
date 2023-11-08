@@ -285,7 +285,8 @@ in configuration
 build: 
    excute-shell : 
 #!/bin/bash
-DOCKER_LOGIN=“copy that and paste”
+copy that and paste  your docker ecr repo push command first step like below
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 368938722695.dkr.ecr.us-west-2.amazonaws.com
 ${DOCKER_LOGIN}
 
 remove ${DOCKER_LOGIN}
@@ -344,18 +345,7 @@ chmod 777 /var/run/docker.sock
 
 re-run the job
 
-
-unknown shorthand flag: 'e' in -e
-See 'docker login --help'.
-[root@ip-10-0-1-170 ~]# 
-
-#!/bin/bash
-DOCKER_LOGIN=`aws ecr get-login --region us-west-2`
-DOCKER_LOGIN=“VAlue”
-${DOCKER_LOGIN}
-stateless
-stateful
-		
+	
 		==========================
 		Code checkout
 		Run tests
