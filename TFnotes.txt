@@ -74,3 +74,31 @@ provider details
 resources
 variables
 output
+======================
+
+
+main.tf
+provider "aws" {
+  region = "us-west-2"
+}
+resource "aws_instance" "web" {
+  ami           = "ami-093467ec28ae4fe03"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+
+save 
+
+run below cmds:
+
+trraform init
+terraform plan
+terraform apply
+
+
+to delete 
+terraform destroy
