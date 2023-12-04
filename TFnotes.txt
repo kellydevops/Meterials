@@ -1,0 +1,76 @@
+terraform apply/plan/destroy
+================================
+download TF 
+https://developer.hashicorp.com/terraform/downloads
+
+extract -- run cmd
+
+
+ install terraform
+ 
+
+
+download and install visualstudi code editor
+
+create folder
+create file main.tf
+
+we are configuring aws resource 
+aws cli configuration
+
+
+
+
+aws 
+console. u p
+Programtic
+API/CLI/SDKs
+
+2 ak sk
+
+
+curd
+create,update,read,delete
+
+1.install terraform
+use the below link:
+https://developer.hashicorp.com/terraform/downloads
+
+2.install visual studio code editor or vi editor
+https://code.visualstudio.com/download
+
+3.install aws cli 
+have AWS account & get access key & secret key from console
+4.configure access & secret key on workstation
+
+aws access key & secret key(to oprate aws through programtic like API/CLI/SDKs/Powershell)
+install aws cli on you workstation(laptop)
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+open powershell/cmd run 
+#aws --version
+
+to get access and secret key goto console -->click user account (on top right side corner) -->click on security credentials -->go to access keys --> create accesskey
+
+configure credentials
+#aws configure
+accesskey:
+secret key:
+region:
+output format:
+
+Terraform lifecycle
+write code
+init(very first time we will run)
+plan
+apply
+
+
+create folder
+main.tf
+
+provider details
+resources
+variables
+output
