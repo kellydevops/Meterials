@@ -1,0 +1,71 @@
+What is Service?
+
+In the context of Kubernetes, a service is a way to expose an application running on a set of Pods as a network service. 
+Kubernetes Services come in several types, each serving a different purpose
+
+Different types of services
+
+1.ClusterIp Service
+
+2.Node Port Service
+
+3.Load Balancer Service
+etc
+
+1.ClusterIP Service: This is the default type of service in Kubernetes. It gives a service an internal IP address so it can be accessed within the cluster. 
+This type of service is useful when you want to expose a service within the cluster only.
+
+Here's a basic example of a ClusterIP service in YAML
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+
+2.NodePort Service: This type of service exposes a service on each Node’s IP at a static port (the NodePort). A NodePort service can be accessed externally through <NodeIP>:<NodePort>. 
+It's a way to expose the service outside the cluster.
+
+Example of a NodePort service in YAML:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nodeport-service
+spec:
+  type: NodePort
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+      nodePort: 30007
+
+3.LoadBalancer Service: This service type exposes the service externally using a cloud provider’s load balancer. 
+It assigns the service a public IP address so that it can be accessed from outside the Kubernetes cluster.
+
+Example of a LoadBalancer service in YAML
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-loadbalancer-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+
+
+Each of these service types plays a crucial role in application deployment and accessibility in a Kubernetes environment. 
+They enable different ways to manage and expose applications running on clusters.

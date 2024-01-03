@@ -1,0 +1,133 @@
+
+                                Taints
+
+Kubernetes scheduler:- ensures that the right node is selected by checking the node’s capacity for cpu & RAM and comparing it to the POD’s resource requests. 
+                       The scheduler makes sure that, each of these resources types; the sum of all resource requests by the pod’s container is 
+                       less thain the capacity of the node. This mechanism ensures that Pods end up on nodes with spare resources. 
+
+                       Kubernetes scheduler’s default behavior works well for most cases – for example, it ensure that pods are only placed on nodes that have sufficient free resources, 
+                       it tries to spread pods from the same set ( ReplicaSet, StatefulSet, Etc) across nodes, it tries to balance out the resource utilization of nodes, etc.
+
+
+When Pods are scheduled Where does Pods Go
+
+   The answer to the above question is (a) Node selectors (b) Node Affinity (c) Taints & Tolerances
+
+   (a) Nodeselector : 
+       In Manifest 
+       Spec: 
+        nodeSelector: 
+         name: Sample 
+
+Check Existing labels: 
+     Kubectl get nodes - -show labels 
+  Add new labels to node:
+      Kubectl label nodes<node-name> <label-key>=<label-value>
+      Ex: 
+      Kubectl label nodes ip-172.10.43.76 name=sample 
+
+Node Affinity 
+
+     As we’ve mentioned earlier, nodeSelector is the simplest Pod scheduling constraint in kubernetes. The affinity greatly expands the node selector Functionality introducing following 
+     improvement
+
+   1) Affinity language is more expressive ( more logical operators to control how pods are scheduled )
+    They have 2 types of rules 
+   (i) Preferred rules 
+   (ii) Required rules
+    Preferred rules, a pod will be assigned on a non matching node if & only if no other node in the cluster matches the specified. Labels is  
+    
+    1)) PreferredDuringSchedulingIgnoredduringExecution is preferred rule affinity 
+   
+    Required rules, if there are no matching nodes, and then the pod won’t be scheduled. 
+    There are a couple of required rules affinities namely are 2 types
+
+  1) requiredDuringSchedulingIgnoredDuringExecution A pod will be scheduled only if the node labels specified in the pod spec matches with the 
+    labels on the node. However, once the pod is scheduled, labels are ignored meaning even if the node labels changes, the pod will continue to run that node. 
+  
+  2) requiredDuringSchedulingRequiredDuringExecution A pod will be scheduled only if the node labels specified in the pod spec matches with the 
+     labels on the node and if the labels change in future, the pod will be evicted. This effects is similar to NoExcute taint with one significant difference. 
+     When NoExcecute taints is applied on a node, every pod not having a toleration will be evicted, whereas removing/changing 
+     a label will remove only the pod that do specify a different label. 
+
+
+NodeAffinity works on label matching. Let’s label node as, 
+
+
+Kubectl label nodes <nodeID/Name> node=workerone 
+
+
+In manifest file 
+Affainity: 
+ nodeaffainity: 
+  requiredDuringSchedulingIgnoredDuringExecution ----> pod will not sheduled when lables are not matched
+   nodeSelectorTerms: 
+   -matchExpressions: 
+    -Key: “node” 
+    Operator: In 
+    Values: 
+   -workerone 
+
+
+In yaml file 
+Affainity: 
+nodeaffainity: 
+preferredDuringSchedulingIgnoredDuringExecution -->soft rule (as Pod will be schedule even when labels aren’t matched but execution will not be done 
+-weight: 1 
+ -matchExpressions: 
+ -Key: “node” 
+ Operator: In 
+ Values: 
+ -workerone 
+
+
+(c) Taints & Tolerances
+
+Taints are a property of node that allows you to repel a set of pods unless those pods explicitly tolerate 
+the said taint. 
+
+Taints has three parts. A key, value & an effect 
+
+How to add label to taints
+
+Kubectl taint nodes <node> node=HatesPods:NoSchedule
+
+The above taint has key=node, value=HatePods and effects as NoSchedule. These key value pairs are configurable. Any pod that doesn’t have a matching toleration to this taint will not be scheduled on 
+node1 
+
+To remove the above taint, we can run the following command
+
+Kubectl taint nodes node1.compute.infracloud.io.thisnode:NoSchedule
+
+
+
+Effects are 3 types 
+. NoSchedule – Doesn’t Schedule a pod without matching tolerations
+. PreferNoSchedule – Prefers that the pod without matching toleration be not scheduled on the node. It is a softer version of NoSchedule Effect. 
+  kubernetes avoids scheduling Pods that do not tolerate this taint onto the node. This one basically means, do it, if possible
+
+. NoExecute – Evicts the pods that don’t have matching tolerations. 
+
+
+How to taint a node ? 
+
+kubectl taint node node(this is a node name which we give it) taintkey=taintvalue:NoExecute
+ 
+kubectl taint nodes <node> node=HatesPods:PreferNoSchedule 
+
+The above taint has key=node, value=HatesPods & Effect as NoSchedule
+
+Toleration is the one which we need to keep it in yaml file in order to execute the tainted pods
+
+In manifest file 
+Keep below spec 
+tolerations: 
+  -key: “node” 
+  operator: “Equal” 
+  value: “HatesPods” 
+  effect: “NoSchedule”
+
+
+
+  
+
