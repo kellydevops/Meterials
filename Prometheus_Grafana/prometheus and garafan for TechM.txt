@@ -1,0 +1,215 @@
+PROMETHEUS INSTALLATION ON UBUNTU
+
+
+STEP 1
+
+Create data & configs directories for Prometheus
+ $ sudo mkdir /var/lib/prometheus
+
+Prometheus primary configuration files directory is /etc/prometheus/. It will have some sub-directories:-
+
+for i in rules rules.d files_sd; do sudo mkdir -p /etc/prometheus/${i}; done
+
+
+Step 3: Download Prometheus
+
+  $ sudo apt update
+  $ sudo apt -y install wget curl vim
+
+Then download latest binary archive for Prometheus.
+  $ mkdir -p /tmp/prometheus && cd /tmp/prometheus
+  $ curl -s https://api.github.com/repos/prometheus/prometheus/releases/latest | grep browser_download_url | grep linux-amd64 | cut -d '"' -f 4 | wget -qi -
+
+Extract the file:
+  $ tar xvf prometheus*.tar.gz
+  $ cd prometheus*/
+
+Move the binary files to /usr/local/bin/ directory.
+   $ sudo mv prometheus promtool /usr/local/bin/
+
+check the installed version :- 
+  $ prometheus --version
+  $ promtool --version
+
+
+Move Prometheus configuration template to /etc directory.
+  $ sudo mv prometheus.yml /etc/prometheus/prometheus.yml
+
+Also move consoles and console_libraries to /etc/prometheus directory:
+  $ sudo mv consoles/ console_libraries/ /etc/prometheus/
+  $ cd $HOME
+
+Step 4: Configure Prometheus
+
+Create or edit a configuration file for Prometheus – /etc/prometheus/prometheus.yml.
+  $ sudo vim /etc/prometheus/prometheus.yml
+
+# my global config
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+    - targets: ['ip:9090']
+
+
+Create a Prometheus systemd Service unit file
+To be able to manage Prometheus service with systemd, you need to explicitly define this unit file.
+    $ sudo tee /etc/systemd/system/prometheus.service<<EOF
+[Unit]
+Description=Prometheus
+Documentation=https://prometheus.io/docs/introduction/overview/
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecReload=/bin/kill -HUP \$MAINPID
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/var/lib/prometheus \
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries \
+  --web.listen-address=0.0.0.0:9090 \
+  --web.external-url=
+
+SyslogIdentifier=prometheus
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+
+
+Change directory permissions.
+ for i in rules rules.d files_sd; do sudo chown -R prometheus:prometheus /etc/prometheus/${i}; done
+for i in rules rules.d files_sd; do sudo chmod -R 775 /etc/prometheus/${i}; done
+ $ sudo chown -R prometheus:prometheus /var/lib/prometheus/
+
+Reload systemd daemon and start the service:
+  $ sudo systemctl daemon-reload
+  $ sudo systemctl start prometheus
+  $ sudo systemctl enable prometheus
+
+
+check the status of prometheus 
+  $ systemctl status prometheus
+
+finally check the port number with ip address { ip:9090 }
+
+```````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+Grafana installation
+
+https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/
+
+check the status of the grafana 
+ $ systemctl status grafana-server.service 
+
+Access Grafana Dashboard using the server IP address and port 3000.
+  http://ip:3000 
+Username: admin
+Password: admin
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+Installation of  Prometheus Node Exporter 
+
+
+1. Download Node Exporter
+     $ wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+
+2. Extract Node Exporter and move binary 
+      $ tar xvf node_exporter-1.3.1.linux-amd64.tar.gz
+
+Switch to the node_exporter directory:
+  $ cd node_exporter-1.3.1.linux-amd64
+
+copy the binary file with the following command:
+   $ sudo cp node_exporter /usr/local/bin
+
+remove the directory that we created after extracting the zip file content:
+    # Exit current directory
+    $ cd ..
+
+    # Remove the extracted directory
+    $ rm -rf ./node_exporter-1.3.1.linux-amd64
+
+3. Create Node Exporter User
+     $ sudo useradd --no-create-home --shell /bin/false node_exporter
+ 
+set the owner of the binary node_exporter to the recently created user:
+     $ sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
+
+4. Create and start the Node Exporter service
+     Create the node_exporter.service file with nano:
+        $ sudo nano /etc/systemd/system/node_exporter.service
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+
+     $ sudo systemctl daemon-reload
+     $ sudo systemctl start node_exporter
+
+ access your server through the web browser at port 9100 
+       http://ip:9100 
+
+add ip:9100 to the prometheus.yml which is provided in the /etc/prometheus and restart the prometheus.service  
+
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+GRAFANA DASHBOARD
+
+
+ 1 :- Set Prometheus as a Grafana datasource:
+
+               - setting > add new data source > add prometheus > http url :- http://ip:9090 > save and test 
+ 
+
+  2 :- Grafana and Prometheus = to know the cpu/memory/ram/disk Utilization we will provide 14513 number while Imort
+                 
+                - dash boards > + import > import via grafana.com { 14513 } and load > add name and add add data source as a prometheus > import
+
+
+3 :-  cpu utilization for prometheus 
+
+                 - add query in metric browser { avg by (instance) (irate(process_cpu_seconds_total{job="prometheus"}[1m])) } 
+                 - add title and apply
+                 - add dashboard name and save 
+
