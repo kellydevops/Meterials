@@ -45,12 +45,15 @@ $ systemctl status docker
 
 
 Step3) Install kubeadm, kubelet, and kubectl (Run it on MASTER & WORKER Nodes)
-$ apt-get update && sudo apt-get install -y apt-transport-https curl
-$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-$ cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
-deb https://apt.kubernetes.io/ kubernetes-xenial main
-EOF
+sudo apt-get update   
+sudo mkdir -p /etc/apt/keyrings   
+sudo apt-get install -y apt-transport-https ca-certificates curl
 
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/kubernetes-apt-keyring.gpg
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+sudo apt-get update   
+sudo apt-get install -y kubelet kubeadm kubectl
 
 3a) Installing Kubeadm, Kubelet, Kubectl:
 
