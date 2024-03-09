@@ -1,0 +1,82 @@
+2379,6443,10250,10251,10252
+
+Step1) Disable Swap (Run it on MASTER & WORKER Nodes)
+$ swapoff -a
+$ sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+
+1a) Bridge Traffic
+
+$ lsmod | grep br_netfilter 
+$ sudo modprobe br_netfilter
+$ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+$ sudo sysctl --system
+
+
+Step2) Install Docker (Run it on MASTER & WORKER Nodes)
+$ apt-get update 
+$ apt install docker.io
+$ systemctl start docker
+
+
+
+2a) Setting up the Docker daemon
+
+$ cat <<EOF | sudo tee /etc/docker/daemon.json
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2"
+}
+EOF
+
+
+2b) Reload, enable and restart the docker service
+
+$ systemctl daemon-reload
+$ systemctl enable docker
+$ systemctl restart docker
+$ systemctl status docker
+
+
+Step3) Install kubeadm, kubelet, and kubectl (Run it on MASTER & WORKER Nodes)
+$ apt-get update && sudo apt-get install -y apt-transport-https curl
+$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+$ cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+
+3a) Installing Kubeadm, Kubelet, Kubectl:
+
+$ apt-get update
+$ apt-get install -y kubelet kubeadm kubectl
+$ apt-mark hold kubelet kubeadm kubectl
+
+
+3b) Start and enable Kubelet
+
+$ systemctl daemon-reload
+$ systemctl enable kubelet
+$ systemctl restart kubelet
+$ systemctl status kubelet
+
+
+Step4) Initializing CONTROL-PLANE (Run it on MASTER Node only)
+$ kubeadm init --pod-network-cidr 10.0.0.0/16
+
+$ mkdir -p $HOME/.kube
+$ cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+$ chown $(id -u):$(id -g) $HOME/.kube/config
+
+wget https://docs.projectcalico.org/manifests/calico.yaml
+
+
+kubectl apply -f calico.yaml
+
+
