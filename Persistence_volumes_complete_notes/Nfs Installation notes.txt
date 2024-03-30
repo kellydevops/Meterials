@@ -1,0 +1,55 @@
+Nfs-server Installation
+ first update your system
+    apt update
+step:-1
+ Installation:
+      sudo apt install nfs-kernel-server
+step:-2
+
+First of all, we will create a directory named “/mnt/share” that is going to be shared by all client systems
+    sudo mkdir -p /mnt/share
+step:-3(Set directory permissions0
+ Next, set the permissions of the created “/mnt/share” directory so that all client machines can easily access it
+  sudo chown -R nobody:nogroup /mnt/share/
+
+Step:-4  (Set file Permissions)
+  Set the file permissions as required. In our case, we have allocated the read, write, and execute permissions to the “/mnt/share” directory files
+  sudo chmod 777 /mnt/share/
+
+Step:-5 (grant NFS access)
+    In this step, we will grant access to the client system for accessing the NFS server. To do so  open "/etc/exports" in the vi editor
+
+   sudo vi /etc/exports
+   /mnt/share IP(rw,sync,no_subtree_check)
+
+
+Step:-6 (Exporting NFS directory)
+    Utiliz the provided command for exporting the NFS shared directory
+     sudo  exportfs -a
+ 
+Step:-7 (Restart NFS server)  
+   Write out the provided command for restarting the NFS server 
+   sudo systemctl restart nfs-kernel-server
+
+-------------------------------------
+Requirements On NFSclinet
+
+
+
+Install nfs-common (install in client servers)
+ sudo apt update
+
+sudo apt install nfs-common 
+ 
+
+sudo systemctl start nfs-common  
+
+
+
+root@ip-172-31-18-53:~# sudo find / -lname '/dev/null' 2>/dev/null | grep 'nfs-common.service'
+
+/usr/lib/systemd/system/nfs-common.service
+
+
+sudo systemctl daemon-reload
+

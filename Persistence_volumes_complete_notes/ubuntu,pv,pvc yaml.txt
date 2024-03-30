@@ -1,0 +1,57 @@
+root@ip-172-31-25-238:~# cat ubuntu.yml 
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ubuntu-mongo-test-backup
+spec:
+  serviceName: "ubuntu-mongo-test-backup"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ubuntu-mongo-test-backup
+  template:
+    metadata:
+      labels:
+        app: ubuntu-mongo-test-backup
+    spec:
+      containers:
+      - name: ubuntu-mongo-test-backup
+        image: ubuntu:20.04
+        ports:
+        - containerPort: 83
+        command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 3600; done"]
+        volumeMounts:
+        - name: data
+          mountPath: data/db
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: pvc-test
+root@ip-172-31-25-238:~# cat pv.yml 
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: testpv
+spec:
+  storageClassName: nfs-storage
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 52.26.156.58
+    path: /mnt/share
+root@ip-172-31-25-238:~# cat pvc.yml 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-test
+  namespace: default
+spec:
+  storageClassName: nfs-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 2Gi
+root@ip-172-31-25-238:~#
