@@ -192,28 +192,20 @@ CLI(Command Line Interface) : Linux, UNIX
 
 most of the org use Linux OS to run enterprise applications.
 
-
 Server — OS Linux /UNIX
 Window 2003,2008,2012,2012R2,2016,2019
 
 Security.  encrypted
 No Virus. — it's a .exe file which will corrupt system files like .exe and .dll 
              in C:\winodws\System32 folder.
-           Linux we shell to execute commands, shell doesn't recognise .exe files
+           Linux we have a shell to execute commands, shell doesn't recognise .exe files
 No Downtime
-   
-
-C:\Windows\System32
-.exe, .dll
+ 
+new s/w or patch servers it will ask reboot
 
 shell
 
-
-Binaries 0 1
-
-
-
-H/W
+H/W : RAM, Processor 
 Kernel : core of OS. it's a programe which will have all modules like s/w and h/w.
 shell : shelll is interface b/w user and kernel, will execute commands on shell.
 user
@@ -229,33 +221,52 @@ in Linux default shell is Bash
 
 Linux
 
+Redhat
+Centos
+suse
+ubuntu
+fedro
+debium
+kali
+mint
+
 WIndows is flat structure 
 
 C:programe 
 D personal
 
+dir folder
 Linux/Unix tree structure
 
-Admin: root : 
-normal user
+Admin: root : full access 
+normal user: limited previlise on system
 
-/(root)
+/  (root)
 
 /bin: binary directory, executables or normal user cmds  ex: ls, cat, rm, mkdir
-/sbin: system binary directory. root user cmds ex: useradd, shutdown, mount
+/sbin: system binary directory. root user cmds  ex: useradd, shutdown, mount
 /usr: manual pages(help)
 /etc: configuration file  ex: tomcat, mysql, nginx, apache config files
-/opt: s/w install ex: orcale, java, ansible……
+/opt: s/w install ex: orcale, java, ansible, maven……
 /var: log, mails, message
 /home: normal user home dir
 /root: root user home
-/dev: logical device info
+/dev: logical device info ex: disk partitions 
 /media: to access removable device ex: pendrive, usb, DVD
 /tmp: to download, to share
 /boot: kernel file(grub)
 
 # — root
 $ — normal user
+
+copy ? description option
+commands -- details 
+
+man ls 
+description 
+options
+examples
+
 
 hard c e 
 partitions 
@@ -266,12 +277,22 @@ user1
 /home/user1
 /home/user2
 /home/user3
+
+root 
+/root -- root user homedir
+
+
 man cat
 desc
 options
 example
 
+Unix and Linux
 
+
+centos
+ubuntu
+redhat
 folder = dir
 
 su - root
@@ -292,9 +313,7 @@ Regular file
 ex:text files, directores
 
 Special file
-Ex: vidoes, device
-
-
+Ex: vidoes, device, socket
 
 1.cat
 2.touch
@@ -317,75 +336,51 @@ ctrl +d (save & quit)
 
 append: add new line at end of file
 
-
 2.touch : to create empty file
-
 touch sample1
 
-
 create, update, modify the text in file we use editors
-
-Notepad, Notepad ++ , sublime  ----> Windows
-
+Notepad, Notepad++ , sublime  ----> Windows
 vi, nano, emac —--> Linux editor
 
-vi sample1
+3. vi sample1
 Esc i: to insert text in vi
-
-
-
-
 Esc:wq!   to save&quit
 
- w save
- q quit
+ w save 
+ q quit 
   ! force
 
  ~  homedir
 
 to create dir
-mkdir demodir
-
-
+#mkdir demodir
 to create recursively
-
- mkdir -p dirA/dirB/dirC/dirD
-
+ #mkdir -p dirA/dirB/dirC/dirD
 to change dir
-cd dir
-
+#cd dir
 to change one dir back
-cd ..
-
+#cd ..
+to change 2 dir back at a time
+cd ../..
+cd ../../..
 to move home dir
 cd
 
 
-
-
-
 ls : list the content in Dir
 
-
-~ — homedir
-
-when 
-/root
-
-/home/user1
-/home/user2
-
 to remove file
-rm <file name>
+#rm <file name>
 
 to remove file with force
- rm -f filename
+ #rm -f filename
 
 to remove empty dir
-  rmdir dirname
+  #rmdir dirname
 
 to remove non-empty dir
-rm -rf dirname
+#rm -rf dirname
  r -- recurceive
  f -- force
 
@@ -394,11 +389,9 @@ rm -rf dirname
  green -- script file
  red -- zip or pkgs etc..
 
-
-
-ls list the content in Dir
-ls -a  all file like visable and hidden files
-ls -s to display content with size(in blocks)
+ls : list the content in Dir
+ls -a : all file like visable and hidden files
+ls -s :to display content with size(in blocks)
 
 linux kernel will respresent storage in 
 block
@@ -407,10 +400,16 @@ sectors
 
  1block = 2MB
 
+- - text file
+d - directory
+l - link file
+ s -socket file
+ b - block file
 ls -l   to display long list(properties) of file
-drwxr-xr-x   10 jrayala  staff        320 Mar 25 08:28 Ansible-101
-type permissions  no.oflinks   owner group size creation date name
- 
+type permissions  no.oflinks   owner group size creation-date name
+# ls -ld testdir
+drwxr-xr-x 2 root root 6 Dec 17 03:51 testdir 
+
 ls -i to display content with inode number
 
   inode: it's kernel reference number, when we created file/dir 
@@ -418,17 +417,13 @@ ls -i to display content with inode number
   of file
 
 ls -lt to display content with timewise
-ls -ltr  to display timewise revrse 
+ls -ltr  to display time wise revrse 
 
 FILE Permission changes:
-
+to see file permissions we use below cmd 
 ls -ld sample
--rw-r--r-- 1 root root  0 Feb  8 14:14 file1
-42 4
-644 — default file
-755 — default permission dir
-
-change
+644 — default file. owner rw, group r, others -r
+755 — default permission dir rwx rx rx
 
 file permission change:
 1.using Numbers
@@ -437,13 +432,13 @@ Numbers
  read - r  4
  write -w 2
  execute -x 1
- 
+
 Symbols
 owner =u 
 group =g
 others =o
 
-to change permission we command "chmod"
+to change permission we use command "chmod"
 chmod 764 dir
 ls -ld file/dir
 
@@ -458,163 +453,243 @@ wx -3
 w -2 
 x -1
 
-
-deploy — app users
-
 to display existed users in linux
-cat /etc/passwd
+#cat /etc/passwd
 
 /etc/passwd : user info on linux
 
 root:*:0:0:System Administrator:/var/root:/bin/sh
 
-username:passwd info: uid : gid : comment: home dir : shell
-
+<username>:<passwd info>: <uid> : <gid> : <comment>: <home dir> : <shell>
 to create new user
-useradd <user name>
+#useradd <user name>
 
 ownership
-chown <new username> file/dir
+#chown <new username> file/dir
 
 to list existing group on linux
-cat /etc/group
+#cat /etc/group
 
 to create new group 
- groupadd <grp name>
+#groupadd <grp name>
 
- to change group membership
+to change group membership
+#chgrp  <new group name> file/dir
 
-chgrp  <new group name> file/dir
+to modify group for existing user
+ syntax : #usermod -g <group> <username>
+ex:  #usermod -g devops demouser
 
-How do we change permissions  of file/dir
+to list users in group
+ #lid -g devops
+or 
+ #/etc/group
+
+to create user in specific group
+  syntax # useradd -g <group name> <new username>
+ ex: #useradd -g devops demouser
+
+to know groups and userid for user
+ #id <username>
+ex: #id demouser
+-=================
+
+Simple
+head
+tail
+wc
+cut
+diff
+sdiff
+cmp
+uniq
+tr
+more
+less
+sort
+
+Advanced
+grep
+sed
+find
+awk
+
 
 ===========================
 
 Filters commands
-
 Simple
+head: to display starting line(default 10 line) of file. 
+syntx:- head <filename> or head -5 <filename>
+tail: to display last 10 line of file. 
+syntx:- tail <filename> or tail -5 <filename>
+wc: to display count of no of line, word, char in a file  
+ syntx:- wc <filename>. 
+ ex: wc /etc/passwd  
+to display only line count
+wc -l /etc/passwd 
 
-head: to display starting line(default 10 line) of file. syntx:- head <filename> or head -5 <filename>
-tail: to display last 10 line of file. syntx:- tail <filename> or tail -5 <filename>
-wc: to display count of no of line, word, char in a file
+to display only word count
+wc -w /etc/passwd
+
+to display only char count
+wc -c /etc/passwd
 cut: to cut and display char, block of char and fields
-
 Ex:
 to display specific position char of each line
 cut -c5 /etc/passwd
-
 to display block of char in each line
 cut -c5-8 /etc/passwd
-
 to display specific filed in a file
 cut -f1 -d ":" /etc/passwd
-
 to dsiplay multiple fields in a file
 cut -f1,3 -d ":" /etc/passwd
 
-diff: to display different line in 2 files
-Ex: create 2 files 
-cat>sample1
-vkjncxjnbb
-bncbnc vnb
-,nbnb  bln
-
-ctrl + d(save & quit)
-
- cat>sample
-,vndvbn
-bvnjbvv
-fb,vnbxf,vbnbnf
-bnfbnmb
-
-ctrl + d(save & quit)
-
-check diff lines
-
+diff: to display different lines in 2 files
+check diff lines in 2 file
 #diff sample sample1
-1,4c1,4
-< ,vndvbn
-< bvnjbvv
-< fb,vnbxf,vbnbnf
-< bnfbnmb
----
-> vkjncxjnbb
-> bncbnc vnb
-> ,nbnb  blnb
-> nbv
-
 
 sdiff:to display 2 file side by side on terminal
-ex: 
-#sdiff sample sample1
-,vndvbn							      |	vkjncxjnbb
-bvnjbvv							      |	bncbnc vnb
-fb,vnbxf,vbnbnf						      |	,nbnb  blnb
 
 cmp:to compare 2 files char by char
 ex: 
 #cmp sample sample1
-sample sample1 differ: char 1, line 1
 
 uniq: to display uniq lines in the file
 ex:
--->to open with uniq lines
+-->to open f ile with uniq lines
 # uniq sample
-,vndvbn
-bvnjbvv
-fb,vnbxf,vbnbnf
-bnfbnmb
 -->to display what are duplicate lines
-[root@jenkins ~]# uniq -d sample
-bvnjbvv
-bnfbnmb
+# uniq -d sample
 --->to  display how many the line repeated
-[root@jenkins ~]# uniq -D sample
-bvnjbvv
-bvnjbvv
-bvnjbvv
-bvnjbvv
-bnfbnmb
-bnfbnmb
-bnfbnmb
-bnfbnmb
-bnfbnmb
+# uniq -D sample
 
 tr:translate the chars in a file
 ex:
-# cat sample1
-vkjncxjnbb
-bncbnc vnb
-,nbnb  blnb
-nbv
-
 ---> to translate small letters into caps letters in a file
-[root@jenkins ~]# tr '[a-z]' '[A-Z]' <sample1
-VKJNCXJNBB
-BNCBNC VNB
-,NBNB  BLNB
-NBV
-
+# tr '[a-z]' '[A-Z]' <sample1  
 more:to scroll a file
 less: to scroll a file
-
+ex: less /etc/ssh/sshd_config
+    more /etc/ssh/sshd_config
 line by line : enter button
 page by page : space 
 go to next page : f
 back page : b
 quit : q
-sort
+
+sort: to sort the text in the file
+ex: sort sample
+    sort -r sample  reverse sort (z-a)
+
 
 Advance filter
 grep(global regular expression): to search word/string/pattrens in a file
 sed
 find
 awk
+ to search string/pattren
+ syntax: grep <word> <filename>
+ ex:#grep DevOps sample2
+     #grep 'DevOps' sample2
+ to exactlty matching word
+ syntax: grep -w '<word>' <filename>
+      ex  #grep -w 'DevOps' sample2
+ 
+ to ignore case sensitive 
+     syntax: grep -i '<word>' <filename>
+             #grep -i devops sample2
+
+  to display along with line numbers
+     
+     syntax: grep -ni '<word>' <filename>
+             #grep -ni devops sample2
+  to how many line having the word count
+
+      syntax: grep -ic '<word>' <filename>
+             #grep -ic devops sample2
+  to search lines starting with perticular word
+      syntx: grep ^'<word>' <filename>
+         ex: #grep ^'hello' sample2
+   to search lines ending with perticular word
+      syntx: grep '<word>'$ <filename>
+         ex: #grep 'hello'$ sample2
+   to display line without perticular word
+        syntx: grep -v '<word>' <filename>
+         ex: #grep  -v 'hello' sample2
+ 
+Sed(stream editor):
+   to  display selected line 
+   syntax: sed -n '1p' <filename>
+        ex: sed -n '1p' sample
+
+    to display multiple line in range
+     syntax: sed -n '1,5p' <filename>
+      ex: sed -n '1,5p' sample
+
+    to display selected multiple lines
+     syntax: sed -n '1p 
+       5p' <file name>
+       ex: sed -n '1p
+           5p' sample
+   to  don't display selected line 
+   syntax: sed  '1d' <filename>
+        ex: sed '1d' sample
+
+    to don't display multiple line in range
+     syntax: sed  '1,5d' <filename>
+      ex: sed '1,5d' sample
+
+    to don't display selected multiple lines
+     syntax: sed '1d 
+       5d' <file name>
+       ex: sed  '1d \
+           5d' sample
+    to replace word with sed
+     syntax: sed 's/<old word>/<new word>/g' <filename>
+       ex: sed 's/hello/HELLO/g' sample
+
+
+to print specific field 
+awk -F':' '{ print $1 }' </etc/passwd
+to print multiple fields
+awk -F':' '{ print $1, $3 }' </etc/passwd
+to print all fileds
+awk -F':' '{ print $0 }' </etc/passwd
+
+to search with name
+find /root -name sample
+
+to search with type
+find /opt -type f 
+find /opt -type d 
+find /opt -type l
+
+to search with size
+find . -size 100M
+find . -size +100M
+find . -size -100M
+to seach with creation/change time
+find . -ctime 1
+to seach with modified time
+find . -mtime 1
+to seach with access time
+find . -atime 1
+to seach with permission time
+find . -perm 644
+to find file and remove
+find /tmp -name core -type f | xargs /bin/rm -f
+find /tmp -size +1G | xargs /bin/rm -f
+ 
 
 
 
 
 
+
+
+     
+simple
 
 head: to display starting line(default 10 line) of file
 tail: to display last 10 line of file
@@ -637,21 +712,41 @@ quit : q
 
 Advance
 
-grep:(global regular expression) to search word/string/pattrens in a file
-sed(stream edit): to display specific line, don’t display, replace word while you display. 
-find: to search files with name,size,perm, change time,mod time etc..
+grep(global regular expression): to search word/string/pattrens in a file
+sed(stream editor): to display specific line, don’t display, replace word while you display. 
+find: to search files with name,size,perm, change time,modified & access time etc..
 awk: to display fields
+
+to display with read mode cat
+edit mode vi
+starting line head
+ending tail
+specific line 20 20-25 203040
+
+2 words at a time search using grep
 
   wget
   curl
 
  /var/log/message
 
+.exe
+.msi
+
+.rpm
+.deb
 
 RPM(RedHat Package Manager): to manage package on linux. 
  Using this we can install, unistall,update, get info etc.....
 
- pkgname-version-release-arch.rpm
+pkg format is like below
+pkgname-version-release-arch.rpm
+
+ex:jenkins-2.375.1-1.1.noarch.rpm
+ 
+wget <url>
+ex:
+wget https://archives.jenkins-ci.org/redhat-stable/jenkins-2.375.2-1.1.noarch.rpm
 
 curl, wget
 
@@ -697,52 +792,55 @@ p
 
 u
 privatekey
-x64
-i386 
+os type
+x64 -- 64 bit os
+i386  --- 32 bit os
 
+.exe
+.msi
+linux .rpm
 jenkins-2.235.4-1.1.noarch.rpm
 
 RPM(Redhat Package Manager)
 
-A B C
+A -->B --> C
 
 wget https://archives.jenkins-ci.org/redhat-stable/jenkins-2.346.2-1.1.noarch.rpm
 curl
 =============================
-Redhat/Centos/Fedro/Amazon 
-RPM(Redhat Package Manager ):
+Redhat/Centos/Fedro/Amazon/SUSE 
+RPM(Redhat Package Manager ): to manage the package
 
-install,update,remove,infor,dep
+install,update,remove,information,dep
 
-offline package manager and dependency resolve manully
- 
-rpm -ivh <pkg name>.   - i--install, v -- verbose, h --hash progress
+to download 
+wget <pkg downloadable url>
 
- rpm -ivh pkg --no-deps
+rpm -ivh <pkg name>   
+- i--install, v -- verbose, h --hash progress
 
- -q 
- -qi 
- -ql
--qR
--Uvh
+ rpm -ivh pkg --nodeps.   to skips dependency
 
-install dep 
+ -q   <pkg name>  to query pkg installed or not
+ -qi  <pkg name>  to get more info for installed pkg
+ -ql  <pkg name>  to get list of files in pkg
+-qR   <pkg name>  to get dependency list for pkg
+-Uvh  <pkg name>  to upgrade pkg
+-e    <pkg name>  to erase the pkg
 
-online pakcage manager and auotmatically resolve dep
+rpm is offline package manager means need to download and resolve dependencies manually 
 
-YUM
+YUM: online package manager and auotmatically resolve dep
 
- yum install pkgname
-     remove 
-     update
+ yum install pkgname   to install pkg
+ yum remove pkgname    to remove pkg
+ yum update pkgname    to update pkg
  yum list-installed    to get all installed pkgs
 =========
-
 Ubuntu/Debium
-
-DPKG
-
- .deb
+.deb
+package manager is dpkg like rpm
+ pacckage extension is .deb like .rpm
 
 dpkg  -i pkgname     -- to install pkg
       -l pkgname     -- to query pkg 
@@ -750,67 +848,59 @@ dpkg  -i pkgname     -- to install pkg
 
 apt or apt-get : online package manager
 
-apt install pkgname
-     purge
-     list
-     update
-
+apt install pkgname.  to insatll pkg
+     purge  pkg name  to remove pkg
+     list   pkg name  to query pkg
+     update pkg name  to update pkg
 ==================
-
 service <servicename>  status/start/stop/restart/reload
 
-
 CentOS/RHEL 7. service is replaced by systemctl 
-
-systemctl  start/stop/status  <service name>
+systemctl  start/stop/status/restart  <service name>
 
 systemctl enable <servicename>
+enable: to set the service in running state(if system is restarted service will go to offline)
 
-
+before --- service
+redhat/centos --- 7 systemctl
+8 and 9  dnf
 =================
-
 process ID
-ps -- to list running process on terminall
+ps -- to list running process on current terminall
 
 ps -ef 
 —to get all  running process info on system
 
-
-user  pID PPID priorty startime terminal  executiontime   cmd
-
-
-
-
+out put for ps -ef 
+user  PID PPID priorty startime terminal  executiontime   cmd
 ps -ef | grep service name  ——> service related process info will display
 
 kill -9 pid  --->to kill process with ID
 pkill -9 jenkins   -->to kill the process with name
-
  -9 signal to remove process and child process 
 
 
-service jenkins restart
+check wheather service running or not
+logs
+search process and kill process
+ and restart the service
+
+to move background  after cmd use & 
+sh install.sh&
+bg to view background process
+fg [pid]
+
 
 
 ===============================
-
-service jenkins restart
-
-================
-
-NIC — eth0 eth1 en0 en1
-
+NIC(network interface card) — eth0 eth1 en0 en1 enX0
 
 lo — loopback — self ping  127.0.0.1
-
-
 ifconfig -- to view the IP
 
 netstat -r   to view route and internet gateway info
-
-
-netstat -natpl | grep <service name> to list listing port for service
-netstat -natpl | grep port to list which service is using that port
+netstat -natpl | grep <service name>  to list listing port for service
+netstat -natpl | grep port            to list which service is using that port
 
 cat /etc/services ---> to know all service related port numbers
 
@@ -828,10 +918,12 @@ cat /etc/redhat-release
 or
 cat /etc/issues
 
+cat /etc/os-release
+
 ubuntu: 
 lsbd_release -a
 
-
+ifconfig: to know ip address
 eth0/eth1 -- NIC
 lo: looback address /self 127.0.0.1
 
@@ -841,8 +933,17 @@ uname -a ---> machine architecture
 
 df -h  --> to get mounted filesytem info and also space for partions
 
+top: cpu , memory 
+free: memory
+/proc: to know about cpu, memory
+nestat: routes, open connects
+useradd: create user
+usermod: modify user details
+chage: user password expiry change/set
+
 
 ===========================
+VI NANO EMAC
 
 cat touch vi 
 
@@ -854,6 +955,7 @@ Insert mode
 Escape 
 colon 
 
+Navigation:
 
 Esc l: to move cursor next char 
 Esc h: to move cursor one char back
@@ -864,35 +966,39 @@ Esc ^: to move cursor at starting char of line
 Esc w: to move next word
 Esc b: to move one word back
 Esc G: to move ending line of file
-Esc M: to move middle line file
-Esc H: to move starting line of file
+Esc M: to move middle line of page
+Esc H: to move starting line of page
 
+copy:
 
 Esc yy: to copy a line
 Esc yw : to copy a word
 Esc yl: to copy a char
 Esc p: paste
 
+delete:
+
 Esc dd: to delete a line
 Esc dw: to delete a word
 Esc x: to delete cursor position char
 Esc X: to delete cursor poistion before char
 
+Replace:
 Esc R: to replace a line
 Esc r: to replace a char
 Esc cw: to replace a word
 
+Insert:
 Esc o: to insert new line below cursor line
-Esc O: to insert new line above cursor line
+Esc O: to insert new line above cursor line 
 Esc A: to move ending cahr of line and insert
 Esc a: to move one char right and insert
 Esc I: to move starting char of line and insert
 
 Esc u: undo
 
-i,I,a,A,o,O  insert
 
-Esc:se nu    to set line numbers
+Esc:se nu    to view file along with line numbers
 Esc:se nonu  to unset line numbers
 Esc:/<word>  to search the word/to move word contain line
 Esc:5        to move to perticular line 
@@ -902,11 +1008,16 @@ Esc:5,$S/old word/new word/g   TO REPLACE FROM 5 TH LINE
 Esc:wq!   to save & quit
 Esc:q!   to quit
 
-Insert mode
-Escape mode
-Colon mode
+
+
+INsert i,I,o,O,a,A
+esc
+colon
+
 ===============
  Links
+
+
  Hard Link
 1. to create hard link 
    ln <source file> <Link file>
@@ -918,15 +1029,38 @@ Colon mode
  Soft Link
 1. to createsoft link 
    ln -s <source file> <Link file>
-2. if we update anyb one of the file both will update
+2. if we update any one of the file both will update
 3. inode,permissions, size are  different for both the files
 4. if we remove source file we can't access link file
 5. this is for files and directories
 
 ===============================
+Enter
+
+e
+
+Region  -- 
+Data center -AZ
+
+Amazon AWS 
+
+Instance --- 
+
+private: Openstack , Vmware
+public 
+hybrid
+
+IAAS ---  Ec2
+PAAS --- application, data -- lb, -- EBS
+SAAS -- 
+
+AWS 2006 
+
+
+co
  1.emai id & account name
  2. details addr & student
- 3.payment credit/debit --- 2rs revert
+ 3.payment credit/debit --- 2rs revert 
  4.verification -- call/sms
  5.activate
 
@@ -956,13 +1090,19 @@ VCS: code central
 get it local system
 changes --- for new feature or bug
 
+VCS/scm: it's s/w to help developers to work together and maintain complete history of ther changes.
+
+charecterstics of VCS is
+
 1. collaboration
 2.maintain changes history
 3.elminate duplicates
 4.backup
 5.to remove integration issues
 
-scripts
+
+
+what we can keep in VCS as DevOps team:
 
 yml
 scripts
@@ -972,50 +1112,40 @@ terraform
 CICD pipeline code
 
 
+ex: SVN,GIT, perfoce, clearcase , mercural....
 
-
-3 --- 2 
-
-code
-build
-test
-deploy
-
-5 dev
-
-LOcal respository 
-
-
-
-GIT
-SCM
 
 VCS/SCM(source code management)
-Git, SVN, Perforce, clearcase
+Ex: Git, SVN, Perforce, clearcase, Mercural
 
 CVCS(Centralized version control system)
 DVCS(Distributed Version control system)
 
 
-CVCS — single point of failure 
-Git — DVCS
-SVN — CVCS
+CVCS —  server act as single point of failure.
+         i.e if server is offline or not available unable to commit.
+ ex:SVN(subversion control)
 
-GIT : 
-Torvald Linuz
-2010
-
-Git Bash
+DVCS --- maintain remote repo on every work station and allow you to commit local
+         when server is offline or not available.
+   ex: Git
 
 
+GIT  is developed by Torvald Linuz in 2005
 
 Workflow
 
+do changes -create/delete/midify
+add stage
+commit
+
+
+object: it's a file
 Repository: collection of files
 Local Repo/working tree: on workstation which dir we are working that is local repo
 Remote Repo: where you store your code remote dir
 Branch: a copy of code. ex: Dev branch,QA branch
-Master: default branch
+Main: default branch
 Tag: A meaningful name of the branch. ex Dev_1.0 QA_2.0
 Clone: to setup project local we do clone
 pull: get update from remote to local
@@ -1025,14 +1155,14 @@ merge: combine one branch into another
 stage/Index: snapshot of changes 
 fork: copy one remote repo to another remote repo
 stash: to save changes in your working dir
-object: it's a file
 
 
+Installation:
 
 Linux (Ubutnu)
- sudo apt-get install git
+ #apt-get install git
 Linux (centos/Rhel)
-sudo yum install git
+ #yum install git
 Mac
 - http://git-scm.com/download/mac
 
@@ -1050,7 +1180,6 @@ download git
 double click — next — next install
 
 
-
 Windows — all programs — select Git folder — open Git Bash
 Mac/Linux — open terminal — and run git commands
 
@@ -1058,7 +1187,10 @@ Mac/Linux — open terminal — and run git commands
 
 GUI
 CMD
-Bash
+Bash --- 
+
+
+
 
 
 Usename
@@ -1071,10 +1203,12 @@ create folder.   mkdir GitDemo
 go to folder  cd GitDemo
 run git init to initialize git repo
 
-do chages
+do chages -- create new file/modify/remove
 add stage 
 commit
 
+,vcdnvdf
+n,fmvnfvf
 =================
 
 4GB
@@ -1118,6 +1252,7 @@ to view email
  git config  — -global user.email
 
 
+Repo -- folder 
 
 create folder
 #mkdir GitDemo
@@ -1128,20 +1263,6 @@ to view content
 
 to initialize git repo
 #git init
-
-
-
-Do changes     
-
- #revert  git restore sample
-
-stage area   
-#git restore --staged sample
-#revert  git restore sample 
-
-commit.  
-#git reset --hard HEAD~
-
 
 create file
 #cat>sample
@@ -1157,25 +1278,78 @@ Add to stage
 commit the change
 #git commit -m “commit description”
 
-
 to check commit history
 #git log
 
 to display commit history in single line
 #git log - -oneline
 
+to show no of commits 
+#git log --oneline | wc -l
+
+to view changes in particular commit id 
+#git show  <commit id>
 
 git reset or revert 
 
+to  revert the changes    
+ #git restore sample
+to revert stage area   
+#git restore --staged sample.   revert from stage
+#git restore sample              revert the changes
+to delete commit.  
+#git reset --hard HEAD~
+
+
+.git folder 
+
+config: to change repository settings 
+description: to set name  for the repository
+Hooks:to mainatain automated scripts(shell scripts ex: pre-commit, 
+       post commit) 
+index:to mainatain snapshot of changes 
+info: to exclude any file from git commit we update in this folder file
+      called exclude.
+logs: commit history maiantain in logs folder
+objects: to mainatain object level changes i.e whenever you did changes
+         in objects it will create 2 digits directory and create SHA ID.
+         it can only read by kernel.
+HEAD/refer: to maitain latest commit info.
+  
+
+
 Agile
+
+feature 
+
+user story
+frontend
+u1 --abc-123
+u2
+u3
+u4
+
+backend
+u5
+u6
+
+main/prod 
+copy 
+branch --- objects commits
+
+merge main
+
 
 add new feature — JIRA — based on numbers XYZ-102 
 create branch
-Dev
-QA
-STG
-main
-master
+
+Branching stratgies
+
+Dev/Feature -- development 
+QA -- testing
+main/prod -- prod
+bugfix -- to fix prod issues
+
 
  list the branches
  #git branch
@@ -1192,6 +1366,8 @@ to current branch
 to merge the branch 
 #git merge Dev
 
+to create new branch swith branch
+#git checkout -b test
 
 
  testrepo git:(main) git branch
@@ -1204,8 +1380,7 @@ sample  sample1
 ➜  testrepo git:(main) git branch              
 ➜  testrepo git:(main) git checkout Dev
 Switched to branch 'Dev'
-➜  testrepo git:(Dev) 
-➜  testrepo git:(Dev) 
+
 ➜  testrepo git:(Dev) git branch      
 ➜  testrepo git:(Dev) ls
 sample  sample1
@@ -1240,10 +1415,13 @@ Fast-forward
 
 
 ===========================
-main/Prod
+branching stratagies
+
+main/Prod -
 QA
 Dev
 bugfix
+Release
  
 Workstation
 
@@ -1279,24 +1457,27 @@ same file same line modifying 2  in branches  when trying to merge
 ==========================
 files —objects
 ======
-same file and same line modified in 2 branches while you're  merging then you will get conflicts
+same file and same line modified in 2 branches while you're  merging then you will
+ get conflicts
 
-move to main branch   git checkout main
+move to main branch   #git checkout main
 edit any file
 
-sample .txt
-1st
+sample
+edit 1st line 
 commit
 
-Dev
-sample.txt
-1st 
+in Dev branch.      #git checkout Dev
+sample
+edit 1st line
 commit
 
-git merge Dev
+switch to main branch    # git checkout main
+ #git merge Dev
 
 to resolve merge conflicts
-open file go to << and >> symbol lines, remove those lines and keep which changes you want 
+open file and go to << and >> symbol lines, remove those lines and keep which changes 
+you want 
 after that save file 
 add stage 
 commit
@@ -1385,6 +1566,279 @@ lastest commit
    SAAS on server install GitHub
   
 
+
+Remote 
+
+GitHub — 
+GitLab — 
+BitBucket
+Azure Repo
+
+GitHub
+
+github.com
+create git hub account with email id
+email
+password
+
+1. create github account
+2. create repo on github
+3. go to local repo on workstation
+4. check wheather remote repo added or not.      (git remote -v)
+5.Add remote repo to local repo   (git remote add origin https://github.com/kellydevops/Demo75.git)
+6.push local chnages to remote   (git push -u origin main) or git push <ssh/https url>
+ 
+github repo/remote repo access via https/ssh urls
+
+if you use https url to push the changes from local to remote it will
+ask username and token
+ if you want generate the token
+go to github --- on top right corner select setting --> developersettings
+--> personal access token -- generate new token
+
+public: if you know url of repo anyone can view code/file on repo and commit only done by the authorized users.
+private: to view or to commit on remote repo we need have permission
+
+origin: default alias name for remote remote repo. going forward instead using
+        github url we can access with this alias name.
+
+to view added remote repo's to local 
+#git remote -v
+
+without asking credentials, to upload in remote repo we use
+ssh keys 
+generate ssh key on workstation
+add it into ssh keys options in github settings
+ 
+if you want push using ssh url without asking password from workstation
+ 1. generate ssh key on workstation
+    if you are using windows 
+      a. open git bash and run below command 
+           #ssh-keygen -t rsa
+           ~/.ssh/id_rsa     ——> private key
+           ~/.ssh/id_rsa.pub —> public key
+
+      b. open id_rsa.pub
+         #cat ~/.ssh/id_rsa.pub
+      c. copy the content
+
+ 2. copy ssh key to GitHub account
+      a.  goto account setting on top right corner
+       b. select settings and select "SSHkeys and GPGKeys" option
+       c. paste id_rsa.pub content there
+
+
+ Linux one system — another system to connect without password  we use sshkey.
+ we called it as trusted relationship
+
+
+
+https://github.com/kellydevops/Demo76/pull/1
+can you please review and approve
+
+Git Stash:  to save current working dir changes without adding stage and commit. or skip git tracking
+
+to check stash list 
+ #git stash list
+to create stash
+ #git stash
+to apply the stash
+ #git stash apply
+to remove the stash
+ #git stash drop
+to apply and remove stash. 
+ #git stash pop
+
+working new feature/bugfix. 20 line
+5 line
+
+
+clone the project 
+or if it is cloned get the latest code
+and create new branch
+make the changes
+upload new branch to remote
+rise a pull request(PR) and add reviewers
+
+https://github.com/kellydevops/repo1/pull/1
+
+
+
+
+
+20 days
+
+do chages 
+add 
+commit 
+
+
+
+git diff : show diff b/w updated file in git repo and current state file
+
+ 
+=============================
+pull vs fetch
+merge vs rebase
+reset vs revert
+
+
+pull — fetch & merge to local repo
+fetch — only fetch the code.
+
+git fetch <ssh/https url>
+git merge FETCH_HEAD
+
+
+merge: combine in one branch another branch with new commit.
+rebase: add commits on top the another branch. it will change commit history.
+        if you're working large projetcs or remote it's not suggetable.
+
+merge will create new commit when you merge the branches.
+
+======================================
+git reset: undo changes and commits
+git reset --soft:  moves HEAD to specified commit reference, index and staging are untouched
+git reset --hard: unstage files AND undo any changes in the working directory since last commit
+
+reset: to remove previous commits 
+1. do the changes
+cat>sample4
+2.Add to stage 
+git add sample4
+3.commit the changes
+git commit -m"sample4 created"
+check the commits
+git log --oneline
+
+remove commit using --hard option 
+git reset --hard HEAD~
+check the commits
+git log --oneline
+
+using --soft option
+cat>sample4
+git add sample4
+git commit -m"sample4 created"
+
+git log --oneline
+remove commit using soft option
+git reset --soft HEAD~
+check the commits
+git log --oneline
+
+Git revert: to remove previous commits with new commit.
+git revert HEAD~3
+           Revert the changes specified by the fourth last commit in HEAD and create a new commit with the
+           reverted changes.
+
+       git revert -n master~5..master~2
+           Revert the changes done by commits from the fifth last commit in master (included) to the third
+           last commit in master (included), but do not create any commit with the reverted changes. The
+           revert only modifies the working tree and the index.
+=============================
+
+PR — 
+
+Master (Main). —— temp 
+do changes
+test
+
+
+ 
+Pull Request  will approved by you peers
+
+
+you should reviewd by 1 or 2 team members
+
+JIRA TICKET NUM
+
+JIRA-1023-to do this
+
+hey I have created PR, regading the so and so changes, can you approve PR
+https://github.com/kellydevops/Demo74/pull/1
+https://github.com/kellydevops/demo73/pull/1
+https://github.com/kellydevops/test3/pull/2
+https://github.com/kellydevops/Demo60/pull/3
+
+
+https://github.com/kellydevops/Demo70/pull/1
+
+https://github.com/kellydevops/test1/pull/1
+https://github.com/kellydevops/Dem060/pull/1
+https://github.com/kellydevops/Dem060/pull/2
+https://github.com/kellydevops/Demo57/pull/1
+https://github.com/kellydevops/Demo59/pull/1'
+https://github.com/kellydevops/Demo59/pull/2
+https://github.com/kellydevops/Demo60/pull/1
+https://github.com/kellydevops/Demo60/pull/2
+https://github.com/kellydevops/Demo62/pull/1
+
+
+
+Main/Production
+QA
+Dev
+Bugfix
+
+ git squash
+ git  cherry pick
+how to restored deleted commit
+how to delete remote branch from local
+
+
+  https://github.com/kellydevops/Meterials.git
+
+
+ 
+
+do the changes in file
+ex:
+ cat>>sample3
+cndsv
+vnvd
+
+ctrl + d (save and quit)
+
+git status 
+
+cat sample3
+
+Stash: to save current working dir changes.
+
+create a stash on this changes
+ git stash
+
+check the stash list
+ git stash list
+
+apply the stash
+ git stash apply
+
+to remove stash
+ git stash remove
+
+to apply and remove stash 
+  git stash pop
+
+
+
+
+https://github.com/kellydevops/Meterials.git
+
+open your browser type above url
+ dowload zip
+
+open git bash
+
+git clone https://github.com/kellydevops/Meterials.git
+
+what is git squash?
+what is git cherry-pick?
+how do you restore deleted commit?
+how do clone/pull perticular branch to local?
+
+
 =====
 Docker 
 kubernetes
@@ -1402,6 +1856,16 @@ docker compose
 ==================
 CI CD CD CM CT CM 
 
+cgroup (control group)A group of Linux processes with optional resource isolation, accounting and limits.
+cgroup is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, 
+disk I/O, network) for a collection of processes.
+
+Container lightweight and portable executable image that contains software and all of its dependencies.
+Containers decouple applications from underlying host infrastructure to make deployment easier in different 
+cloud or OS environments, and for easier scaling. The applications that run inside containers are called 
+containerized applications. The process of bundling these applications and their dependencies into a container
+ image is called containerization.
+
 conatiner is light weight machine which provide runtime env for application
 
 
@@ -1410,6 +1874,21 @@ conatiner is light weight machine which provide runtime env for application
 Continous delivery: the capability of deployment any point time
 Continous Deployment: the automation of deployment all env including prod
 3.micro service
+
+cgroup (control group): A group of Linux processes with optional resource isolation, accounting and limits.
+cgroup is a Linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, 
+disk I/O, network) for a collection of processes.
+deployments automate up stage
+
+
+
+Conatiner Runtime 
+Ex: Docker, Rocket, CRI-O, ContainerD
+
+
+fast: booting allocate all resources to up for VM.
+      but conatiner fraction of sec it will create
+less space:
 
 
 oracle virual box/ vmware workstsation/
@@ -1439,22 +1918,30 @@ share base system resources, not assiging dedicated reource
 Monolethic 
 micro service
 
-Conatiner Runtime 
+
+
 Docker
-Rocket
-CRI-O
+Docker (specifically, Docker Engine) is a software technology providing operating-system-level virtualization 
+also known as containers.
+Docker uses the resource isolation features of the Linux kernel such as cgroups and kernel namespaces, and a 
+union-capable file system such as OverlayFS and others to allow independent containers to run within a single 
+Linux instance, avoiding the overhead of starting and maintaining virtual machines (VMs).
 
 2013 before it called dotcloud
-at that time onely we can run Linux application
+at that time only we can run Linux application
 2016 windows support conatinerization.
 
 
- mysql
+ mysql ---- im
   os linux centos 7.  -- 
     lib
      dep
     env
     port
+
+image: 
+container
+Registry: 
 
 
 
@@ -1466,9 +1953,7 @@ suse — s/w
 
 kernel 
 
-fast: booting allocate all resources to up for VM.
-      but conatiner fraction of sec it will create
-less space:
+
 
   10 -- disk space 1GB 
 
@@ -1476,17 +1961,23 @@ less space:
 
 
 
-Monolithec
+Monolithec.  ----  f backend db pay,tracking ,booking , catalog, db, ui,
 Micro service
 
 EE CE
+
+
+Docker/CRI-O/Rocket
 
 ============================
 Docker 
 phy/vm/cloud
 
+CE EE
+
 AWS Linux(ubuntu)ec2  docker
 
+Azure ubuntu 
 Image
 container
 Registry
@@ -1497,17 +1988,8 @@ Laptop            Linux
 
 windows/Mac.       ubuntu/centos/redhat
 
-Docker Desktop      Docker engine
- 8GB
-
-hypervisor s/w 
-any one of hypervisor like VM ware workstation/oracle virual box
-4GB
-
-
- on AWS EC2 ubuntu 
-VM ubuntu ----
-
+Docker Desktop      Docker engine 
+ 
 install docker
 
 install from offical docs
@@ -1520,54 +2002,54 @@ install from script
   curl -fsSL https://get.docker.com -o get-docker.sh
   sh get-docker.sh
 
-install from package repo
+install from package manager
 3.apt-get install docker.io
 
-
- DockerHub: to get public images or we can store images pulic/private.
+DockerHub: to get public images or we can store images pulic/private.
 
 to list local images 
-docker images 
-
+#docker images 
 to list running conatiners 
-docker ps 
+#docker ps 
 
+to lsit all state(stopped and running) of conatiner
+#docker ps -a
 to create conatiner
-docker run -tid --name test ubuntu /bin/bash
-
-
+#docker run -tid --name test ubuntu /bin/bash
 
  ctrl + P + Q: to exit from container
-
 t -- terminal
 i -- interactive
 d -- detached/
+to login to container
 
-docker attach conta-name/id
-
+#docker attach conta-name/id
+or
 docker exec 
-
-docker exec -ti test /bin/bash
+#docker exec -ti test /bin/bash
 
 to check container logs
-docker logs containename/id 
+#docker logs containename/id 
 
 to stop conatiner
-docker stop c.name/ID
-
+#docker stop c.name/ID
 to remove conatiner
-docker rm cname/ID 
-
-ro start the container
-docker start cname/ID
+#docker rm cname/ID 
+to start the container
+#docker start cname/ID
 
 to remove running container
-docker rm -f cname/ID
-
+#docker rm -f cname/ID
+to remove image
+#docker rmi <imagename>
 
 ============================
+How do remover stopped conatiners with single cmd
+how do get ip address of conatiner with single cmd
 
 
+
+======================================
 
 
 plain ubuntu as conatiner -- 
@@ -1592,28 +2074,71 @@ webserver --  to display the info about company -- index pages
   create index pages
   start service
 
+ create a conatiner
+ #docker run -tid --name=webserver -p 80:80  ubuntu /bin/bash
+
+ login to conatiner 
+ #dokcer attach webserver
+
+ run below commands to install webserver
+ #apt update
+ #apt install apache2 -y
+ #dpkg -l apache2
+ #service apache2 start
+ #service apache2 status
+
+Go to browser on your laptop and enter the ip address of Dockerhost
+ 
 
 
-N/W: 
+
+N/W: VPC 
 
  Bridge: default n/w 
  Host: 
  None:
 
-Network
-subnet
-public subnet
-private subnet
-IP
+Network: group of computers
+subnet: logical portion of n/w is called subnet
+public subnet: to allow out side access we create public subnet
+private subnet: to allow inside of n/w
+IP: logical address of system
 type ip address
-subnet mask
-CIDR
-ingress
-Egress
-NAT
-Internet gateway
-Route
-port
+subnet mask: to get n/w of ip address 
+CIDR(classless inter domain route): to create customised subnet
+ingress: incoming traffic(inbound)
+Egress: outgoing traffic(outbound)
+NAT(Network Address Translator): to communicate public network from private subnet or to allow outside traffic
+ to private network.
+Internet gateway: to allow outside traffic to n/w
+Route: to communicate diffrent subnet systems 
+port: logical number for service
+
+Network layer: Transfer bits and bytes.   ---IP
+Transport  layer: are the bits and bytes transferred properly?---TCP,UDP,TLS
+Application layer: make REST API calls send emails ---http,https,udp 
+
+
+Network Layer:
+IP(internet transfer protocol): Transfer bytes. Unreliable
+Transport Layer:
+TCP(Transmission control): Reialbility and Performance 
+TLS(Layer Security): Secure TCP
+
+Most applications talk at application layer. But some applications talk at network layer directly (for high performance)
+
+
+ Class A (0-127)    N.H.H.H  255*255*255    255.0.0.0 or 8.      10.0.0.0
+ Class B (128 -191) N.N.H.H.  255*255.      255.255.0.0 or16.    172.168.0.0
+ Class C (192 -223) N.N.N.H   255.          255.255.255.0 or 24
+ Class D (224 -239)
+ Class E (240 - 255)
+ 
+Class A,B -- public n/w 10
+Class C private 172
+Class D route/switches
+Class E Super computers
+
 
 LAN(Local Area N/W): with in the building/room 
 MAN(Metropolitan Area N/W): within the city
@@ -1642,16 +2167,8 @@ binary: 8.        1111100.00111100.01010101.11110000
  
  ICANA
 
- Class A (0-127)    N.H.H.H  255*255*255    255.0.0.0 or 8
- Class B (128 -191) N.N.H.H.  255*255.      255.255.0.0 or16
- Class C (192 -223) N.N.N.H   255.          255.255.255.0 or 24
- Class D (224 -239)
- Class E (240 - 255)
- 
-Class A,B -- public n/w
-Class C private
-Class D route/switches
-Class E Super computers
+
+
 
 192.168.1.10/255.255.255.0 or 24
  255.255.0.0 or16
@@ -1663,13 +2180,17 @@ Subnet mask : to find n/w of IP address
  using logical AND
 
  
-CIDR(Class Inter Domain Route): customize subnet 
+CIDR(Classless Inter Domain Route): customize subnet 
 
 1000
 
 129.1.0.0   255*255 =64000
 
+192.168.0.0/24
+
+
 192.168.20.10/28
+172.168.0.0/24
 
 
 Ingress: incoming traffic in your n/w
@@ -1697,7 +2218,7 @@ docker network create demonw --subnet=172.19.0.0/16
 to view n/w on docker host
 docker network ls
 
- to create container specifi ip, n/w and hostname
+ to create container specifi ip, n/w and hostname 
 docker run -tid --name=demo --net demonw --ip 172.19.0.10 -h web.example.com ubuntu /bin/bash
 
 to check details of container
@@ -1721,99 +2242,109 @@ docker network connect bridge demo
 to check 
 docker inspect demo or docker inpect bridge
 
+======
+vm ---build -- install app/ configure --- or snapshot -- 
+cloud --- images --- launch 
+Docker -- docker image --- run container
 
 
+==== 
+conatainer 
+volume to persist conatiner data we volumes.
+if conatiner down will data on conatiner will loss.
+as well container is light weight system so that we can't store much on container.
 
+if container is down we can crreate same state of conatiner from image.
+ 
 
  Docker volume:
-  dir on dockerhost
-  logical volumes create on DH
-  AWS EBS, VHD
-  NFS
+we can store container data on below 
+  --dir on dockerhost
+  --logical volumes create on DH(Docker Host)
+  --AWS EBS, VHD(Disks )
+  --NFS
 
   create a dir on dockerhost
- mkdir /test
+ #mkdir /test
   check the content
-  ls /test
+  #ls /test
  now create a container with volume
- docker run -tid --name=test -v /test:/var/log ubuntu
+ #docker run -tid --name=test -v /test:/var/log ubuntu
 
  there is no data on volume 
-ls /test
+#ls /test
 
 now login to container
-docker attach test
+#docker attach test
 
-cd /var/log
+#cd /var/log
 
 create some test files
-touch a{1..10}
- ls
+#touch a{1..10}
+# ls
 
-exit from container
+exit from container using ctl + P + Q
 
 check on docker host /test folder
 
-ls /test
+#ls /test
 
 now remove container
-docker rm -f test
+#docker rm -f test
 
 check the content in /test folder
-ls /test
+#ls /test
 
 sample folder we can attach to multiple containers
 if we updated any of the conatiner or volume, all will be updated.
 
 to list logical volumes
-docker volume ls
+#docker volume ls
 
 to create volume 
-docker volume create testvol
+#docker volume create testvol
 
 to list logical volumes
-docker volume ls
+#docker volume ls
 
 in side the docker host volume data will stored under
- ls /var/lib/docker/volumes
+ #ls /var/lib/docker/volumes
 we can see newly created volume
 in side the docker host volume data will stored under
-ls /var/lib/docker/volumes/testvol/_data
+#ls /var/lib/docker/volumes/testvol/_data
 
 attach volume to container
-docker run -tid --name=demo -v testvol:/var/log ubuntu
+#docker run -tid --name=demo -v testvol:/var/log ubuntu
 
 now check data on volume
-ls /var/lib/docker/volumes/testvol/_data
+#ls /var/lib/docker/volumes/testvol/_data
 
 to remove volume fisrt remove container
-docker rm -f demo
+#docker rm -f demo
 
 to remove volume
-docker volume rm testvol
+#docker volume rm testvol
 
 now list the volumes 
-docker volume ls
+#docker volume ls
 or
-ls /var/lib/docker/volumes/
+#ls /var/lib/docker/volumes/
 
 
 
 ==============
-
+1. take one ebs/vhd attach to container. ----
 can I dettach volume from running container?
 can I assign volume to running conatiner?
 =============================
  
 Image build
-
 1.Dockerfile
 2.commit running container as image
 
  if I want create my own webserver image
-
-  image
-  run conatiner and login
+  image ubuntu
+  run conatiner and login plain container
   run the cmds 
   apt update
   apt-get install apache2 -y
@@ -1821,12 +2352,35 @@ Image build
   /var/www/html/index.html
 
 
+webserver image
+
+
+
+plain container
+createing as websever image
+webserver img --- 
+
+img webserver -- 
+
  to build image for above steps
  1.create a folder on DockerHost
- mkdir webserver
- cd webserver
+ #mkdir webserver
+ #cd webserver
  2. create file called Dockerfile(this standerd name for image build for Docker)
-  vi Dockerfile
+  #vi Dockerfile
+ write below cmds
+  
+  FROM ubuntu
+  RUN apt update && apt-get install apache2 -y && service apache2 start
+  COPY index.html /var/www/html
+  EXPOSE 80
+  ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+ :wq! (save and quit)
+  
+  and also create index.html file 
+   cat>index.html
+    Welcome to Docker 
+    ctrl +d (save and quit)
  3.use Docker file commandsfor above steps
 
  4.build image using below command
@@ -1841,7 +2395,7 @@ Once you build the image to push into Docker Registry
  Public : anyone can see in dockerhub
  Private: only authorised members can see image and donwload
 
-To upload local image to DOckerHub
+To upload local image to DckerHub
  command line login to DockerHub account
   docker login
  and then run below commands
@@ -1850,6 +2404,92 @@ docker tag local-image:tagname new-repo:tagname
  ex: docker tag webserver kellydockerhub/webserver:latest
 docker push new-repo:tagname
  ex: docker push kellydockerhub/webserver:latest
+
+form Running container
+
+to build image  from running container
+docker commit <container name> <new img name>
+===============================
+# Filename: Dockerfile 
+FROM node:10-alpine
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+===========================
+
+FROM ubuntu
+RUN apt-get update
+ENTRYPOINT ["echo", "Welcome to Docker World"]
+CMD [/bin/bash]
+=====================================
+CMD defines default commands and/or parameters for a container. CMD is an instruction that is best to use if you 
+need a default command which users can easily override. If a Dockerfile has multiple CMDs, it only applies the instructions 
+from the last one.
+ENTRYPOINT is preferred when you want to define a container with a specific executable.
+You cannot override an ENTRYPOINT when starting a container unless you add the --entrypoint flag.
+
+CMD
+Docker file
+
+  FROM centos:8.1.1911
+
+  CMD ["echo", "Hello Docker"]
+Run result
+
+$ sudo docker run <image-id>
+Hello Docker
+$ sudo docker run <image-id> hostname   # hostname is exec to override CMD
+244be5006f32
+
+ENTRYPOINT
+Docker file
+
+  FROM centos:8.1.1911
+
+  ENTRYPOINT ["echo", "Hello Docker"]
+Run result
+
+$ sudo docker run <image-id>
+Hello Docker
+$ sudo docker run <image-id> hostname   # hostname as parameter to exec
+Hello Docker hostname
+
+There are many situations in which combining CMD and ENTRYPOINT would be the best solution for your Docker container. In such cases, the executable is defined with ENTRYPOINT, while CMD specifies the default parameter.
+Docker file
+
+  FROM centos:8.1.1911
+
+  ENTRYPOINT ["echo", "Hello"]
+  CMD ["Docker"]
+Run result
+
+$ sudo docker run <image-id>
+Hello Docker
+$ sudo docker run <image-id> Ben
+Hello Ben
+
+=======================
+COPY	 vs ADD COMMAND
+
+COPY is a docker file command that copies files from a local source location to a destination in
+ the Docker container.	ADD command is used to copy files/directories into a Docker image.
+Syntax: COPY <src> <dest>	Syntax: ADD source destination
+It only has only one assigned function.	It can also copy files from a URL.
+Its role is to duplicate files/directories in a specified location in their existing format.	ADD command is used to download an external file and copy it to the wanted destination.
+If we want to avoid backward compatibility, we should use the COPY command.	
+ADD command is less usable than the COPY command.
+
+CMD vs Entrypoint
+
+CMD defines default commands and/or parameters for a container. CMD is an instruction that is best to 
+use if you need a default command which users can easily override. If a Dockerfile has multiple CMDs, 
+it only applies the instructions from the last one.
+
+ENTRYPOINT is preferred when you want to define a container with a specific executable.
+You cannot override an ENTRYPOINT when starting a container unless you add the --entrypoint flag
 
 ==================================
 DOcker 
@@ -1865,282 +2505,88 @@ how do you monitor containers
 ==================
 
 
+amazon.in
+
+20 service --- container
+
+
  Dockercompose: to manage multiple service/container using yml 
-
-micro services --- conatiner
-
-amazon.in --- 
-
-
-
+ 
 WordPress --- blogs/publish 
 wordpress --- wordpress
 Database  --- mysql/
 
 Docker-compose.yml
+
+install docker-compose 
+#apt  install docker-compose
+
+create folder name wordpress
+#mkdir wordpress
+#cd wordpress
+create docker-compose.ym file
+#vi docker-compose.yml
+services:
+  db:
+    
+    image: mysql:8.0.27
+    command: '--default-authentication-plugin=mysql_native_password'
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=somewordpress
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+    expose:
+      - 3306
+      - 33060
+  wordpress:
+    image: wordpress:latest
+    volumes:
+      - wp_data:/var/www/html
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+volumes:
+  db_data:
+  wp_data:
+
+
+save & close
+
+https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/wordpress/
+
+to run wordpress press application 
+#docker-compose up -d
+
+check the images
+#docker images 
+
+check the conatiner
+#docker ps
+
+go to browser use public ip address of docker host we can see wordpress site.
+
+ 
+
 ==========================
 
 =============
-.git folder 
 
-config: to change repository settings 
-description: to set name  for the repository
-Hooks:to mainatain automated scripts(shell scripts ex: pre-commit, 
-       post commit) 
-index:to mainatain snapshot of changes 
-info: to exclude any file from git commit we update in this folder file
-      called exclude.
-logs: commit history maiantain in logs folder
-objects: to mainatain object level changes i.e whenever you did changes
-         in objects it will create 2 digits directory and create SHA ID.
-         it can only read by kernel.
-HEAD/refer: to maitain latest commit info.
-  
 
 *.exe 
 some file you don't want to commit 
 
 
 ==========================================
-Remote 
 
-GitHub — 
-GitLab — 
-BitBucket
-
-GitHub
-
-github.com
-email
-password
-
-
-
-1. create github account
-2. create repo on github
-3. go to local repo on workstation
-4. check wheather remote repo added or not.      git remote -v
-5.Add remote repo to local repo   git remote add origin git@github.com:kellydevops/Demo60.git
-6.push local chnages to remote   git push -u origin main
- 
-github repo/remote repo access via https/ssh urls
-
-if you use https url to push the changes from local to remote it will
-ask username and token
- if you want generate the token
-go to github --- on top right corner select setting --> developersettings
---> personal access token -- generate new token
-
-public: if you know url of repo anyone can view code/file on repo and commit only done by authorized users.
-private: to view or to commit on remote repo we need have permission
-
-origin: default alias name for remote remote repo. going forward instead using
-        github url we can access with this alias name.
-
-to view added remote repo's to local 
-#git remote -v
-
-
-without asking credentials, to upload in remote repo we use
-ssh keys 
-generate ssh key on workstation
-add it into ssh keys options in github settings
-
-
- 
-if you want push using ssh url without asking password from workstation
- 1. generate ssh key on workstation
-    if you are using windows 
-      a. open git bash and run below command 
-           #ssh-keygen -t rsa
-           ~/.ssh/id_rsa     ——> private key
-           ~/.ssh/id_rsa.pub —> public key
-
-      b. open id_rsa.pub
-         #cat ~/.ssh/id_rsa.pub
-      c. copy the content
-
- 2. copy ssh key to GitHub account
-      a.  goto account setting on top right corner
-       b. select settings and select SSHkeys and GPGKeys option
-       c. paste id_rsa.pub content there
-
-
- Linux one system — another system  connect without password  we use sshkey.
- we called it as trusted relationship
-
-
-
-
-Git Stash:  to save current working dir changes. without adding stage and commit.
-
-to check stash list 
- #git stash list
-to create stash
- #git stash
-to remove the stash
- #git stash drop
-to apply and remove stash
- #git stash pop
-
-
-
-20 days
-
-do chages 
-add 
-commit 
-
-pull vs fetch
-merge vs rebase
-reset vs revert
-
-git diff : show diff b/w update file in git repo and current state file
-
-
-merge: combine in one branch another branch. 
-rebase: add commits on top the another branch. it will change commit history.
-        if you're working large projetcs or remote it's not suggetable.
-
-merge will create new commit when you merge the branches.
-
- 
-=============================
-
-pull — fetch & merge to local repo
-fetch — fetch
-
-
-Merge : adding 2 branches
-
-
-======================================
-git reset: undo changes and commits
-git reset --soft:  moves HEAD to specified commit reference, index and staging are untouched
-git reset --hard: unstage files AND undo any changes in the working directory since last commit
-
-
-reset: to remove previous commits 
-1. do the changes
-cat>sample3
-2.Add to stage 
-git add sample3
-3.commit the changes
-git commit -m"sample3 created"
-check the commits
-git log --oneline
-
-
-remove commit using hard option 
-git reset --hard HEAD~
-check the commits
-git log --oneline
-
-
-cat>sample3
-
-git add sample3
-git commit -m"sample3 created"
-
-git log --oneline
-remove commit using soft option
-git reset --soft HEAD~
-check the commits
-git log --oneline
-
-
-git revert HEAD~3
-           Revert the changes specified by the fourth last commit in HEAD and create a new commit with the
-           reverted changes.
-
-       git revert -n master~5..master~2
-           Revert the changes done by commits from the fifth last commit in master (included) to the third
-           last commit in master (included), but do not create any commit with the reverted changes. The
-           revert only modifies the working tree and the index.
-=============================
-
-PR — 
-
-Master (Main). —— temp 
-do changes
-test
- 
-Pull Request  will approved by you peers
-
-
-you should reviewd by 1 o2 team members
-
-JIRA TICKET NUM
-
-JIRA-1023-to do this
-
-hey I have regading can you approve PR
-https://github.com/kellydevops/test1/pull/1
-https://github.com/kellydevops/Dem060/pull/1
-https://github.com/kellydevops/Dem060/pull/2
-https://github.com/kellydevops/Demo57/pull/1
-https://github.com/kellydevops/Demo59/pull/1'
-https://github.com/kellydevops/Demo59/pull/2
-https://github.com/kellydevops/Demo60/pull/1
-https://github.com/kellydevops/Demo60/pull/2
-https://github.com/kellydevops/Demo62/pull/1
-
-
-
-Main/Production
-QA
-Dev
-Bugfix
-
- git squash
-  cherry pick
-how to restored reverted commit
-
-
-  https://github.com/kellydevops/Meterials.git
-
-
-Stash: to save current working dir changes. 
-
-do the changes in file
-ex:
- cat>>sample3
-cndsv
-vnvd
-
-ctrl + d (save and quit)
-
-git status 
-
-cat sample3
-
-create a stash on this changes
- git stash
-
-check the stash list
- git stash list
-
-apply the stash
- git stash apply
-
-to remove stash
- git stash remove
-
-to apply and remove stash 
-  git stash pop
-
-
-
-https://github.com/kellydevops/Meterials.git
-
-open your browser type above url
- dowload zip
-
-open git bash
-
-git clone https://github.com/kellydevops/Meterials.git
-
-git squash:
 
 
 
@@ -2154,11 +2600,21 @@ git squash:
 
 CI 
 
-Bamboo,Hudson, Drone, CircleCI, TeamCity
+Bamboo,Hudson, Drone, CircleCI, TeamCity, Jenkins
+
 
 workflow/ orchistrator
 
 I -- B -- T -- A -- D
+
+some changes on the  20 regarding some feature 
+I
+B
+T
+A
+D
+
+test
 
 system
 
@@ -2185,39 +2641,43 @@ jenkins port 8080
 open port 8080 on security group
 
 
+JDK & JRE
+
+
 VM/Physical/Cloud 
 
-Ec2 Linux — Jenkins
+Ec2 Amazon  Linux — Jenkins
 
- Java required (yum install java-1.8.0-openjdk.x86_64)
+ Java required (yum install java-17-openjdk) >=11
  
 Java available 2 type
  1.Open JDK
  2.Oracle Java
 
-to install java 11
+to install java 17
 
- yum install fontconfig java-11-openjdk
-sudo amazon-linux-extras install java-openjdk11
+ #yum install fontconfig java-17-openjdk
+#sudo amazon-linux-extras install java-openjdk17
+or 
+yum install fontconfig java-17-*
 
 to add jenkins repository 
-  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  #sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  #sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
  
  install jenkins
+ #yum install jenkins
+to verify jenkins install or not
+  #rpm -q jenkins
 
- yum install jenkins
-rpm -q jenkins
-
-start jenkins service
- service jenkins status
- service jenkins start
+ to start jenkins service
+ #service jenkins status
+ #service jenkins start
  or
- sysstemctl start jenkins
+ #systemctl start jenkins
 
 to enable jenkins
- systemctl enable jenkins
-
+ #systemctl enable jenkins
 Jenkins home dir 
  /var/lib/jenkins
 
@@ -2235,6 +2695,7 @@ copy the text
 
 30 GB -- 50 GB
 
+Workflow
 
 
 I
@@ -2271,11 +2732,18 @@ I'll run script from github using Jenkins
  echo " this current dir `pwd` "
 
 ========
+select public ip and type in browser ip:8080
 
- new item ---> job name and select the job type ---> ok --> build --> execute shell --> add commands
+to create job
+ new item ---> job name and select the job type ---> ok --> build --> execute shell 
+--> add commands ---> save 
 
----> save 
+Jenkins home dir : /var/lib/jenkins
 
+Workspace:  to build project Jenkins will create a folder with Job name
+/var/lib/jenkins/workspace
+
+to install plugins
  manage jenkins --> manage plugins --> available --> search plugin and select ---> install 
  without retsart
 
@@ -2288,10 +2756,9 @@ domain
 s/w
 security
 
-Jenkins home dir : /var/lib/jenkins
 
-Workspace:  to build project Jenkins will create a folder with Job name
-/var/lib/jenkins/workspace
+
+
 
 SCM/VCS — 
 
@@ -2351,7 +2818,7 @@ deployment
 10PM
 
 
-webhooks —— any event(commits) happen on git hub it wil notify Jenkins server
+webhooks —— any event(commits) happen on github it wil notify Jenkins server
 
 go to github repo settings — webhooks — add     jenkinsurl/github-webhook/
 
@@ -2379,11 +2846,13 @@ Maven ——
 
 Nodes/Agent/Client/slave
 
-
+install 
 Java --- 
 maven ---
 Nodes
 python --- 
+docker
+
 
 Jenkins Server --- Ec2/VM 
 configure it as node
@@ -2406,13 +2875,28 @@ execution Node
 Linux --- All Job
 Windows  -- failed 
 
+create jobs on master execution will do on remote system(Node/agent/slave/client).
 
-LAbel -- Node 
+
+
+
+100
+10 --- system resource 
+
+
+
+ Node any cloud/vm
+5 3 Linux, windows
 ====================
 1.create one more ec2 instance.
 2.login and check java is there or not
 if not install java: 
-yum install java-1.8.0-openjdk.x86_64
+if you're taking amazon linux os
+(yum install fontconfig java-11-openjdk
+or 
+yum install fontconfig java-11-*
+sudo amazon-linux-extras install java-openjdk11)
+
 3. go to jenkins gui and select manage Jenkins --> manage node
  --> create node --> provide name and select perminent
  
@@ -2430,11 +2914,12 @@ yum install java-1.8.0-openjdk.x86_64
 demo:
   create 2 jobs execute 2 jobs at same time if master is busy it will execute on node
 
+Label
 
+goto --> manage Jnekins --> manage nodes --> configure --> label --> give label
 
-
-
-
+goto job--> general section --- select Restrict where this project can be run --
+         provide label
 
 5 jobs
 
@@ -2448,35 +2933,46 @@ you have jenkins on Linux
 
 windows -- wiindows
 
-Label
 
-goto --> manage Jnekins --> manage nodes --> configure --> label --> give label
 
-goto job--> general section --- select Restrict where this project can be run --
-         provide label
+
+
+mount -o remount,size=5G /tmp/
+
+/etc/fstab
+tmpfs /tmp tmpfs rw,nodev,nosuid,size=5G 0 0
+
 
 
 create user and manage users
 
-Authentication: to who want to give acccess
-JEnkins own user database(need to create user omn JNekins server)
 
-Authorization: set the level permission
-by default "logged in user can do anything".
-
-we need to set matrix based permission
-
-manage jenkins --> configure  global security ---> authentication --> select "jenkins ownuser database"
-
-authorization --> select matrix-based security -->add user --> in  overall  tick readonly for test user and admin
-for jenikins admin and save 
-
-to test --> open jenins usrl in different browser and login to new user and check what permission he has.
 
 
 
 
 create windows on aws and configure as node
+=========
+CI/CD
+
+pipeline
+
+jenkins/gitlab/azure devops/jfrog pipeline
+
+
+checkout 
+build
+test
+deploy
+upload artifactory
+quality
+
+
+ trreform - create
+ ansible s/w
+ build docker
+ upload dockerhub
+ deploy into kubernets cluster
 
 
 ==================
@@ -2494,9 +2990,7 @@ first I'll download to system and upload to Jenkins server
 
 
 
-Maven is java build tool
-
-build tool --- script to reduced day to day task of developers.
+opers.
 
 folder structure 
 J2EE
@@ -2508,22 +3002,24 @@ java -- compile -- class -- binaries -- test -- upload central -- run local -- d
 
 dependencies -- 
 
-build -- 
-java based -- Maven/Gradle/ANT
-Microsoft -- NANT,MSBuild
 
+Maven is java build tool
+
+build tool --- script to reduced day to day task  devel
+
+build tools
+java based -- Maven/Gradle/ANT
+Microsoft -- NANT,MSBuild,Ngunt
 
 ANT -- Impertaive mode. --- you need to define the steps and exution steps 
 Maven -- declarative mode --
 
 Structure
-
-
 Src : to keep source code and test code
 Pom.xml : declare 
 Target -- workspace for maven projet
 
-
+convention over configuration 
 
 It’s a build tool
 	▪	Simplifies the build process
@@ -2536,8 +3032,6 @@ It’s a build tool
 	▪	Helps to create sites, reporting and documentation
 	▪	Follows standard project structure (or folder structure)
 
-jar/war/ear
-
 pom.xml
 
 artifact : name of the project
@@ -2548,20 +3042,10 @@ Package: type of package like jar/war/ear
 Repository : where we can get dependencies like local, remote and central
 Dependencies: which dependencies required
 
-SRC
-Main: Source code
-Test: test code
 
-When you start maven build it will generate folder called Taget.
-Target: workspace for maven project
+  helloworld_1.0.war/jar/ear
 
-code a+b =c
- 3 2 5
-
-
-23
-
-Life Cycle
+Life Cycle : sequence of steps
 
 mvn verify
 mvn compile
@@ -2588,11 +3072,35 @@ deploy	       Copies the final package to the remote repository for sharing with
                other developers and projects.
 =====================
 
-1.install maven plugin on GUI  --done   
-2.install maven on Jenkins server  --done
-3.configure maven path on GUI. --done
+
+1.install maven plugin on GUI    --done
+2.install maven on Jenkins server  -- done 
+3.configure maven path on GUI. --
 
 ====================
+
+JDK JRE
+
+
+Oracle JDK
+Open JDK  ---- yum install 
+ssh to jenkins
+
+install maven
+check java installed or not
+
+openjava 
+oracle java
+
+Windows --- Linux 
+
+java.taz -- 
+
+
+scp
+how to copy from windows--- linux  --- winscp/filezilla
+Linux/mac -- Linux.    scp
+
 
 how to secure your jenkins server
 10 users
@@ -2603,14 +3111,21 @@ tar
 winrar
 7zip
 
+ to export any env variable perminantly 
+ we use 2 locations 
+1./etc/profile.d/
+create a shell script 
+keep the export commands
 
-tar   .tar
-gunzip .gz
-bunzip .bz
+or 
+
+2. ~/.bash_profile
+  update the export cmds
 
 
 go to browser search for apache maven download
 
+ cd /opt
 to dowload
  #wget https://downloads.apache.org/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.zip
 unzip maven
@@ -2635,9 +3150,9 @@ configure maven home dir & path
 Java is install 
 
 Open JAVA.      yum install java-1.8.0-openjdk.x86_64
-Orcle JAVA:
+Orcle JAVA: 
 
-go to browser search for JDK1.8 download
+go to browser search for JDK11 download
 
 it will ask create Oracle account
 
@@ -2652,15 +3167,13 @@ How to SCP
 Windows -- Linux    Winscp/FileZilla
 Linux/Mac --- Linux  scp
 
-cp source dest
-cp -r abc xyz
-
-scp  sorce dest
 
 scp  sourcefile   username@ip:/path
+password:
+
 scp -i key sourcefile username@ip:/path
 
-scp -i ~/Downloads/demo_key.pem  ~/Downloads/jdk-8u281-linux-x64.tar.gz ec2-user@54.149.23.210:/tmp
+ex: scp -i ~/Downloads/demo_key.pem  ~/Downloads/jdk-11.0.16.1_linux-x64_bin.tar.gz ec2-user@54.149.23.210:/tmp
 
 1.move java file to opt folder
 2. extract
@@ -2739,12 +3252,12 @@ cron jobs
 Task schedulars
 
 * * * * *
-
-min (0-59)
-hr (0-23)
-day of month (1-31)
-month of year(1-12)
-day of week (0-6)
+1 2 3 4 5
+1.min (0-59)
+2.hr (0-23)
+3.day of month (1-31)
+4.month of year(1-12)
+5day of week (0-6)
 
 
 
@@ -2760,7 +3273,7 @@ every day 10:30PM
 
 30 22 * * * every day 10:PM
 30 22 * * 6 every Sat 10:30Pm
-0  */1 * * * every 2 hrs
+0  */2 * * * every 2 hrs
 0 22 1,15 * * 1st,15th of every month
 
 ==============
@@ -2776,12 +3289,16 @@ any event(commits) happen on GitHub it will notify to Jenkins server, then Jenki
 
 Goto Github repo -- settings -- webhooks -- add webhook.
 
-enetr  in Payload URL   <jenkins server url>/github-webhook/
+enter  in Payload URL   <jenkins server url>/github-webhook/
 
-5 
-5 time
+goto to jenkins server --> selsct job --> select configuration ---> build trigger selsct "GitHub hook trigger for GITScm polling"
+           --> save the job.
 
-30 -- any commits happen then trigger otherwise it will not trigger.
+to trigger job goto github make change and commit, automatically job trigger on jenkins.
+
+
+
+Poll SCM -- in schedule time any new commits happen it trigger the job then otherwise it will not trigger the job.
 
 
 ==============
@@ -2809,11 +3326,36 @@ write pipeline job save as Jenkinsfile and keep into VCS(Github).
 
 Declarative pipeline : we write pipeline script in Jnkinsfile and keep into VCS(GitHub).
 Scripted pipeline: directly writeen in pipeline session in pipeline job.
+==============
+
+secure jenkins server:
+
+Authuntication: to give access to jenkins server, different types we can gibe access to Jenkins the default one is "JEnkins own user database".
+
+Authorization: level of permission. Jenkins default permission will be "Logged in user can do anything"
+
+
+to seucre Jenkins server:
+
+go to manage jenkins --> users --> create new user.
+select manage jenkins --> security --> select authention "Jenkins own user database".
+for authorization -- 
+select manage jenkins --> security --> change autherization type to "Matrix base security" ad add uses give "administrator" permission for Jenkinsadmin user and other user give read permission --> apply
+
+to test goto another browser and loggin with new user and check permission.
+
+
+build -- war -- central --deploy Tomcat
+
+ Jenkins --- artifactory
+         --- tomcat
+         --- Sonarqube
+
 
 
 ================
 
-Jenkins --->Artifactory
+Jenkins --->Jfrog Artifactory
 
 Universal Binary repository:
 to mainatain binaries centrally
@@ -2833,6 +3375,7 @@ any binaries/libraries/artifacts/package
 compile -- it dowload internet ---> vulnerabilities
 
 
+
 binaries/Artifacts/bundles
 
   1. Local Repo: on Jforg created a folder to upload Artifacts
@@ -2840,10 +3383,10 @@ binaries/Artifacts/bundles
   3. virtual Repo: 
 
 How to set Artifactory server
-how upload binaries from Jenkins Artifactory.
+how upload binaries from Jenkins  to Artifactory.
 Repositories
 
-Ec2 Linux 
+Ec2 Amazon  Linux 
 2 vcpus 4GB --- 
 
 Install Jfrog Artifactory
@@ -2851,11 +3394,16 @@ On your infra
 Opensource OSS
 Enterprise Pro
 
+yum install fontconfig java-11-*
+
 SAAS --
  cloud
 
 on browser copy below link
 https://jfrog.com/community/download-artifactory-oss/
+
+docker pull releases-docker.jfrog.io/jfrog/artifactory-oss:latest
+wget https://releases.jfrog
 
 
 wget https://releases.jfrog.io/artifactory/artifactory-rpms/artifactory-rpms.repo -O jfrog-artifactory-rpms.repo;
@@ -2863,6 +3411,10 @@ sudo mv jfrog-artifactory-rpms.repo /etc/yum.repos.d/;
 sudo yum update && sudo yum install jfrog-artifactory-oss
 
 
+
+wget https://releases.jfrog.io/artifactory/artifactory-rpms/artifactory-rpms.repo -O jfrog-artifactory-rpms.repo;
+sudo mv jfrog-artifactory-rpms.repo /etc/yum.repos.d/;
+sudo yum update && sudo yum install jfrog-artifactory-oss
 
 GUI
 
@@ -2894,8 +3446,7 @@ Remote
 hub.docker.com
 s3
 ===============
-Ansible
-CM
+
 
 Installed Jfrog server
 GUI logged in
@@ -2907,40 +3458,64 @@ wget https://releases.jfrog.io/artifactory/artifactory-rpms/artifactory-rpms.rep
 sudo mv jfrog-artifactory-rpms.repo /etc/yum.repos.d/;
 sudo yum update && sudo yum install jfrog-artifactory-oss
 
+ systemctl start artifactory.service
 
+1. Local Repo: on Jforg created a folder to upload Artifacts
+  2.Remote Repo: on Remote site 
+  3. virtual Repo: combination of local and remote
 
 install artifactory plugin
-manage jenkins --> manage plugins -- vailable -- search for Artifactory -- install 
+manage jenkins --> manage plugins -- available -- search for Artifactory -- install 
 
-got manage jenkins ---> configuration system -- > JFrog --> give ID(any name like jforg)
+goto manage jenkins ---> configuration system -- > JFrog --> give ID(any name like jforg)
    ---> JFrog Platform URL (artifactory url publicip:8082)
    ---> Default Deployer Credentials - give username and credential of artifacroy server
 
 
-go to jenkins job -- configuration --> post build action selst deploy artfacts to artifactory
+go to jenkins job -- configuration --> post build action select "deploy artfacts to artifactory"
+
+https://github.com/AndriyKalashnykov/tomcat-root-war.git
+install
 
 
 =========================
 Jenkins -- Tomcat
-
 install java
-yum install java-1.8.0-openjdk.x86_64
+#yum install fontconfig java-11-*
 
 goto /opt
-cd /opt
+#cd /opt
 
 download tomcat form tar.gz
-wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84.tar.gz
+#wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.84/bin/apache-tomcat-8.5.84.tar.gz
 
 extract tar file 
-tar xvzf apache-tomcat-8.5.84.tar.gz
+#tar xvzf apache-tomcat-8.5.84.tar.gz
 
 goto apache-tomcat-8.5.84 folder
-cd apache-tomcat-8.5.84
+#cd apache-tomcat-8.5.84
+#cd bin
+#sh startup.sh
+#ps -ef | grep tomcat/java
+
+go to browser enter public ip address with port no 8080
+make sure allow port no 8080 in aws ec2 security group
+
+integrate Tomcat with Jenkins
+
+goto Jenkins GUI ---> manage Jeknins --> manage plugins --> avaiable search for
+ --> deploy to conatainer
+
+once you install you can see the option in post build actions called 
+"Deploy war/ear to conatainer".
 
 
-
-
+bin
+logs
+config
+webapp
+temp
+catilina
 =============
 build
 
@@ -2976,19 +3551,38 @@ netstat -natpl | grep java
 
 webapps folder we copy packages(war file)
 
-integrate Tomcat with Jenkins
 
-goto Jenkins GUI ---> manage Jeknins --> manage plugins --> avaiable search for
- --> deploy to conatainer
-
-
-once you install you can see the option in post build actions called 
-"Deploy war/ear to conatainer".
+CURD create read update delete
 
 
 Jenkins integration with SonarQube.
 
 How do operate JEnkins through API/CLI
+on broweser 
+jenkins url/api
+it will avialable api
+
+curd
+
+
+for json api
+jenkins url/api/json?pretty=true
+
+or open power shell run below command
+
+curl -u <username>:<api token> jenkins url/api/json?pretty=true
+
+to generate api token 
+on browser type like this
+jenkins url/me/configure
+
+click on generate api token and copy that
+
+to oprate command line
+on browser type like this
+jenkins url/cli
+
+it will show all avilable cmds and syntax. download.jar file before execute cmd on the same folder
 
 
 what is CI and intro
@@ -3005,43 +3599,126 @@ JEnkins through API/CLI
 Devlivary pipeline view.
 
 plugin delvary pipeline 
-Already existing jobs(freestyle) you can add in visualization on Jenkins dashboard.
+Already existing jobs(upstream and down stream freestyle) you can add in visualization on Jenkins dashboard.
+
+go to manage plugins ---> available plugins -- search for delivery pipeline  and install
+
+goto jenkins dashboard --> click on "+" button --> creat view and select delivery pipeline 
+---> give name for view ---> goto pipeline components add your upstream job and save.
+
+
+ CURD: 
 
 
 https://github.com/kellydevops/Meterials.git
+
+
+Intro VCS
+type VCS
+installation
+terminology 
+git workflow
+local git repo init
+git logs
+git revertes changes /stage/commit
+git branch
+merge and merge conflicts
+remoterepo github
+pull push
+git ssh
+github repo settings
+pull vs fetch 
+reset vs revert
+merge vs rebase
+git stash
+git PR
+
+git squash
+git cherrypic
+
+============
+Linux intro
+file structure
+file/creation creation
+file permissions
+filters
+users & group
+rpm &yum
+ps, 
+cp, scp,
+network
+=============
 
 ====================
 
 
 IAC
 
-CM |                   Infra provision |      App Runtime
+CM             |      Infra provision   |      App Runtime
 
-chef 			Terraform 		Docker
-ansible			clouformation		Vagrant
-puppet                  ARM templates
-salt stack
-
-DSL
+chef 			     Terraform 		         Docker
+ansible		    clouformation		         Vagrant
+puppet                 ARM templates/BICEP
+salt stack.            pulmni
 
 
-Manual. 
-script ---
-
-1.scalability.   
+1.scalability.  1 -- 1day min --  
 2.reuse
 3.Logs
 4.Deployment
+5.traking the infra changes
 
+DSL
+
+manage infra
+
+create
+install s/w
+config
+patch os, s/w
+deployments 
+delete
+
+manual
+script
+
+
+os
+create sever
+install os
+install s/w
+n/w
+security 
+
+code
+DSL -- 
+Manual. 
+script --- 100 script -- 10 
+
+code
+DSL
+
+  
+
+
+code -- SCM -- CM --infra
+
+provider
+
+resource
+
+
+prod -- feature. --- deploy -- cm 
+1
 
 DSL -- 
 \
 Chef        Ansible    Puppet
 
 
-patch 
+patch  100 
 
-script 
+script 100 10 
 
 
 to maintain existing env
@@ -3078,35 +3755,56 @@ database
 application
 fileserver
 
-
-package
-index file
+install s/w
+create index 
 start service
 
- tomcat  java
+install webserver for mutliple os 
 
- Run apt update
+1. create 2 server 
+     1 as ansible master(installed ansible on ther server by the installation steps)
+    2 as agent
+
+2. hostname change and check the connectivity b/w master and agents
+     if we want connect with hostname need update(ip with hostname) /etc/hosts file on master.
+
+3. generate  public key(on master) and copy to every agent
+       this is for passwordless authentication.
+
+4. update inventory file(with hostname/ip add of agents) in master
+
+5. check some Ad-hoc commands(one time tasks).
+    Ansible use to connect agents default user is root. 
+
+  idempotency: if any resource is there it will skip 
+
+
+
+
+/etc/hosts -- name resolve ip - name
+/etc/ansible/hosts -- inventory-- to manage server using ansible we need update hostname/ip in this file
+
+1. Run apt update
  #apt update
-Add pre-requisite package
+2. Add pre-requisite package
  #apt install software-properties-common
- Add ansible Repo
+3. Add ansible Repo
  #add-apt-repository --yes --update ppa:ansible/ansible
- INstall Ansible  
+4. INstall Ansible  
  #apt install ansible
 ==================
-  Ansible homw dir  -- 
+  Ansible home dir  -- 
  /etc/ansible
-  ansible.cfg
-  hosts
-  Roles
+  ansible.cfg  --- configuration file
+  hosts        --- inventory file
+  Roles        --- to write roles
 
-  check the connecivity b/w master agent
+centos or redhat default home dir:  /root/.ansible
+ 
+  check the connecivity b/w master and agent
+  host name -- ip. /etc/hosts 
 
-
-  DNS
-  host name -- ip
-
- change the hostname
+ change the hostname(#hostname <newname>)
  ping the servers with ip 
 or
  ping with host name after you update entry in /etc/hosts (to name resolve)
@@ -3119,10 +3817,8 @@ or
  
 if you want conect throgh ssh we will below command and you credential(user name & password)
  ssh username@ipaddress/hostname
-  password:
- 
+ password: 
 or 
-
 generate ssh key and keep on all systems(Dev,QA,Prd etc...) which you want manage through Ansible
 
 1. generate ssh key on Ansible master
@@ -3131,12 +3827,10 @@ generate ssh key and keep on all systems(Dev,QA,Prd etc...) which you want manag
            #ssh-keygen -t rsa
            ~/.ssh/id_rsa     ——> private key
            ~/.ssh/id_rsa.pub —> public key
-
       b. open id_rsa.pub
          #cat ~/.ssh/id_rsa.pub
       c. copy the content to ALl systems(Ansible agents) in below file
           ~/.ssh/authorised_keys 
-
 
 Any system you want to manage through Asible update in inventry file
 
@@ -3146,6 +3840,16 @@ vi /etc/ansible/hosts
 Add ip/hostname of agent
 
 :wq!(save &quit)
+
+
+ ssh username@ip/hostname
+
+
+idempotency: already resource 
+
+script:
+setup module gather the facts(system info json format) --- ohai
+
 
 
 Ad-hoc:
@@ -3166,7 +3870,7 @@ remote to local
   scp -i key   ubuntu@ip:/path/file  /tmp
 
 
-created role
+to create role
 cd /etc/ansible/roles
 ansible-galaxy init webserver
 
@@ -3201,7 +3905,7 @@ vi webserver/tasks/service.yml
 
 open handerles main.yml
 
-vi apache2/handler/main.yml
+vi webserver/handler/main.yml
 ---
 # handlers file for apache2
  - name: restart apache2 service
@@ -3209,14 +3913,29 @@ vi apache2/handler/main.yml
      name: apache2
      state: restarted
 
-
 create index file in files folder and copy apache2.conf file
 
 vi apache2/file/index.html
 Welcome to Webserver
 
-copy  apache2.conf file from any existing system (alredy  we have in apache2.conf file in Agent1, so we will copy from that)
+copy  apache2.conf file from any existing system (alredy  we have in apache2.conf file in Agent1, so we will copy 
+from that)
 
+if you install apache2 on ansible server
+(if you want install run #apt install apache2)
+ cp /etc/apache2/apache2.conf webserver/files
+create site.yml file and assign role 
+vi site.yml
+---
+ - hosts: agent1
+   roles:
+     - apache2
+
+execute site.yml playbook
+
+ansible-playbook site.yml
+
+=====
 goto agent and check apache2 is installed or not 
 #appache2 -l
 if installed it will show out put
@@ -3230,34 +3949,156 @@ change permission for pem key.
 chmod 600 demo_key.pem
 
 scp -i demo_key.pem ubuntu@agent1:/etc/apache2/apache2.conf  apache2/files
-
-create site.yml file and assign role 
-vi site.yml
----
- - hosts: agent1
-   roles:
-     - apache2
-
-execute site.yml playbook
-
-ansible-playbook site.yml
-
-
+===
 install jenkins
 tomcat play/role
 filewalls
 create file system
 java 
-LAMP()
+LAMP(Linux Apache MySql PHP)
 
 
  Dynamic inventry
  Ansible tower
+============================
+VIrtual Private CLoud(VPC): to get more control(secure) on AWS resources
+every region having default VPC
+Limits: 5VPC per Region
 
 
+8 or 255.0.0.0 
+16 or 255.255.0.0 -- 255*255
+24 or 255.255.255.0 -- 255
+CIDR
+
+
+
+1.VPC with public subnet
+2.VPC with public and private subenet (NAT)
+3.VPC with  public and private subnet and VPN
+4.VPC with private subnet and VPN
+
+1.create vpc.
+2.create subnets.
+3.create internet Gateway.
+4.attach internet gateway to vpc.
+5.use default route table and allow traffic via internet gateway.
+6.attach route table to public subnet.
+7.create nat gateway/instance in public subnet.
+8.create another route table and allow traffic from NAT gateway.
+9.attach to private subnet.
+
+
+testing purpose create 2 instaces 
+1.under public subnet and try to connect form workstation.
+2.create another instance under private subnet and try to connect from workstation (it will not connet you need to connect from any public ec2 instace to this) and try to run yum update(out side connection )
+
+public ec2 can connect from internet(workstation )
+private ec2 cnn’t connect from internet
+
+
+to get the private 2 ways
+1. copy from your desktop to aws using winscp/filezill
+2. create smake name using vi <key filename>
+goto laptop and open your key with notepad and copy the content and paste on vi <keyname> anbd save it.
+
+after the key chnage permissions.
+
+#chmod 600 <keyname>
 ==========================
+Cloud
+what is 
+what type
+what are offering
+public cloud AWS
+
+any service using internet 
+
+cloud
+
+PAy as you use
+anywhere you can access
+
+server --- upfront cost
+
+server,storage, n/w
+
+
+as service
+IAAS: VM
+PASS: Kubernetes, EBS, APPservice
+SAAS: Gmail, Salesforce
+
+
+Public cloud: AWS,Azure,GCP
+private: Openstack,VAmware
+hybrid: 
+ 
+CAAS
+FAAS
+ 
+
+Data center
+server
+n/w
+system
+
+2006, Amazon 
+Amazon Webservices(AWS), 
+
+
+
+console.aws.amazon.com
+email id
+phone
+credit/debit card
+
+5
+
+1. enter email & account name 
+2. details 
+3. credit/debit -- 2 rs revert.  
+4. verification  -- phone 
+5. account
+
+
+vm -- instance
+Linux
+Ubuntu, Rehat,suse,MacOs, Windows
+
+
+
+
+ Regions and availability Zones
+
+ Programatic 
+  API,CLI,SDK
+
+some always
+trials
+limit 
+1year
+
+Console 
+
+Elastic cloud compute (ec2 instace) | Azure VMs (20000Rs) | GCP VM instance(18000)
+
+1.whether it free tier or not  750 hr/mon
+2.configuration 
+3.price
+
+
+Console --
+
+Programatically 
+CLI,API,SDKs
+
+Amazon Linux/Redhat/SUSE/Ubuntu/Mac/windows/Debium
+
 Configure
 pricing 
+
+Instancce types:
 
 General purpose 
 T M A.       
@@ -3270,9 +4111,61 @@ G P
 Storage
 I H D
 
-each series different type/models
-T2
- T3 M4 M3 M5
+steps to launch instance:
+
+1.Name and tags
+demo --- ec2 -- 
+2.AMI OS templates
+3.instance type.  ----> t2.micro 1vcp 1GB
+4.connect keypair(private key) while crreating ec2 instance, or if you have already one
+ key pair we can use for other instance
+5.Secutity Group we will open ports  Linux -- ssh -- 22 8080 80 3306
+6.storage -- 30GB -- Volumes
+
+ 
+ ondemand
+ reserverd -- 1/3yr 
+ spot. -- bid 
+ dedicated
+
+ Linux -- Linux/Mac
+  ssh -i keypair username@publicip
+ Linux -- Windows
+   putty/git bash/powershell/Mobixterm/ openssh
+ 
+oracle vm/vm ware workstation
+create vm --
+install os
+
+
+ssh username@ip
+password:
+
+
+username ec2-user 
+ubuntu
+
+
+git bash
+power ssh
+
+putty
+.ppk
+
+terminal/shell on linux mac
+
+ssh
+
+ec2-user ---
+ubuntu
+
+
+  instance --- AMI -- Create snapshot for root volume 
+
+
+username & password
+username & private key
+
 
 instance stopped  -- charge compute
 staoge attached to that they will charge
@@ -3310,6 +4203,10 @@ what happend my master is down even nodes are up?
 if you wanr deploy pod on specific node how do you do that
 
 
+
+
+https://github.com/kellydevops/Meterials.git
+
 1. Choose AMI(Amazon Machine Image) -- os template
 2. Choose Instance Type
 3. Configure Instance
@@ -3318,6 +4215,7 @@ if you wanr deploy pod on specific node how do you do that
 6. Configure Security Group
 7. Review
 
+instance --- ami(root volume snapshot) -- snapshot 
 
 some pre-defined templates offered by AWS
 your AMI 
@@ -3335,6 +4233,39 @@ mysql -- 3306
 SG-- once we create SG we can also reuse for other instances
 ex: weberver security group ---- all webserver
     DB SG --- all Database servers
+
+
+/dev/sda or hda or xvdf
+
+/dev/sda1
+/dev/sda2
+/dev/sda3
+
+/dev/sdb1
+====================
+
+1.VPC with public subet
+2.VPC with public and private subenet (NAT)
+3.VPC with  public and private subenet and VPN
+4.VPC with private subnet and VPN
+
+1.create vpc.
+2.create subnets.
+3.create internet Gateway.
+4.attach internet gateway to vpc.
+5.use default route table and allow traffic via internet gateway.
+6.attach route table to public subnet.
+7.create nat gateway/instance.
+8.create another route table and allow traffic from NAT gateway.
+9.attach to private subnet.
+
+
+testing purpose create 2 instaces 
+1.under public subnet and try to connect form workstation.
+2.create another instance under private subnet and try to connect from workstation (it will not connet you need to connect from any public ec2 instace to this) and try to run yum update(out side connection )
+
+public ec2 can connect from internet(workstation )
+private ec2 cnn’t connect from internet
 
 ==============
 Terraform
@@ -3381,6 +4312,315 @@ app 2.0 with centos 7 so & so dep
 
 
 centos 8
+
+HCL. like json
+
+
+main.tf
+
+providers: what infra 
+resource: 
+variable
+output
+
+variables.tf
+output.tf
+
+code --init(first time) it will download aws plugins to operate aws resource--- plan
+terraform apply/plan/destroy
+================================
+download TF 
+https://developer.hashicorp.com/terraform/downloads
+
+extract -- run cmd
+
+
+ install terraform
+ 
+
+
+download and install visualstudi code editor
+
+create folder
+create file main.tf
+
+we are configuring aws resource 
+aws cli configuration
+
+
+
+
+aws 
+console. u p
+Programtic
+API/CLI/SDKs
+
+2 ak sk
+
+
+curd
+create,update,read,delete
+
+TF is infra provision tool. Using TF 
+we can create desired state of infra
+create infra in multiple env/regions
+we can create immutable infrastucture 
+
+1.install terraform
+use the below link:
+https://developer.hashicorp.com/terraform/downloads
+
+2.install visual studio code editor or vi editor
+https://code.visualstudio.com/download
+
+3.install aws cli 
+have AWS account & get access key & secret key from console
+4.configure access & secret key on workstation
+
+aws access key & secret key(to oprate aws through programtic like API/CLI/SDKs/Powershell)
+install aws cli on you workstation(laptop)
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+open powershell/cmd run 
+#aws --version
+
+to get access and secret key goto console -->click user account (on top right side corner) -->click on security credentials 
+-->go to access keys --> create accesskey
+
+configure credentials
+#aws configure
+accesskey:
+secret key:
+region:
+output format:
+
+Terraform lifecycle
+write code
+init(very first time we will run)
+plan
+apply
+
+
+create folder
+main.tf
+
+provider details
+resources
+variables
+output
+
+
+
+vpc(Virt)
+public subnet
+private
+
+
+
+
+1.create ec2 instance using terrform
+
+
+provider 
+ resource
+
+
+before we run aws cli or update accesskey and secret in main.tf
+
+to operate aws programtic we use AK&SK
+cli,api,sdk
+
+
+init
+
+plan
+
+
+Goal to create web server with speci keypair and subnet
+
+1. creaet public and privatekey  using 
+#ssh-keygen -t rsa -f demo
+write a main.tf file
+
+a) create key pair
+b) Assigning key par to instance
+c) connecting ec2 instance with private key
+d) to execute commands once instance created using TF
+
+
+Resource Providers: Terraform resource providers allow you to manage resources on different cloud platforms, 
+such as AWS, Azure, and Google Cloud. You can use resource providers to manage a wide variety of resources, 
+such as virtual machines, databases, and networking resources.
+
+variable
+Input variables are like function arguments.
+Output valueiss are like function return values.
+Local values are like a function's temporary local variables.
+
+modules
+
+Terraform is Infrastructure AS Code. Using Terraform we can manage multiple type of Infra.
+It will create infra from Zero to Desired state. And also it maintain immutable infrastructure.
+
+Modules: Terraform modules allow you to reuse code and create more modular infrastructure configurations. 
+You can use modules to organize your code, create reusable components, and simplify your infrastructure 
+management.
+
+Variables: Terraform variables allow you to define values that can be used throughout your infrastructure 
+configuration. You can use variables to make your configuration more flexible and reusable, and to make 
+it easier to manage complex infrastructure.
+
+Outputs: Terraform outputs allow you to expose information about your infrastructure to other resources 
+or to the user. You can use outputs to share data between resources, or to display important information 
+to the user.
+
+The state file in Terraform is a file that contains information about the current 
+state of the infrastructure that Terraform is managing. It is used to keep track 
+of the resources that have been created, their current properties, and the 
+relationships between them.
+
+The state file is automatically created and managed by Terraform. By default, it is
+ stored in a local file named terraform.tfstate. However, it is recommended to use 
+a remote state management like S3 bucket, azure storage , consul, etc so that it can 
+be shared among multiple users and teams working on the same infrastructure
+
+terraform {
+  backend "s3" {
+    bucket = "my-terraform-state-bucket"
+    key    = "path/to/my/statefile.tfstate"
+    region = "us-west-2"
+  }
+}
+
+
+
+Remote State: Terraform's remote state feature allows you to store your infrastructure state in a remote 
+location, such as an S3 bucket or a Terraform Cloud workspace. This can be useful for collaboration and 
+for keeping track of changes to your infrastructure.
+
+Terraform Cloud: Terraform Cloud is a hosted service that provides additional features for managing your 
+Terraform infrastructure, such as collaborative workspaces, automated runs, and version control.
+
+
+
+Terraform Cloud is an application that helps teams use Terraform together. It manages Terraform runs in a consistent and reliable environment, and includes easy access to shared state and secret data, access controls for approving changes to infrastructure, a private registry for sharing Terraform modules, detailed policy controls for governing the contents of Terraform configurations, and more.
+
+Here's an example of how you can set up a remote state file using an S3 bucket:
+
+Create an S3 bucket: Create an S3 bucket to store the state file.
+
+Configure the backend: In your Terraform configuration file, add a block that 
+configures the backend to use the S3 bucket. Here is an example of how the block 
+should look like:
+
+
+terraform {
+  backend "s3" {
+    bucket = "my-terraform-state-bucket"
+    key    = "path/to/my/statefile.tfstate"
+    region = "us-west-2"
+  }
+}
+
+Run terraform init: Run the command terraform init to initialize the backend and 
+download the necessary plugins.
+
+Run terraform plan and terraform apply : Now when you run terraform plan and 
+terraform apply, Terraform will use the remote state file stored in the S3 bucket.
+
+=======================================
+# main.tf
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_key_pair" "example" {
+  key_name   = "example"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqTn2gqVqO4lx8...
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0ff8a91507f77f867"
+  instance_type = "t2.micro"
+  key_name      = aws_key_pair.example.key_name
+
+  tags = {
+    Name = "example-instance"
+  }
+
+  connection {
+    type        = "ssh"
+    user        = "ec2-user"
+    private_key = file("path/to/private_key")
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo yum install -y httpd",
+      "sudo systemctl start httpd"
+    ]
+  }
+}
+
+
+In this example, we first specify the AWS provider and the region that we want to 
+use. Then, we create an AWS key pair resource, providing the key name and the 
+public key.
+
+Next, we create an EC2 instance resource, specifying the AMI ID, instance type, and
+key pair to use. We also specify a tag for the instance, and the connection details
+to access the instance using the private key.
+
+Finally, we use the provisioner block to run a series of commands to install and 
+start the Apache web server. The remote-exec provisioner runs the command on the 
+remote instance using SSH.
+
+After you run terraform apply, Terraform will create the key pair and the EC2 i
+nstance, and run the commands to install and start the web server. You can then 
+access the web server by visiting the public IP of the instance in your web browser.
+
+It's worth noting that you will need to make sure that the user which you are 
+providing in the connection block has the permissions to create ec2 instances and 
+also the keypair should be created in the same region where the ec2 instance is 
+being created.
+
+====================================
+Here's an example of how you can create and use workspaces in Terraform:
+
+First, initialize your Terraform configuration by running:
+
+terraform init
+
+Then create a new workspace by running:
+terraform workspace new dev
+
+This will create a new workspace called "dev"
+You can switch to an existing workspace by running:
+terraform workspace select dev
+
+You can also list all available workspaces by running:
+terraform workspace list
+
+Now, you can use your Terraform configuration as usual, but the state will be kept 
+separate for each workspace.
+
+For example, if you have a main.tf file that creates an EC2 instance and you run 
+terraform apply in the dev workspace, it will create an EC2 instance and save the 
+state information related to that instance in a dev.tfstate file.
+
+If you switch to another workspace, let's say prod and run terraform apply, it will
+ create another EC2 instance but the state information will be saved in a different prod.tfstate file, so you can have different versions of your infrastructure in different workspaces.
+
+You can also use workspaces to manage different environments, for example: dev, 
+staging, and production. this way you can easily test your code in dev environment,
+ and promote it to staging and production environment.
+
+It's worth noting that you should use remote state management in conjunction with 
+workspaces to make sure that the state files are shared among the different 
+workspaces and teams.
+
 ===============================
 to get the availabilty zones using AWS CLI:
 
@@ -3526,6 +4766,83 @@ reosurce
 data
  to get exiting resource
 
+=======================
+
+1.separate varibale.tf
+ define default values
+
+2. pass command line using below commands
+-var="varname=value"
+-var='varname=["el1","el2","el3"]'
+
+ex: terraform apply -var='cidr_block=["192.168.0.0/16","192.168.0.0/24","192.168.1.0/24"]' -var='subnet_name=["sn1","sn2"]' -var="aws_region=us-west-2" -var="vpc_name=example"
+
+3. pass using .tfvars file
+
+--var-file=varfile.tfvars
+region=us-west2
+ami=""
+tag=""
+
+ex:
+variable.tfvars
+  aws_region = "us-west-2"
+  cidr_block = ["192.168.0.0/16","192.168.0.0/24","192.168.1.0/24"]
+  vpc_name = "demovpc"
+  subnet_name = ["sn1","sn2"]
+
+4. define as environment variable and pass 
+
+ export TF_VAR_name_of_var="value"
+
+ex:export TFVAR_cidr_block='["192.168.0.0/16","192.168.0.0/24","192.168.1.0/24"]'
+   export TFVAR_ vpc_name='testvpc'
+
+
+terraform apply -var='cidr_block=["192.168.0.0/16","192.168.0.0/24","192.168.1.0/24"]' -var='subnet_name=["sn1","sn2"]' -var="aws_region=us-west-2" -var="vpc_name=example"
+
+
+
+export 
+
+
+terraform plan -var='tags=["testvpc", "Public subnet", "private subnet"]' -var='cidr_block=["192.168.0.0/16", "192.168.0.0/24", "192.168.1.0/24"]' -var="region=us-west-2"
+
+============================
+1. create ec2 instance and make it as webserver
+2. backend as s3 instead of local
+
+=============
+
+1. create TF cloud account 
+2. create project & workspace
+3. Add TF cloud org  & workspace name in main.tf
+4. command line login to TF cloud
+5. generate token and copy it to local
+6. add AWS credentials as variable set in TF cloud.
+7. run terraform init.
+8. run TF plan and apply.
+
+
+
+Ensure you are properly authenticated into Terraform Cloud by running terraform login on the command line or by using a 
+credentials block.
+Add a code block to your Terraform configuration files to set up the cloud integration . 
+You can add this configuration block to any .tf file in the directory where you run Terraform.
+
+Example code
+terraform {
+  cloud {
+    organization = "kellydevopsdemo"
+
+    workspaces {
+      name = "demo10"
+    }
+  }
+}
+
+Run terraform init to initialize the workspace.
+Run terraform apply to start the first run for this workspace.
 ======================
 
 AWS ec2,s3, VPC etc....
@@ -3573,8 +4890,126 @@ Visualstudio code editor /Sublime/Atom/IntiliJ etc.....
  state file/ Terraform cloud
  
 
+
+
+
+Terraform cloud:
+
+to  collaborate teams in your oranization
+
+signup free terraform cloud with email id
+
+
+create project and workspace
+
+workspace: to maintain diff env tf code and tf state file we use TF work spaces.
+
+to create workspace
+#terrafoem workspace new dev
+
+to change workspace
+#terrafoem workspace select dev
+
+to list workspace
+#terrafoem workspace list
+
+
+TF cloud will not read loacl AWS CLI credentials.
+configure AWS credentials as Variable set on TF cloud
+Settings---> Variable sets ---> Configure settings (Name) (description), Variable set scope 
+select Apply to specific projects and workspaces or Apply globally
+Add variable enter key & value 
+AWS_ACCESS_KEY:
+AWS_SECRET_KEY:
+
+goto local folder
+create main.tf and add resources and below block
+terraform {
+  cloud {
+    organization = "kellydevopsdemo"
+
+    workspaces {
+      name = "testworkspace-1"
+    }
+  }
+}
+
+run below command
+#terraform login
+
+it will redirect to browser and generate token and copy token.
+goto terminal paste token(it will not display when you paste).
+
+run terraform plan and apply
+
+
+
+create a vpc and subnet using TF
+create 3 instace with diffrent name and same vaules
+create 3 ec2 instace with different names,env with diffrent values  subnet,ami 
+
+web-dev
+web-qa
+we-prod
+
+
+
+
+
   Kubernates terraform
 ==============================================================
+managed service
+
+GKE,EKS,AKS
+
+
+when we create EKS service AWS will provide Controle plane
+2 3 5-- through node group
+
+
+EKS cluster create using console:
+
+frist crerate 2 roles for EKS cluster
+1.EKScluster role ---> to managae AWS resource by EKS behalf of you.
+2.Node Roles --> create ec2 instance by EKS cluster.
+
+to create EKSCluster role use the policy called "amazonEKSClusterPolicy".
+to create Node Role use the policies "AmazonEKSWorkerNodePolicy", 
+"AmazonEC2ContainerRegistryReadOnly",
+"AmazonEKS_CNI_Policy"
+
+AmazonEC2ContainerRegistryReadOnly	AWS managed	
+Provides read-only access to Amazon EC2 Container Registry repositories.
+
+AmazonEKS_CNI_Policy
+
+search service EKS
+Step 1
+Configure cluster --> create cluster -- provide the name and role and K version .
+
+Step 2
+Specify networking ---> vpc, subnet and SGs and endpoint access 
+
+Step 3
+Configure logging --> for the troubleshooting purpose we can enable logs but not required(keep it default)
+
+Step 4
+Select add-ons --> 3 add EKS will use kube-proxy,coreDNS, CNI
+
+Step 5
+Configure selected add-ons settings ---> select avaiblae versions for above addons (keep default)
+
+Step 6
+Review and create
+
+it will take 15 mins
+
+AWS CLI or EKSCTL or aws console: 
+
+EKS 0.10$/hr --- additional charges for the node which we add in cluster
+
+
+
 EKS cluster install using eksctl tool
 
 to install eksctl
@@ -3586,8 +5021,52 @@ on Mac
 brew install weaveworks/tap/eksctl
 eksctl version 
 
+aws cli
+eksctl
+kubectl
+
+console
+
+username password
+
+Programatic
+CLI,API,SDKs
+
+Access Key Secret Key
+
+2 roles
+
+EKScluster role
+for this we ned attach policy "AmazonEKSClusterPolicy". It will manage ec2 instance 
+
+Nodegroup
+AmazonEKSWorkerNodePolicy
+AmazonEC2ContainerRegistryReadOnly
+AmazonEC2ContainerRegistryFullAccess 
+AmazonEKS_CNI_Policy
+
+
+prerequisites :
+on workstation insatll aws cli >2.7
+install kubectl
+instll eksctl
+
 to create eks cluster using eksctl:-
 eksctl create cluster --name demo-cluster --region us-west-2
+
+to connect eks cluster from local system
+aws eks --region us-west-2 update-kubeconfig --name demo-cluster
+
+for more details
+https://aws.amazon.com/premiumsupport/knowledge-center/eks-cluster-connection/
+
+to create node group
+eksctl create nodegroup --cluster testcluster --region us-west-2 --name demo-nodegrp --node-type t3.medium  \
+  --nodes 2 \
+  --nodes-min 2 \
+  --nodes-max 2 \
+  --ssh-access \
+  --ssh-public-key demo_key
 
 to create node group in EKS cluster:-
 eksctl create nodegroup \
@@ -3601,7 +5080,57 @@ eksctl create nodegroup \
   --ssh-access \
   --ssh-public-key my-key
 
-kubectl get nodes
+kubectl: is tool to manage kubernetes resource like deployment, service, pod etc...
+ 
+to display deployments
+#kubectl get deployment
+
+to display service
+#kubectl get service 
+or 
+#kubectl get svc
+
+to display pods
+#kubectl get pods
+or 
+#kubectl get po
+
+to deplay namespace
+#kubectl get namespace
+or 
+#kubectl get ns
+
+to deploy application write yml file(manifest)
+exammple: to deploy nginx app on kubernets 
+
+vi nginx-deployment.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2 
+        ports:
+        - containerPort: 80
+
+:wq! (save&quit)
+
+to deploy app 
+#kubectl create -f nginx-deployment.yml
+
+check deployment and pod using kubectl get command
 
 
 
@@ -3609,16 +5138,29 @@ kubectl expose deployment example --port=80 --target-port=9376 \
         --name=example-service --type=LoadBalancer
 
 
-1.Rolling deployment —replaces pods running the old version of the application with the new version, one by one, without downtime 
+1.Rolling deployment/ Blue Gree deployments
+  —replaces pods running the old version of the application with the new version, one by one, without downtime 
    to the cluster.
-2.Recreate —terminates all the pods and replaces them with the new version.
-3.Ramped slow rollout —rolls out replicas of the new version, while in parallel, shutting down old replicas. 
-4.Best-effort controlled rollout. —specifies a “max unavailable” parameter which indicates what percentage of existing pods can be 
+2.Recreate 
+—terminates all the pods and replaces them with the new version.
+3.Ramped slow rollout 
+—rolls out replicas of the new version, while in parallel, shutting down old replicas. 
+4.Best-effort controlled rollout. 
+—specifies a “max unavailable” parameter which indicates what percentage of existing pods can be 
    unavailable during the upgrade, enabling the rollout to happen much more quickly.
-5.Canary deployment—uses a progressive delivery approach, with one version of the application serving most users, and another, 
-   newer version serving a small pool of test users. The test deployment is rolled out to more users if it is   successful.
+5.Canary deployment
+—uses a progressive delivery approach, with one version of the application serving most users, and another, 
+   newer version serving a small pool of test users. The test deployment is rolled out to more users if it is successful.
+  
+   
 
-==================================================================================
+====================================================================================
+
+3 pod -- ip 
+
+service
+node -- 
+=============
 
 cluster-ip
 
@@ -3648,14 +5190,31 @@ metadata:
   labels:
     app: nginx-app
   name: nginx-svc
-  namespace: default
 spec:
-  type: ClusterIP  # use ClusterIP as type here
+  type: ClusterIP  
   ports:
     - port: 80
   selector:
     app: nginx-app
-=========================
+
+
+spec:
+  type: NodePort  
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30002
+  selector:
+    app: nginx-app
+
+spec:
+  type: LoadBalancer  
+  ports:
+     - port: 80
+       targetPort: 80
+  selector:
+    app: nginx-app
+========================
 nodeport
 
 apiVersion: apps/v1
@@ -3734,9 +5293,209 @@ spec:
 
 
 =============
+ Scheduling Pods
+
+ using  Nodeselector
+   1. Lables
+   2. Affinity and anti-affinity or tolarate
+   3. nodeName 
+ 
+using Labels  
+  check the labels of nodes
+#kubectl get nodes --show-labels
+
+ to assign labels to Nodes
+#kubectl label node <Node2 Name> disktype=hdd
+#kubectl label node <Node1 Name> disktype=ssd
+
+ check the labels of nodes
+#kubectl get nodes --show-labels
+
+create yml file to schedule pod based on labels
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx2
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  nodeSelector:
+    disktype: ssd
+
+
+created pod 
+ #kubectl create -f pod.yml
+
+now check the pod deployed on which node
+#kubectl get pod -o wide
+
+
+2. Affinity and anti-affinity 
+
+requiredDuringSchedulingIgnoredDuringExecution:  The scheduler can't schedule the Pod unless the rule is met. 
+                                                  This functions like nodeSelector, but with a more expressive 
+                                                  syntax.
+preferredDuringSchedulingIgnoredDuringExecution: The scheduler tries to find a node that meets the rule. 
+                                                 If a matching node is not available, the scheduler still 
+                                                 schedules the Pod.
+
+Note: In the preceding types, IgnoredDuringExecution means that if the node labels change after Kubernetes schedules 
+      the Pod, the Pod continues to run.
 
 
 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-node-affinity
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.kubernetes.io/zone
+            operator: In
+            values:
+            - us-west-2b
+            - 
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: topology.kubernetes.io/region
+            operator: In
+            values:
+            - us-west-2
+  containers:
+  - name: with-node-affinity
+    image: registry.k8s.io/pause:2.0
+
+
+3. nodeName:
+
+nodeName is a field in the Pod spec. If the nodeName field is not empty, the scheduler ignores the Pod and the kubelet on
+ the named node tries to place the Pod on that node. Using nodeName overrules using nodeSelector or affinity and 
+  anti-affinity rules.
+
+Some of the limitations of using nodeName to select nodes are:
+
+If the named node does not exist, the Pod will not run, and in some cases may be automatically deleted.
+If the named node does not have the resources to accommodate the Pod, the Pod will fail and its reason will indicate why,
+ for example OutOfmemory or OutOfcpu.
+Node names in cloud environments are not always predictable or stable.
+Here is an example of a Pod spec using the nodeName field:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  nodeName: kube-01
+The above Pod will only run on the node kube-01.
+
+Pod
+=======================
+secrete and configmaps:
+
+dev qa --- same db server
+
+MongoDb on Kubernetes cluster along with Mongo Express 
+
+============================
+ Horizental Pod Autoscaling(HPA)
+ cluster Autoscaling
+
+prerequisites:
+
+1. existing Amazon EKS cluster or Minikube.
+2. Kubernetes Metrics Server installed.
+3. kubectl installed on Workstaion.
+
+in AWS EKS cluster HPA below is doc
+https://docs.aws.amazon.com/eks/latest/userguide/horizontal-pod-autoscaler.html
+
+or 
+kubernets docs
+https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+
+
+Installing the Kubernetes Metrics Server
+
+1.Deploy the Metrics Server with the following command:
+#kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+2.Verify that the metrics-server deployment is running the desired number of pods with the following command.
+#kubectl get deployment metrics-server -n kube-system
+
+
+The example output is as follows.
+
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+metrics-server   1/1     1            1           6m
+
+
+To test your Horizontal Pod Autoscaler installation
+
+Deploy a simple Apache web server application with the following command.
+#kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
+
+Create a Horizontal Pod Autoscaler resource for the php-apache deployment.
+#kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+
+Describe the autoscaler with the following command to view its details.
+kubectl get hpa
+
+Create a load for the web server by running a container.
+kubectl run -i \
+    --tty load-generator \
+    --rm --image=busybox \
+    --restart=Never \
+    -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+
+To watch the deployment scale out, periodically run the following command in a separate terminal from 
+the terminal that you ran the previous step in.
+
+kubectl get hpa php-apache
+
+
+Stop generating load
+To finish the example, stop sending the load.
+
+In the terminal where you created the Pod that runs a busybox image, terminate the load generation by typing
+ <Ctrl> + C.
+
+Then verify the result state (after a minute or so):
+
+# type Ctrl+C to end the watch when you're ready
+kubectl get hpa php-apache --watch
+
+
+When you are done experimenting with your sample application, delete the php-apache resources.
+kubectl delete deployment.apps/php-apache service/php-apache horizontalpodautoscaler.autoscaling/php-apache
+
+============
+
+
+helm
+
+
+secrets and configmaps 
+
+kubectl port-forward service/mongo-express-service 8081:8081
+
+
+
+echo "admin" | base64
+YWRtaW4K
+➜  Downloads echo "YWRtaW4K" |base64 --decode
 yml
 
 kubectl get 
@@ -3799,7 +5558,7 @@ Tier3 Webserver Application Database
 
 
 Master Dabase
-servers -- not respomding primary
+servers -- not responding primary
 Agents standby
 
 Redis  master
@@ -3819,6 +5578,47 @@ Service
 Package manager -- Helm
 Service Mesh(network) -- Istio
 
+=
+====================
+to deploy mongo db
+we will create 2  deployments one is mongo pod and another one is mongo-express
+
+
+mongo db -- clusterip
+mongo-express -- nodeport
+
+
+mongo-express is webclient for mongodb, it will use port 8081
+mongo port is 27017
+
+1.create deployment for mongodb
+to connect mongodb we user username and password, this values will create separate yml as secrets.yml
+and will use this values foom secrets
+databse connection details like mongodb server url and db or connections values will keep in configmaps
+
+
+in mogo DB will create service also
+ kubectl create -f secrets.yml          
+➜   kubectl get secret                     
+➜   kubectl create -f mongo-deployment.yml 
+➜   kubectl get deployment                 
+➜   kubectl create -f mongodb-configmap.yml
+➜   kubectl get configmap 
+➜   kubectl create -f mongo-express.yml
+➜   kubectl get svc       
+➜   kubectl get deployment
+
+
+
+Programming
+Database
+Cloud
+container
+monotiong
+metrigs
+logs
+servers web 
+
 
 
 Ansible 
@@ -3830,6 +5630,8 @@ projects 1
 
 
 install tomcat & java & mysql
+
+console.aws.amazon.com
 
 
   1. enter email id & set account name.
@@ -3885,6 +5687,78 @@ Torvald Linuz
 
 
 
+----minikube --- local 
+ -----kubeadm --- vm 
+ ---- kubernates maanged service --- EKS/AKS
 
 
 
+EBS(Elastic Block Storage)
+
+5 types
+
+ssd.  gp(general)(1 GiB - 16 TiB), IOPS (DB, low latency) (4 GiB - 16 TiB) 
+hdd.: Cold HDD volumes, Throughput Optimized HDD volumes  --- to stoge big data,Data warehouses.(125GB-16TB)
+magantic -- infrequent access data(1 GiB-1 TiB) 
+
+
+
+
+root volume: which contains OS
+ebs volume: apart from root we called ebs volumes
+
+
+
+1.create volume.  --- console /Programtic
+2.attach volume to instance
+3.format disk & create partitions
+4.convert into file system
+5.mount the partion.
+
+to format disk and create partitions
+
+#fdisk /dev/xvdf
+:n
+type : e
+Partition number (1-4, default 1): enter
+First sector (2048-20971519, default 2048):  enter
+Last sector: +9G
+
+:n
+Partition type: l
+First sector (4096-18876415, default 4096):
+Last sector: +5G
+
+:w
+
+to update disk change to kernel without restart use the below cmd
+#partprobe /dev/xvdf
+
+windows -- NTFS 4, 6 , FAT16,FAT32
+Linux -- xfs, ext2,ext3,ext4
+unix: ufs,jfs,jfs2
+
+create file system
+#mkfs -t /dev/xvdf5 
+
+create a dir 
+#mkdir /test
+
+mount the dir 
+#mount /dev/xvdf5 /test
+
+to see mounted partitions
+#df -h
+
+go to dir and write some files
+#cd /test
+#touch sample{1..10}
+
+
+to umnount, first come out from current dir
+#cd
+
+unmount
+#umount /test
+
+go to console select volume and detach/force dettach volume and selct and delete afte see the available state.
