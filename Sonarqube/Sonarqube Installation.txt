@@ -1,0 +1,126 @@
+Sonarqube Installation
+
+
+For code quality analysis, initially we require sonarqube server and later we have to integrate it with jenkins. 
+Follow step by steps for sonarqube installation. 
+Initially launch a t2.medium instance in AWS and then execute the following commands. 
+
+
+sudo apt-get update 
+
+Then, execute the following commands for upgrading the packages. 
+
+
+sudo apt-get upgrade -y
+
+sudo apt-get install openjdk-17-jdk -y 
+
+To validate the java installation, execute the following command. 
+
+java --version
+
+Now execute the following command, to enter into opt directory for downloading sonarqube. 
+
+cd /opt
+
+After entering into that directory. Execute the below command for downloading. 
+
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.0.65466.zip 
+
+
+As we have downloaded zip file, to unzip that folder we require unzip software and it shall 
+be installed by executing the following commands. 
+
+
+sudo unzip sonarqube-9.9.0.65466.zip 
+
+
+After extracting the zip folder, rename that folder by using the following command. 
+sudo mv /opt/sonarqube-9.9.0.65466 /opt/sonarqube 
+
+We can’t run the sonarqube as a root user. So, it’s time to create new group and user to run 
+sonarqube server. Execute the below commands.
+
+
+sudo groupadd sonar 
+sudo useradd -c "user to run SonarQube" -d /opt/sonarqube -g sonar sonar 
+sudo chown -R sonar:sonar /opt/sonarqube 
+sudo passwd sonar (set the password)
+
+Now edit the sonar script file by executing the following commands. 
+
+sudo vi /opt/sonarqube/bin/linux-x86-64/sonar.sh 
+
+RUN_AS_USER=sonar 
+
+Now, give the sudo access to the sonar user, by executing the following command. 
+sudo visudo 
+
+sonar ALL=(ALL:ALL) ALL
+
+Now, view the default shell used for sonar user, by executing the following command. 
+
+sudo vi /etc/passwd 
+here change sh to bash for sonar
+
+Now, before starting sonarqube service. Switch to sonar user by executing following 
+command. 
+
+sudo su sonar 
+
+
+Then execute the following command, for entering into SonarQube directory and start the 
+service. 
+cd /opt/sonarqube/bin/linux-x86-64/ 
+./sonar.sh start 
+
+
+Now, execute the following command to check the SonarQube status 
+./sonar.sh status 
+
+tail /opt/sonarqube/logs/sonar.log 
+
+
+Now, stop the service and add the system service, by executing the following command. 
+./sonar.sh stop 
+
+After stopping the service, execute the following command. To create systemd service. 
+sudo vi /etc/systemd/system/sonar.service 
+
+[Unit] 
+Description=SonarQube service 
+After=syslog.target network.target 
+[Service] 
+Type=forking 
+ExecStart=/opt/sonarqube/bin/linux-x86-64/sonar.sh start 
+ExecStop=/opt/sonarqube/bin/linux-x86-64/sonar.sh stop 
+User=sonar 
+Group=sonar 
+Restart=always 
+LimitNOFILE=65536 
+LimitNPROC=4096 
+[Install] 
+WantedBy=multi-user.target 
+
+After pasting the content, execute the following command to start the sonarqube service. 
+sudo systemctl start sonar 
+
+After starting the service, check the status by executing the following commands. 
+sudo systemctl status sonar 
+
+
+We can enable the sonarqube service at system startup by using the following command. 
+sudo systemctl enable sonar 
+
+
+http://IP_ADDRESS:9000/              (Sonarqube default port is 9000)
+
+
+After entering that URL, the following page will appear. In that we have to enter username 
+and password. 
+Default username- admin
+Default password- admin
+
+
+
+ 
