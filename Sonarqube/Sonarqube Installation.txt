@@ -123,4 +123,19 @@ Default password- admin
 
 
 
+
+Pom.xml changes for Sonar qube
+
+<sonar.host.url>
+http://35.90.108.171:9000/
+</sonar.host.url>
+        <sonar.login>squ_f4cf4ae61e5205ee1f155fbf980fd2a2dd0ddd9b</sonar.login>
+</properties>
+	<dependencies>
+		 <dependency>
+ <groupId>org.sonarsource.scanner.maven</groupId>
+ <artifactId>sonar-maven-plugin</artifactId>
+ <version>3.9.0.2155</version>
+</dependency>
+
  
