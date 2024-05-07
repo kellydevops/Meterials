@@ -1,0 +1,34 @@
+Terraform file to create ec2 instance 
+
+provider "aws" {
+  region = "us-west-2"  
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-052c9ea013e6e3567"  
+  instance_type = "t2.micro"              
+
+  tags = {
+    Name = "example-instance"
+  }
+}
+
+
+
+
+
+Terraform file to create s3 bucket 
+
+
+provider "aws" {
+  region = "us-east-1" 
+}
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my-unique-bucket-name" 
+  acl    = "private"                
+  tags = {
+    Name        = "MyS3Bucket"
+    Environment = "Production"
+  }
+}

@@ -1,0 +1,9 @@
+What is Terraform 
+Terraform inorder to automate and manage your infrastructure and your platform 
+and services that run on the platform
+opensource
+declarative   Declarative= define what end result you want
+
+                imperative =define exact steps how
+
+

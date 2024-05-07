@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    
+    environment {
+       M2_HOME = tool name: "maven3.6.9", type: 'maven'
+    }
+    
+    stages {
+       stage('get code') {
+          steps {
+             git 'https://github.com/akhil835/Akhil_repo.git'
+          }
+       }
+       stage('maven build') {
+          steps { 
+             sh "${env.M2_HOME}/bin/mvn clean package"
+          }
+       }
+       stage('sonar reports') {
+          steps {  
+             sh "${env.M2_HOME}/bin/mvn sonar:sonar"
+          }
+       }
+       stage('build') {
+          steps {
+             script {
+                 sshagent(['urpem']) {
+                    sh 'scp -o "StrictHostkeyChecking=no" target/sparkjava-hello-world-1.0.war ubuntu@34.212.36.201:/opt/apache-tomcat-9.0.88/webapps'
+                 }
+             }
+          }
+       }
+    }
+}
