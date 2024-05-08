@@ -32,3 +32,31 @@ resource "aws_s3_bucket" "my_bucket" {
     Environment = "Production"
   }
 }
+
+
+
+var.tf
+
+variable "region" {
+  description = "The AWS region to create resources in"
+  type        = string
+  default     = "us-west-2"
+}
+
+variable "instance_type" {
+  description = "The type of instance to launch"
+  type        = string
+  default     = "t2.micro"
+}
+
+
+ec2.tf
+
+provider "aws" {
+  region = var.region
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-023e152801ee4846a"
+  instance_type = var.instance_type
+}
