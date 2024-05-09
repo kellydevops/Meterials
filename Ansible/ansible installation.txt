@@ -1,0 +1,112 @@
+Ansible installation 
+
+    1  sudo apt-get update
+    2  sudo apt-get install software-properties-common
+    3  sudo add-apt-repository --yes --update ppa:ansible/ansible
+    4  sudo apt-get install ansible -y
+
+
+1. change hostname for both master and agent
+
+ master
+   hostname master
+2. sudo vi /etc/hosts
+  Open /etc/hosts file and  add agent, master public ip like below
+
+ root@master:~# cat /etc/hosts
+127.0.0.1 localhost
+master 34.221.98.20
+agent 54.213.140.147
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+
+
+
+save the file and come out
+
+
+
+repeat same thing agent also
+
+1. change hostname for both master and agent
+
+ agent
+   hostname agent
+2. sudo vi /etc/hosts
+  Open /etc/hosts file and  add agent, master public ip like below
+
+ root@master:~# cat /etc/hosts
+127.0.0.1 localhost
+master 34.221.98.20
+agent 54.213.140.147
+# The following lines are desirable for IPv6 capable hosts
+::1 ip6-localhost ip6-loopback
+
+
+
+Master
+
+
+In master server open /etc/ansible/hosts
+
+  Provide agent public Ip and save it
+
+
+In master, Generate sshkey copy pub key into agent like below
+
+ssh-copy-id 54.213.140.147
+
+
+
+Now check connection
+
+root@master:~# ansible all -m ping
+54.213.140.147 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+
+
+Now ansible master and slave are ready
+
+ansible-playbook playbookname.yml
+
+---
+- name: Install wget and curl on all hosts
+  hosts: all
+  become: yes  
+  tasks:
+  - name: Install wget
+    package:
+      name: wget
+      state: present
+
+  - name: Install curl
+    package:
+      name: curl
+      state: present
+
+
+root@master:~# cat file.yml 
+---
+- hosts: all
+  tasks:
+    - name: create file
+      file:
+        path: /tmp/akhil
+        state: touch
+
+
+root@master:~# cat filecontent.yml 
+---
+- hosts: all
+  tasks:
+    - name: create file and insert data
+      copy:
+        content: |
+          Hi everyone
+        dest: /tmp/akhil
